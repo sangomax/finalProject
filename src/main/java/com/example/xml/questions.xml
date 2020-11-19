@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<class>
+    <question id="1">
+        <questionDesc>Naman</questionDesc>
+        <answer>Kumar</answer>
+        <clue>Math</clue>
+        <category nameCategory="teste" codeCategory="1" colorCategory="blue"></category>
+        <type>1</type>
+    </question>
+
+    <question id="2">
+        <questionDesc>Naman</questionDesc>
+        <answer>Kumar</answer>
+        <clue>Math</clue>
+        <category nameCategory="teste2" codeCategory="2" colorCategory="green"></category>
+        <type>1</type>
+    </question>
+
+    <question id="3">
+        <questionDesc>Naman</questionDesc>
+        <answer>Kumar</answer>
+        <clue>Math</clue>
+        <category nameCategory="teste3" codeCategory="3" colorCategory="red"></category>
+        <type>2</type>
+    </question>
+
+</class>

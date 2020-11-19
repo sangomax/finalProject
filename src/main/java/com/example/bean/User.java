@@ -5,11 +5,6 @@ public class User {
     private String name;
     private String occupation;
 
-    public User() {
-
-        System.out.println("teste teste");
-    }
-
     public String getName() {
         return name;
     }
