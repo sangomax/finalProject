@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Show message</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:link .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 300px;
+	height: 150px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+    bg
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+    </style>
+</head>
+<body>
+
+<h2>Question Table</h2>
+<p>All quetions</p>
+<table class="table">
+    <thead>
+    <tr bgcolor="#cccccc">
+        <th width="20%">Question</th>
+        <th width="20%">Answer</th>
+        <th width="20%">Clue</th>
+        <th width="20%">Category</th>
+        <th width="20%">Type</th>
+    </tr>
+    </thead>
+    <tbody th:if="${questions.empty}">
+    <td colspan="2"> No Books Available</td>
+    </tbody>
+    <tbody th:each="question : ${questions}">
+    <tr th:bgcolor="${question.category.colorCategory}">
+        <td><span th:text="${question.question}"/></td>
+        <td><span th:text="${question.answer}"/></td>
+        <td><span th:text="${question.clue}"/></td>
+        <td><span th:text="${question.category.nameCategory}"/></td>
+        <td><span th:text="${question.getTypeDescription()}"/></td>
+    </tr>
+    </tbody>
+</table>
+
+<div align="center">
+<div class="flip-container" id="flip-toggle" >
+    <div class="flipper" >
+        <div class="front" th:bgcolor="${randonQuestion.category.colorCategory}" style="margin:10px; text-align:left; padding: 10%;">
+            <tr th:bgcolor="${randonQuestion.category.colorCategory}">
+            <p><span th:text="${randonQuestion.question}"/></p>
+            </tr>
+            <!-- front content -->
+        </div>
+        <div class="back" style="background-color:LightBlue; text-align:center; padding: 10% 0;">
+            <tr th:bgcolor="${randonQuestion.category.colorCategory}">
+            <p><span th:text="${randonQuestion.answer}"/></p>
+            </tr>
+            <!-- back content -->
+        </div>
+    </div>
+</div>
+<br/>
+<button onclick="document.querySelector('#flip-toggle').classList.toggle('hover');" class="sexyButton">Toggle Flip</button>
+</div>
+</body>
+</html>

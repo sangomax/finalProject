@@ -10,6 +10,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class GreetingController {
 
+    testeServer testeServer = new testeServer();
+
+    public GreetingController() {
+        this.testeServer.readQuestions();
+    }
+
+
+
     @GetMapping("/greeting")
     public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
         model.addAttribute("name", name);
@@ -21,6 +29,15 @@ public class GreetingController {
     public String sendForm(User user) {
         System.out.println("get" + user.getName());
         return "addUser";
+    }
+
+    @GetMapping("/listQuestions")
+    public String showAll(Model model) {
+
+        model.addAttribute("questions", this.testeServer.getAllQuestions());
+        int questionNumber = this.testeServer.getRandomNumber(this.testeServer.getAllQuestions().size());
+        model.addAttribute("randonQuestion", this.testeServer.getAllQuestions().get(questionNumber));
+        return "listQuestions";
     }
 
     @PostMapping("/addUser")

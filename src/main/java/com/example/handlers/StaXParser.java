@@ -75,25 +75,9 @@ public class StaXParser {
                             question.setClue(event.asCharacters().getData());
                             break;
                         case CATEGORY:
-                            Category category = null;
-                            if (event.isStartElement()) {
-                                StartElement startCategory = event.asStartElement();
-
-                                category = new Category();
-
-                                Iterator<Attribute> attributesCat = startCategory.getAttributes();
-                                while (attributesCat.hasNext()) {
-                                    Attribute attribute = attributesCat.next();
-                                    if (attribute.getName().toString().equals(NAME_CATEGORY)) {
-                                        category.setNameCategory(attribute.getValue());
-                                    } else if (attribute.getName().toString().equals(CODE_CATEGORY)) {
-                                        category.setCodeCategory(Integer.valueOf(attribute.getValue()));
-                                    } else if (attribute.getName().toString().equals(COLOR_CATEGORY)) {
-                                        category.setColorCategory(attribute.getValue());
-                                    }
-                                }
-                            }
-                            question.setCategory(category);
+                            event = eventReader.nextEvent();
+                            question.setCategory(new Category());
+                            question.getCategory().setCategory(Integer.valueOf(event.asCharacters().getData()));
                             break;
                         case TYPE:
                             event = eventReader.nextEvent();
