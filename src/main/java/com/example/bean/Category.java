@@ -44,6 +44,41 @@ public class Category {
         this.colorCategory = colorCategory;
     }
 
+    public void setCategory(Integer code) {
+        switch (code) {
+            case 1:
+                setCodeCategory(code);
+                setColorCategory("LightSkyBlue");
+                setNameCategory("Geography");
+                break;
+            case 2:
+                setCodeCategory(code);
+                setColorCategory("LightPink");
+                setNameCategory("Entertainment");
+                break;
+            case 3:
+                setCodeCategory(code);
+                setColorCategory("Yellow");
+                setNameCategory("History");
+                break;
+            case 4:
+                setCodeCategory(code);
+                setColorCategory("MediumPurple");
+                setNameCategory("Art & Culture or Art & Culture");
+                break;
+            case 5:
+                setCodeCategory(code);
+                setColorCategory("LightGreen");
+                setNameCategory("Science & Nature");
+                break;
+            case 6:
+                setCodeCategory(code);
+                setColorCategory("Orange");
+                setNameCategory("Sport & Leisure");
+                break;
+        }
+    }
+
     @Override
     public String toString() {
         return "Category{" +

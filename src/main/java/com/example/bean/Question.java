@@ -80,6 +80,23 @@ public class Question {
         this.type = type;
     }
 
+    public String getTypeDescription() {
+        String typeDesc = "";
+        switch (this.getType()) {
+            case 1:
+                typeDesc = "Normal";
+                break;
+            case 2:
+                typeDesc = "Special";
+                break;
+            case 3:
+                typeDesc = "Final";
+                break;
+        }
+        return typeDesc;
+    }
+
+
     @Override
     public String toString() {
         return "Question{" +

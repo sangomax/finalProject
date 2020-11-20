@@ -1,27 +1,53 @@
 <?xml version="1.0"?>
 <class>
     <question id="1">
-        <questionDesc>Naman</questionDesc>
-        <answer>Kumar</answer>
-        <clue>Math</clue>
-        <category nameCategory="teste" codeCategory="1" colorCategory="blue"></category>
-        <type>1</type>
+        <questionDesc>What is the name of the thin, but a long country that spans more than
+            half of the western coast of South America?</questionDesc>
+        <answer>Chile</answer>
+        <clue>? ? ?</clue>
+        <category>1</category>
+        <type>2</type>
     </question>
 
     <question id="2">
-        <questionDesc>Naman</questionDesc>
-        <answer>Kumar</answer>
-        <clue>Math</clue>
-        <category nameCategory="teste2" codeCategory="2" colorCategory="green"></category>
+        <questionDesc>What is the name of the song that Queen Elsa sings as she builds her ice
+            castle in the movie Frozen?</questionDesc>
+        <answer>Let It Go</answer>
+        <clue>When Elsa feel herself free</clue>
+        <category>2</category>
         <type>1</type>
     </question>
 
     <question id="3">
-        <questionDesc>Naman</questionDesc>
-        <answer>Kumar</answer>
-        <clue>Math</clue>
-        <category nameCategory="teste3" codeCategory="3" colorCategory="red"></category>
-        <type>2</type>
+        <questionDesc>By what name were the Egyptian kings/rulers known as?</questionDesc>
+        <answer>Pharaohs</answer>
+        <clue>I don't know</clue>
+        <category>3</category>
+        <type>1</type>
     </question>
 
+    <question id="4">
+        <questionDesc>Who played Anita in the first Broadway production of West Side Story?</questionDesc>
+        <answer>Chita Rivera</answer>
+        <clue>Good luck</clue>
+        <category>4</category>
+        <type>1</type>
+    </question>
+
+    <question id="5">
+        <questionDesc>Who discovered penicillin?</questionDesc>
+        <answer>Alexander Fleming</answer>
+        <clue>You are crazy</clue>
+        <category>5</category>
+        <type>3</type>
+    </question>
+
+    <question id="6">
+        <questionDesc>How many soccer players should each team have on the field at the start
+            of each match?</questionDesc>
+        <answer>11</answer>
+        <clue>It is easy</clue>
+        <category>6</category>
+        <type>1</type>
+    </question>
 </class>
