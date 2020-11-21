@@ -48,32 +48,32 @@ public class Category {
         switch (code) {
             case 1:
                 setCodeCategory(code);
-                setColorCategory("LightSkyBlue");
+                setColorCategory("#1563BF");
                 setNameCategory("Geography");
                 break;
             case 2:
                 setCodeCategory(code);
-                setColorCategory("LightPink");
+                setColorCategory("#D320D3");
                 setNameCategory("Entertainment");
                 break;
             case 3:
                 setCodeCategory(code);
-                setColorCategory("Yellow");
+                setColorCategory("#F0BF2B");
                 setNameCategory("History");
                 break;
             case 4:
                 setCodeCategory(code);
-                setColorCategory("MediumPurple");
+                setColorCategory("#6E22F0");
                 setNameCategory("Art & Culture or Art & Culture");
                 break;
             case 5:
                 setCodeCategory(code);
-                setColorCategory("LightGreen");
+                setColorCategory("#128B6E");
                 setNameCategory("Science & Nature");
                 break;
             case 6:
                 setCodeCategory(code);
-                setColorCategory("Orange");
+                setColorCategory("#EA7620");
                 setNameCategory("Sport & Leisure");
                 break;
         }
