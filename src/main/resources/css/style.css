@@ -43,3 +43,45 @@
   color: white;
   transform: rotateY(180deg);
 }
+
+/*Fonts style*/
+.heading{
+  font: 50px "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.subheading1{
+  font: italic 40px "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.subheading2{
+  font: 40px "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.section{
+  font: 30px "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.question-text{
+  font: 30px "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.body-text{
+  font: 25px "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.caption{
+  font: 20px "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.buttons{
+  font: 38px "Roboto", sans-serif;
+  font-weight: 400;
+}
+
