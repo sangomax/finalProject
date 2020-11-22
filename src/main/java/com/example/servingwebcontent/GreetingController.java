@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class GreetingController {
@@ -29,6 +30,12 @@ public class GreetingController {
     public String sendForm(User user) {
         System.out.println("get" + user.getName());
         return "addUser";
+    }
+
+    @RequestMapping("/playFeild")
+    public String playFeild() {
+        System.out.println("Let's play!");
+        return "playFeild";
     }
 
     @GetMapping("/listQuestions")
