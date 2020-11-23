@@ -25,10 +25,10 @@ public class GreetingController {
         return "greeting";
     }
 
-    @GetMapping("/addUser")
+    @GetMapping("/addPlayers")
     public String sendForm(User user) {
         System.out.println("get" + user.getName());
-        return "addUser";
+        return "addPlayers";
     }
 
     @GetMapping("/listQuestions")
