@@ -1,6 +1,6 @@
 package com.example.servingwebcontent;
 
-import com.example.bean.User;
+import com.example.bean.Player;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +18,6 @@ public class GreetingController {
     }
 
 
-
     @GetMapping("/greeting")
     public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
         model.addAttribute("name", name);
@@ -26,10 +25,10 @@ public class GreetingController {
         return "greeting";
     }
 
-    @GetMapping("/addUser")
-    public String sendForm(User user) {
-        System.out.println("get" + user.getName());
-        return "addUser";
+    @GetMapping("/addPlayers")
+    public String sendForm(Player player) {
+        System.out.println("get" + player.getNamePlayer());
+        return "addPlayers";
     }
 
     @RequestMapping("/playFeild")
@@ -47,9 +46,9 @@ public class GreetingController {
         return "listQuestions";
     }
 
-    @PostMapping("/addUser")
-    public String processForm(User user) {
-        System.out.println("post" + user.getName());
+    @PostMapping("/addPlayers")
+    public String processForm(Player player) {
+        System.out.println("post" + player.getNamePlayer());
         return "showMessage";
     }
 

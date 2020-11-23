@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add user</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h1>Add Player</h1>
+
+<form action="#" th:action="@{/addPlayers}" th:object="${player}" method="post">
+    <p>
+        NamePlayer: <input type="text" th:field="*{namePlayer}">
+    </p>
+    <p>
+        Token: <input type="text" th:field="*{colorPlayer}">
+    </p>
+    <p>
+    <p>
+        <input type="submit" value="Submit"/> <input type="reset" value="Reset">
+    </p>
+    <!--    <select>-->
+    <!--        <option value="Blue" label="Blue"/>-->
+    <!--        <option value="Purple" label="Purple"/>-->
+    <!--        <option value="Green" label="Green"/>-->
+    <!--        <option value="Red" label="Red"/>-->
+    <!--        <option value="Orange" label="Orange"/>-->
+    <!--        <option value="Yellow" label="Yellow"/>-->
+    <!--    </select>-->
+</form>
+
+
+</body>
+</html>
