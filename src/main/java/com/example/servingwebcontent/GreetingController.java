@@ -1,7 +1,6 @@
 package com.example.servingwebcontent;
 
 import com.example.bean.Player;
-import com.example.bean.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +15,6 @@ public class GreetingController {
     public GreetingController() {
         this.testeServer.readQuestions();
     }
-
 
 
     @GetMapping("/greeting")
@@ -41,9 +39,9 @@ public class GreetingController {
         return "listQuestions";
     }
 
-    @PostMapping("/addUser")
-    public String processForm(User user) {
-        System.out.println("post" + user.getName());
+    @PostMapping("/addPlayers")
+    public String processForm(Player player) {
+        System.out.println("post" + player.getNamePlayer());
         return "showMessage";
     }
 
