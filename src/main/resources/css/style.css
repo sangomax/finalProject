@@ -44,7 +44,7 @@
   transform: rotateY(180deg);
 }
 
-/*Fonts style*/
+/*Font style*/
 .heading{
   font: 50px "Roboto", sans-serif;
   font-weight: 700;
@@ -84,4 +84,6 @@
   font: 38px "Roboto", sans-serif;
   font-weight: 400;
 }
+
+
 
