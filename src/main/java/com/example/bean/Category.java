@@ -64,7 +64,7 @@ public class Category {
             case 4:
                 setCodeCategory(code);
                 setColorCategory("#6E22F0");
-                setNameCategory("Art & Culture or Art & Culture");
+                setNameCategory("Art & Culture");
                 break;
             case 5:
                 setCodeCategory(code);
