@@ -1,5 +1,6 @@
 package com.example.servingwebcontent;
 
+import com.example.bean.Player;
 import com.example.bean.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,8 +27,8 @@ public class GreetingController {
     }
 
     @GetMapping("/addPlayers")
-    public String sendForm(User user) {
-        System.out.println("get" + user.getName());
+    public String sendForm(Player player) {
+        System.out.println("get" + player.getNamePlayer());
         return "addPlayers";
     }
 

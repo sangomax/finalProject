@@ -6,25 +6,28 @@
 </head>
 <body>
 
-<h1>namePlayer</h1>
+<h1>Add Player</h1>
 
-<!--<form action="#" th:action="@{/addUser}" th:object="${user}" method="post">-->
-<!--    <p>-->
-<!--        Name: <input type="text" th:field="*{name}">-->
-<!--    </p>-->
-<!--    <p>-->
-<!--        Occupation: <input type="text" th:field="*{occupation}">-->
-<!--    </p>-->
-<!--    <p>-->
-<!--        <input type="submit" value="Submit"/> <input type="reset" value="Reset">-->
-<!--    </p>-->
-
-<!--    <select>-->
-<!--        <option value="1" label="1"/>-->
-<!--        <option value="2" label="2"/>-->
-<!--        <option value="3" label="3"/>-->
-<!--    </select>-->
-<!--</form>-->
+<form action="#" th:action="@{/addPlayers}" th:object="${player}" method="post">
+    <p>
+        NamePlayer: <input type="text" th:field="*{namePlayer}">
+    </p>
+    <p>
+        Token: <input type="text" th:field="*{colorPlayer}">
+    </p>
+    <p>
+    <p>
+        <input type="submit" value="Submit"/> <input type="reset" value="Reset">
+    </p>
+    <!--    <select>-->
+    <!--        <option value="Blue" label="Blue"/>-->
+    <!--        <option value="Purple" label="Purple"/>-->
+    <!--        <option value="Green" label="Green"/>-->
+    <!--        <option value="Red" label="Red"/>-->
+    <!--        <option value="Orange" label="Orange"/>-->
+    <!--        <option value="Yellow" label="Yellow"/>-->
+    <!--    </select>-->
+</form>
 
 
 </body>
