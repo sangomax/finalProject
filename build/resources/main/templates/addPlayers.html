@@ -3,28 +3,52 @@
 <head>
     <title>Add user</title>
     <meta charset="UTF-8">
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
 </head>
-<body>
+<body class="body-text">
 
-<h1>namePlayer</h1>
+<form action="#" th:action="@{/game}" th:object="${player}" method="post">
 
-<!--<form action="#" th:action="@{/addPlayers}" th:object="${user}" method="post">-->
-<!--    <p>-->
-<!--        NamePlayer: <input type="text" th:field="*{namePlayer}">-->
-<!--    </p>-->
-<!--    <p>-->
-<!--        Token: <input type="text" th:field="*{colorPlayer}">-->
-<!--    </p>-->
-<!--    <p>-->
-<!--        <input type="submit" value="Submit"/> <input type="reset" value="Reset">-->
-<!--    </p>-->
+        <div class="divTable" id="targetElement">
+            <div class="headRow">
+                <div class="divCell" align="left" style="width:5%; background-color:#ccc;">&nbsp;<= </div>
+                <div class="divCell" align="center" style="width:95%">
+                    <img src="/images/Trivia-logo.png" width="250" height="100">
+                </div>
+            </div>
+            <div class="divRow">
+                <br/>
+            </div>
+            
+            <div class="divRow">
+                <div class="divCell" align="left" style="width:5%;">&nbsp;&nbsp;&nbsp;</div>
+                <div class="divCell" align="center" style="width:95%">
+                    <div class="divRow" align="center" style="width:95%">
+                        <div class="divCell"><label> PLAYER 1 </label></div>
+                        <div class="divCell"><input type="text" th:field="*{namePlayer}" class="body-text"></div>
+                        <div class="divCell">
+                            <select th:field="*{colorPlayer}" class="body-text">
+                                <option value="" label="Select a Token" selected/>
+                                <option value="Blue" label="Blue"/>
+                                <option value="Purple" label="Purple"/>
+                                <option value="Green" label="Green"/>
+                                <option value="Red" label="Red"/>
+                                <option value="Orange" label="Orange"/>
+                                <option value="Yellow" label="Yellow"/>
+                            </select>
+                        </div>
 
-<!--    <select>-->
-<!--        <option value="1" label="1"/>-->
-<!--        <option value="2" label="2"/>-->
-<!--        <option value="3" label="3"/>-->
-<!--    </select>-->
-<!--</form>-->
+                    </div>
+                </div>
+            </div>
+            </form>
+            <div class="divRow_button">
+                <div class="divCell" align="left" style="width:5%;">&nbsp;&nbsp;&nbsp;</div>
+                <div class="divCell" align="center" style="width:95%;"><input type="submit" value="Submit" class="buttons"/><input type="reset" value="Reset" class="buttons"/></div>
+            </div>
+
+        </div>
+</form>
 
 
 </body>

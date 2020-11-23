@@ -3,10 +3,9 @@ package com.example.servingwebcontent;
 import com.example.bean.Player;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
 
 @Controller
 public class GreetingController {
@@ -27,7 +26,8 @@ public class GreetingController {
 
     @GetMapping("/addPlayers")
     public String sendForm(Player player) {
-        System.out.println("get" + player.getNamePlayer());
+//        System.out.println("get" + player.getNamePlayer());
+        this.testeServer.setPlayerList(new ArrayList<>());
         return "addPlayers";
     }
 
@@ -46,10 +46,23 @@ public class GreetingController {
         return "listQuestions";
     }
 
-    @PostMapping("/addPlayers")
-    public String processForm(Player player) {
-        System.out.println("post" + player.getNamePlayer());
-        return "showMessage";
+//    @PostMapping("/addPlayers")
+//    public String processForm(Player player) {
+//        System.out.println("post" + player.getNamePlayer());
+//        return "showMessage";
+//    }
+
+    @PostMapping("/game")
+    public String game(Model model) {
+        model.addAttribute("players", testeServer.getPlayerList());
+        for(Player player: this.testeServer.getPlayerList())
+        {
+            System.out.println(player.getNamePlayer());
+            System.out.println(player.getColorPlayer());
+        }
+
+        System.out.println("Let's play!");
+        return "game";
     }
 
 }
