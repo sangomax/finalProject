@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<class>
+    <question id="1">
+        <questionDesc>In Which British Newpaper Did The First Crossword Appear</questionDesc>
+        <answer>The Sunday Express</answer>
+        <clue>The S????? E??????</clue>
+        <category>6</category>
+        <type>3</type>
+    </question>
+
+    <question id="2">
+        <questionDesc>Which Williams sister has won more Grand Slam titles? Venus or Serena?
+        </questionDesc>
+        <answer>Serena</answer>
+        <clue>No Hint.</clue>
+        <category>6</category>
+        <type>3</type>
+    </question>
+
+    <question id="3">
+        <questionDesc>In Which Game Might You Castle</questionDesc>
+        <answer>Chess</answer>
+        <clue>No Hint</clue>
+        <category>6</category>
+        <type>3</type>
+    </question>
+
+    <question id="4">
+        <questionDesc>In Which Sport Might You Win The Curtis Cup</questionDesc>
+        <answer>Golf</answer>
+        <clue>Hint: G???</clue>
+        <category>6</category>
+        <type>3</type>
+    </question>
+
+</class>

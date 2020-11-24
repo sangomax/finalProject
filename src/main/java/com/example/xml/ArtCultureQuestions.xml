@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<class>
+    <question id="1">
+        <questionDesc> Who played Anita in the first Broadway production of West Side Story?</questionDesc>
+        <answer>Chita Rivera</answer>
+        <clue>Hint: C???? R???? </clue>
+        <category>4</category>
+        <type>2</type>
+    </question>
+
+    <question id="2">
+        <questionDesc> In which US city is Broadway located?</questionDesc>
+        <answer>New York</answer>
+        <clue>It's most famous city in US</clue>
+        <category>4</category>
+        <type>1</type>
+    </question>
+
+    <question id="3">
+        <questionDesc> What is the longest-running Broadway show?</questionDesc>
+        <answer>The Phantom of the Opera</answer>
+        <clue>Hint: The P?????? of the O????</clue>
+        <category>4</category>
+        <type>2</type>
+    </question>
+
+    <question id="4">
+        <questionDesc> Which show is the highest-grossing production on Broadway ever?</questionDesc>
+        <answer>The Lion King</answer>
+        <clue>The name includes Animal name.</clue>
+        <category>4</category>
+        <type>1</type>
+    </question>
+
+    <question id="5">
+        <questionDesc> Broadway was established in what year in New York?</questionDesc>
+        <answer>1750</answer>
+        <clue>It's 1750s.</clue>
+        <category>4</category>
+        <type>2</type>
+    </question>
+
+    <question id="6">
+        <questionDesc>In which period did ballet originate?</questionDesc>
+        <answer>Italian Renaissance</answer>
+        <clue>Hint: I?????? Renaissance</clue>
+        <category>4</category>
+        <type>2</type>
+    </question>
+
+    <question id="7">
+        <questionDesc> Who was the greatest male ballet dancer of the early 20th century?</questionDesc>
+        <answer>Vaslav Nijinsky</answer>
+        <clue>Hint: V????? N??????</clue>
+        <category>4</category>
+        <type>1</type>
+    </question>
+
+    <question id="8">
+        <questionDesc> What is a plié in ballet?</questionDesc>
+        <answer>Bending at the knees</answer>
+        <clue>Hint: Bending at the ?????</clue>
+        <category>4</category>
+        <type>1</type>
+    </question>
+
+    <question id="9">
+        <questionDesc> What is the tallest building in the world?</questionDesc>
+        <answer>Burj Khalifa</answer>
+        <clue>Hint: B??? K??????</clue>
+        <category>4</category>
+        <type>1</type>
+    </question>
+
+    <question id="10">
+        <questionDesc> Who designed the Sydney Opera House?</questionDesc>
+        <answer>Jorn Utzon</answer>
+        <clue>Hint: J??? U????</clue>
+        <category>4</category>
+        <type>2</type>
+    </question>
+
+    <question id="11">
+        <questionDesc> Between 1933 to 1947, the Hoover Dam was called what?</questionDesc>
+        <answer>Boulder Dam</answer>
+        <clue>Hint: B????? D???</clue>
+        <category>4</category>
+        <type>1</type>
+    </question>
+
+    <question id="12">
+        <questionDesc> Where can you find the Petronas Towers?</questionDesc>
+        <answer>Kuala Lumpur</answer>
+        <clue>Hint: K???? D?????</clue>
+        <category>4</category>
+        <type>1</type>
+    </question>
+
+    <question id="13">
+        <questionDesc>Who did paint the famous painting Guernica?</questionDesc>
+        <answer>Picasso</answer>
+        <clue>First letter of the name is "P".</clue>
+        <category>4</category>
+        <type>1</type>
+    </question>
+
+    <question id="14">
+        <questionDesc> What is the smallest size bed available in the United States?</questionDesc>
+        <answer>Twin</answer>
+        <clue>Hint: T???</clue>
+        <category>4</category>
+        <type>1</type>
+    </question>
+
+    <question id="15">
+        <questionDesc> Stripes, chevron, floral, and plaid are examples of what?</questionDesc>
+        <answer>Patterns</answer>
+        <clue>Hint: P?t????s</clue>
+        <category>4</category>
+        <type>1</type>
+    </question>
+
+    <question id="16">
+        <questionDesc> What design style uses lots of sea/ocean themed items?</questionDesc>
+        <answer>Nautical</answer>
+        <clue>Hint: N??t????</clue>
+        <category>4</category>
+        <type>1</type>
+    </question>
+
+    <question id="17">
+        <questionDesc> What’s another name for a footrest?</questionDesc>
+        <answer>Ottoman</answer>
+        <clue>Hint: O?????n</clue>
+        <category>4</category>
+        <type>1</type>
+    </question>
+
+    <question id="18">
+        <questionDesc> The Islamic calendar is based on which cycle?</questionDesc>
+        <answer>Lunar</answer>
+        <clue>Hint: L????</clue>
+        <category>4</category>
+        <type>1</type>
+    </question>
+
+    <question id="19">
+        <questionDesc> Who was the last prophet in Islam?</questionDesc>
+        <answer>Muhammad</answer>
+        <clue>Hint: M??????d</clue>
+        <category>4</category>
+        <type>1</type>
+    </question>
+
+    <question id="20">
+        <questionDesc> ”Cohen” is Hebrew for what?</questionDesc>
+        <answer>Priest</answer>
+        <clue>Hint: P???st</clue>
+        <category>4</category>
+        <type>1</type>
+    </question>
+
+    <question id="21">
+        <questionDesc> What is the Hebrew term for “commandment”?</questionDesc>
+        <answer>Mitzvah</answer>
+        <clue>Hint: M????ah</clue>
+        <category>4</category>
+        <type>2</type>
+    </question>
+
+</class>

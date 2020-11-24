@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<class>
+    <question id="1">
+        <questionDesc> In which country was Buddha born?</questionDesc>
+        <answer>Nepal</answer>
+        <clue>First letter of the name is "N".</clue>
+        <category>4</category>
+        <type>3</type>
+    </question>
+
+    <question id="2">
+        <questionDesc>Which is the main substance used to make a crayon?</questionDesc>
+        <answer>Wax</answer>
+        <clue>Hint: W??</clue>
+        <category>4</category>
+        <type>3</type>
+    </question>
+
+    <question id="3">
+        <questionDesc>In which city is the Prado Art Gallery?</questionDesc>
+        <answer>Madrid</answer>
+        <clue>Hint: M????d</clue>
+        <category>4</category>
+        <type>3</type>
+    </question>
+
+    <question id="4">
+        <questionDesc> When did construction on the Empire State building started?</questionDesc>
+        <answer>1929</answer>
+        <clue>It's 1920s.</clue>
+        <category>4</category>
+        <type>3</type>
+    </question>
+
+</class>
