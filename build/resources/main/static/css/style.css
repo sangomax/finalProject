@@ -46,45 +46,47 @@
 
 /*Font style*/
 .heading{
-  font: 50px "Roboto", sans-serif;
+  font: 35px "Roboto", sans-serif;
   font-weight: 700;
 }
 
 .subheading1{
-  font: italic 40px "Roboto", sans-serif;
+  font: italic 25px "Roboto", sans-serif;
   font-weight: 700;
 }
 
 .subheading2{
-  font: 40px "Roboto", sans-serif;
+  font: 25px "Roboto", sans-serif;
   font-weight: 700;
 }
 
-.section{
-  font: 30px "Roboto", sans-serif;
+.player-name{
+  font: 22px "Roboto", sans-serif;
   font-weight: 700;
 }
 
-.question-text{
-  font: 30px "Roboto", sans-serif;
-  font-weight: 400;
-}
+
 
 .body-text{
-  font: 25px "Roboto", sans-serif;
+  font: 20px "Roboto", sans-serif;
   font-weight: 400;
   height: 100%;
   display:auto;
 }
 
 .caption{
-  font: 20px "Roboto", sans-serif;
+  font: 14px "Roboto", sans-serif;
   font-weight: 400;
 }
 
 .buttons{
-  font: 38px "Roboto", sans-serif;
+  font: 25px "Roboto", sans-serif;
   font-weight: 400;
+}
+
+.input-text{
+  font: 17px "Roboto", sans-serif;
+  font-weight:400;
 }
 
 
@@ -127,4 +129,51 @@
             height: 100%;
     }
 
+    .buttons_add{
+      font: 25px "Roboto", sans-serif;
+      font-weight: 400;
+      width:40px;
+    }
+
+/* Color palette*/
+.sciences-q{
+  background-color:#128B6E;
+}
+.sciences-specialq{
+  background-color:#1CB792;
+}
+.sport-q{
+  background-color:#EA7620;
+}
+.sport-specialq{
+  background-color:#F09D2B;
+}
+.geography-q{
+  background-color:#1563BF;
+}
+.geography-specialq{
+  background-color:#398CEF;
+}
+.entertainment-q{
+  background-color:#D320D3;
+}
+.entertainment-specialq{
+  background-color:#E870DF;
+}
+.art-q{
+  background-color:#6E22F0;
+}
+.art-specialq{
+  background-color:#9A70E8;
+}
+
+.index-button{
+  border-color:#EA627D;
+}
+.reg-button{
+  border-color:#4791E7;
+}
+.general-background{
+background: linear-gradient(12deg, rgba(14,13,29,1) 0%, rgba(44,38,105,1) 100%);
+}
 
