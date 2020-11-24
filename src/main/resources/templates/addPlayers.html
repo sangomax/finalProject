@@ -3,7 +3,8 @@
 <head>
     <title>Add user</title>
     <meta charset="UTF-8">
-    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css">
+    <!--<link th:href="@{/css/style.css}" rel="stylesheet"/>-->
     <script>
         function myFunction(v,p) {
             if(v == 1) {
@@ -81,9 +82,9 @@
 <form action="#" th:action="@{addPlayers}" th:object="${player}" method="post">
     <div class="divTable general-background" id="targetElement">
         <div class="headRow">
-            <div class="divCell" align="left" style="width:5%;">&nbsp;<a href="/"> <img src="/images/Arrow.png" width="30" height="30"> </a></div>
+            <div class="divCell" align="left" style="width:5%;transform:rotate(1deg);">&nbsp;<a href="/"> <img src="../static/images//Arrow.png" width="30" height="30"> </a></div>
             <div class="divCell" align="center" style="width:95%">
-                <img src="/images/Trivia-logo.png" width="250" height="100">
+                <img src="../static/images/Trivia-logo.png" width="250" height="100">
             </div>
         </div>
         <div class="divRow">
