@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<class>
+    <question id="1">
+        <questionDesc>Which European country was occupied by Britain from 1814 until 1964?
+        </questionDesc>
+        <answer>Malta</answer>
+        <clue>M????</clue>
+        <category>3</category>
+        <type>3</type>
+    </question>
+
+    <question id="2">
+        <questionDesc>What German dance, which sees partners spinning together in close contact, was
+          condemned as depraved when it was first seen in Regency society?
+        </questionDesc>
+        <answer>The Waltz</answer>
+        <clue>The W????</clue>
+        <category>3</category>
+        <type>3</type>
+    </question>
+
+    <question id="3">
+        <questionDesc>Which king preceded Queen Victoria?</questionDesc>
+        <answer>King William IV</answer>
+        <clue>King W?????? IV</clue>
+        <category>3</category>
+        <type>3</type>
+    </question>
+
+    <question id="4">
+        <questionDesc>Who was the second President of the United States?</questionDesc>
+        <answer>John Adams</answer>
+        <clue>J??? A????</clue>
+        <category>3</category>
+        <type>3</type>
+    </question>
+</class>

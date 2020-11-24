@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<class>
+    <question id="1">
+        <questionDesc>By what name were the Egyptian kings/rulers known as?</questionDesc>
+        <answer>Pharaohs</answer>
+        <clue>First letter is "P"</clue>
+        <category>3</category>
+        <type>1</type>
+    </question>
+
+    <question id="2">
+        <questionDesc>How many Pyramids of Giza were made?</questionDesc>
+        <answer>3</answer>
+        <clue>The answer is between 2 and 5.</clue>
+        <category>3</category>
+        <type>1</type>
+    </question>
+
+    <question id="3">
+        <questionDesc>Who which queen was Julius Caesar involved with?</questionDesc>
+        <answer>Cleopatra</answer>
+        <clue>C???????a</clue>
+        <category>3</category>
+        <type>1</type>
+    </question>
+
+    <question id="4">
+        <questionDesc>Where did the Franks settle after defeating the Romans?</questionDesc>
+        <answer>Gaul</answer>
+        <clue>G???</clue>
+        <category>3</category>
+        <type>2</type>
+    </question>
+
+    <question id="5">
+        <questionDesc>How long did the Middle Ages last?</questionDesc>
+        <answer>About 1000 years</answer>
+        <clue>About ???? years</clue>
+        <category>3</category>
+        <type>2</type>
+    </question>
+
+    <question id="6">
+        <questionDesc>Which religion dominated the Middle Ages?</questionDesc>
+        <answer>Catholicism</answer>
+        <clue>C?????????m</clue>
+        <category>3</category>
+        <type>1</type>
+    </question>
+
+    <question id="7">
+        <questionDesc>In which year World War I begin?</questionDesc>
+        <answer>1914</answer>
+        <clue>It's 1910s.</clue>
+        <category>3</category>
+        <type>1</type>
+    </question>
+
+    <question id="8">
+        <questionDesc>In which country Adolph Hitler was born?</questionDesc>
+        <answer>Austria</answer>
+        <clue>A?????a</clue>
+        <category>3</category>
+        <type>1</type>
+    </question>
+
+    <question id="9">
+        <questionDesc>John F. Kennedy was assassinated in which city?</questionDesc>
+        <answer>Dallas</answer>
+        <clue>D?????</clue>
+        <category>3</category>
+        <type>1</type>
+    </question>
+
+    <question id="10">
+        <questionDesc>On Sunday 18th June 1815, which famous battle took place?</questionDesc>
+        <answer>The Battle of Waterloo</answer>
+        <clue>The B????? of Wa??????</clue>
+        <category>3</category>
+        <type>2</type>
+    </question>
+
+    <question id="11">
+        <questionDesc>Which queen had the shortest reign of Henry VIII’s six wives?</questionDesc>
+        <answer>Anne of Cleves</answer>
+        <clue>A??? of Cl????</clue>
+        <category>3</category>
+        <type>2</type>
+    </question>
+
+    <question id="12">
+        <questionDesc>Who Discovered America?</questionDesc>
+        <answer>Columbus</answer>
+        <clue>No Hint</clue>
+        <category>3</category>
+        <type>1</type>
+    </question>
+
+    <question id="13">
+        <questionDesc>Who wrote the 12th-century account Historia regum Britanniae (The History of the
+          Kings of Britain), which is often credited with making the legend of King Arthur popular?
+        </questionDesc>
+        <answer>Geoffrey of Monmouth</answer>
+        <clue>G??????? of M???????</clue>
+        <category>3</category>
+        <type>2</type>
+    </question>
+
+    <question id="14">
+        <questionDesc>What is the longest war in U.S. history?</questionDesc>
+        <answer>Afghan War</answer>
+        <clue>A????? War</clue>
+        <category>3</category>
+        <type>2</type>
+    </question>
+
+    <question id="15">
+        <questionDesc>How many stars does the American Flag have?</questionDesc>
+        <answer>50</answer>
+        <clue>No Hint</clue>
+        <category>3</category>
+        <type>2</type>
+    </question>
+
+    <question id="16">
+        <questionDesc>Which medieval queen was married to both Louis VII of France and Henry II of
+          England?
+        </questionDesc>
+        <answer>Eleanor of Aquitaine</answer>
+        <clue>EL????? of A????????</clue>
+        <category>3</category>
+        <type>1</type>
+    </question>
+
+    <question id="17">
+        <questionDesc>How many Stripes does the United States of America’ flag have?</questionDesc>
+        <answer>13</answer>
+        <clue>No Hint</clue>
+        <category>3</category>
+        <type>2</type>
+    </question>
+
+    <question id="18">
+        <questionDesc>Which Century did the French Revolution take place?</questionDesc>
+        <answer>18th century</answer>
+        <clue>No Hint</clue>
+        <category>3</category>
+        <type>1</type>
+    </question>
+
+    <question id="19">
+        <questionDesc>Who was the captain of the vessel Titanic at the time of its sinking?
+        </questionDesc>
+        <answer>Edward Smith</answer>
+        <clue>E????? S????</clue>
+        <category>3</category>
+        <type>1</type>
+    </question>
+
+    <question id="20">
+        <questionDesc>Who discovered penicillin?</questionDesc>
+        <answer>Alexander Fleming</answer>
+        <clue>Al??????? F??????</clue>
+        <category>3</category>
+        <type>1</type>
+    </question>
+
+    <question id="21">
+        <questionDesc>Julius Caesar was assassinated on 15 March 44 BC, a date now often known by what
+          term?
+        </questionDesc>
+        <answer>The Ides of March</answer>
+        <clue>The ???? of ?????</clue>
+        <category>3</category>
+        <type>1</type>
+    </question>
+
+</class>

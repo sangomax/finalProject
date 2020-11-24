@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<class>
+    <question id="1">
+        <questionDesc>What was the name of the actor who played Jack Dawson in Titanic?</questionDesc>
+        <answer>Leonardo Dicaprio</answer>
+        <clue>First letter of the actor is "D"</clue>
+        <category>2</category>
+        <type>3</type>
+    </question>
+
+    <question id="2">
+        <questionDesc>Which iconic TV featured the main characters, Samantha, Carrie, Cynthia
+          and Charlotte?
+        </questionDesc>
+        <answer>Sex and the City</answer>
+        <clue>The title includes the word of "City"</clue>
+        <category>2</category>
+        <type>3</type>
+    </question>
+
+    <question id="3">
+        <questionDesc>“Astro Boy” is what genre of a video game?</questionDesc>
+        <answer>Action</answer>
+        <clue>Action or Adventure or Role-playing</clue>
+        <category>2</category>
+        <type>3</type>
+    </question>
+
+    <question id="4">
+        <questionDesc>In 2019, who had the biggest selling album in the United Kingdom?</questionDesc>
+        <answer>Lewis Capaldi</answer>
+        <clue>Hint: L???? C????</clue>
+        <category>2</category>
+        <type>3</type>
+    </question>
+
+</class>
