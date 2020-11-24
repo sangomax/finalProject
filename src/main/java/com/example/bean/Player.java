@@ -8,10 +8,10 @@ public class Player {
 
     private Score scorePlayer;
 
-    private Score codePlayer;
-    //private short codePlayer;
+    private Integer codePlayer;
 
-    public Player(String namePlayer, String colorPlayer, Score codePlayer) {
+
+    public Player(String namePlayer, String colorPlayer, Integer codePlayer) {
         this.namePlayer = namePlayer;
         this.colorPlayer = colorPlayer;
         this.codePlayer = codePlayer;
@@ -42,11 +42,11 @@ public class Player {
         this.scorePlayer = scorePlayer;
     }
 
-    public Score getCodePlayer() {
+    public Integer getCodePlayer() {
         return codePlayer;
     }
 
-    public void setCodePlayer(Score codePlayer) {
+    public void setCodePlayer(Integer codePlayer) {
         this.codePlayer = codePlayer;
     }
 }

@@ -1,22 +1,92 @@
-<div id="intro-dm">
-<div class="divRow">
-    <div class="divCell" align="left" style="width:5%;"></div>
-    <div class="divCell" align="center" style="width:95%">
-        <div class="divRow" align="center" style="width:95%">
-            <div class="divCell"><label> PLAYER 2 </label></div>
-            <div class="divCell"><input type="text" width="200" th:field="*{namePlayer}"></div>
-            <div class="divCell">
-                <select th:field="*{colorPlayer}">
-                    <option value="" label="Select a Token" selected/>
-                    <option value="Blue" label="Blue"/>
-                    <option value="Purple" label="Purple"/>
-                    <option value="Green" label="Green"/>
-                    <option value="Red" label="Red"/>
-                    <option value="Orange" label="Orange"/>
-                    <option value="Yellow" label="Yellow"/>
-                </select>
-            </div>
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add user</title>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+
+    <script>
+        function myFunction(l) {
+            if(l == 1) {
+                document.getElementById("myP").style.visibility = "hidden";
+
+            } else {
+                document.getElementById("myP").style.visibility = "visible";
+            }
+
+        }
+    </script>
+</head>
+<body class="body-text">
+
+
+<div class="divTable" id="targetElement">
+    <div class="headRow">
+        <div class="divCell" align="left" style="width:5%; background-color:#ccc;">&nbsp;<=</div>
+        <div class="divCell" align="center" style="width:95%">
+            <img src="/images/Trivia-logo.png" width="250" height="100">
         </div>
     </div>
+    <div class="divRow">
+        <br/>
+    </div>
+    <form action="#" th:action="@{/addPlayers}" th:object="${player}" method="post" >
+        <div class="divRow">
+            <div class="divCell" align="left" style="width:5%;">&nbsp;&nbsp;&nbsp;</div>
+            <div class="divCell" align="center" style="width:95%">
+                <div class="divRow" align="center" style="width:95%">
+                    <div class="divCell"><label> PLAYER 1 </label></div>
+                    <div class="divCell"><input type="text" th:field="*{namePlayer}" class="body-text"></div>
+                    <div class="divCell">
+                        <select th:field="*{colorPlayer}" class="body-text">
+                            <option value="" label="Select a Token" selected/>
+                            <option value="Blue" label="Blue"/>
+                            <option value="Purple" label="Purple"/>
+                            <option value="Green" label="Green"/>
+                            <option value="Red" label="Red"/>
+                            <option value="Orange" label="Orange"/>
+                            <option value="Yellow" label="Yellow"/>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </form>
+    <form action="#" th:action="@{/addPlayers}" onsubmit="return false" th:object="${player}" method="post">
+        <div class="divRow" id="myP" style="visibility:hidden;">
+            <div class="divCell" align="left" style="width:5%;">&nbsp;&nbsp;&nbsp;</div>
+            <div class="divCell" align="center" style="width:95%">
+                <div class="divRow" align="center" style="width:95%">
+                    <div class="divCell"><label> PLAYER 2 </label></div>
+                    <div class="divCell"><input type="text" th:field="*{namePlayer}" class="body-text"></div>
+                    <div class="divCell">
+                        <select th:field="*{colorPlayer}" class="body-text">
+                            <option value="" label="Select a Token" selected/>
+                            <option value="Blue" label="Blue"/>
+                            <option value="Purple" label="Purple"/>
+                            <option value="Green" label="Green"/>
+                            <option value="Red" label="Red"/>
+                            <option value="Orange" label="Orange"/>
+                            <option value="Yellow" label="Yellow"/>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </form>
+    <form action="#" th:action="@{/game}" method="post">
+        <div class="divRow_button">
+            <div class="divCell" align="left" style="width:5%;">&nbsp;&nbsp;&nbsp;</div>
+            <div class="divCell" align="center" style="width:95%;">
+                <input type="submit" value="Submit" class="buttons"/>
+                <input type="reset" value="Reset" class="buttons"/>
+            </div>
+        </div>
+    </form>
 </div>
-</div>
+
+
+</body>
+</html>
