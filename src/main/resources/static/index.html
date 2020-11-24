@@ -3,7 +3,7 @@
 <head>
     <title>Index</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
     <style>
 
 
@@ -43,10 +43,7 @@ height: 112px;
     display:block;
     text-decoration: none;
 }
-.button-text{
-    font: 400 "Roboto", sans-serif;
-    font-size: 25px;
-}
+
 
 
 
@@ -61,19 +58,7 @@ height: 112px;
   text-align: center;
 }
 
-.button {
-  font-size: 1em;
-  padding: 10px;
-  color: #fff;
-  border: 2px solid #06D85F;
-  border-radius: 20px/50px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-}
-.button:hover {
-  background: #E74767;
-}
+
 
 .overlay {
   position: fixed;
@@ -140,15 +125,15 @@ height: 112px;
 <body>
 <div class="container-index" >
     <div >
-        <img src="./images/Trivia-logo.png" style="margin:auto; transform:rotate(1deg);margin:161px 531px 0px 531px;">
+        <img src="/images/Trivia-logo.png" style="margin:auto; transform:rotate(1deg);margin:161px 531px 0px 531px;">
     </div>
     <div class="body-text">
         <div  style="margin-top:127px">
-            <button onclick="window.location.href='../templates/addPlayers.html'" class="index-button">New Game</button>
+            <button onclick="window.location.href='/addPlayers'" class="index-button button-shape button">New Game</button>
         </div>
 
         <div >
-            <a class="index-button" href="#popup1"><hr style="visibility:hidden;height:0.1px;margin: 12px 0px 1px 0px; width:20%;"></span><span style="font:25px 'Roboto';margin-top:100px;margin-left:85px ">Instructions</span></a>
+            <a class="index-button button-shape button" href="#popup1"><hr style="visibility:hidden;height:0.1px;margin: 12px 0px 1px 0px; width:20%;"></span><span style="font:25px 'Roboto';margin-top:100px;margin-left:85px ">Instructions</span></a>
         </div>
         <div id="popup1" class="overlay">
             <div class="popup">
