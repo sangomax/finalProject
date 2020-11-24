@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<class>
+    <question id="1">
+        <questionDesc> What food comprises 99 percent of a giant panda’s diet? </questionDesc>
+        <answer>Bamboo</answer>
+        <clue>B????o</clue>
+        <category>5</category>
+        <type>3</type>
+    </question>
+
+    <question id="2">
+        <questionDesc> Which planet has the most gravity?</questionDesc>
+        <answer>Jupiter</answer>
+        <clue>The first letter is "J"</clue>
+        <category>5</category>
+        <type>3</type>
+    </question>
+
+    <question id="3">
+        <questionDesc>Whats the world's largest ocean?</questionDesc>
+        <answer>Pacific ocean</answer>
+        <clue>??? ocean</clue>
+        <category>5</category>
+        <type>3</type>
+    </question>
+
+    <question id="4">
+        <questionDesc> What is meteorology the study of?</questionDesc>
+        <answer>The weather</answer>
+        <clue>The w??????</clue>
+        <category>5</category>
+        <type>3</type>
+    </question>
+
+</class>

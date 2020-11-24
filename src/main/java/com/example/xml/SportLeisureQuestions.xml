@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<class>
+    <question id="1">
+        <questionDesc>How many soccer players should each team have on the field at the start
+          of each match?
+        </questionDesc>
+        <answer>11</answer>
+        <clue>No Hint.</clue>
+        <category>6</category>
+        <type>1</type>
+    </question>
+
+    <question id="2">
+        <questionDesc>When Michael Jordan played for the Chicago Bulls, how many NBA
+          Championships did he win?
+        </questionDesc>
+        <answer>Six</answer>
+        <clue>The answer is between Three and Seven.</clue>
+        <category>6</category>
+        <type>2</type>
+    </question>
+
+    <question id="3">
+        <questionDesc>What country won the very first FIFA World Cup in 1930?</questionDesc>
+        <answer>Uruguay</answer>
+        <clue>Hint: U??????</clue>
+        <category>6</category>
+        <type>1</type>
+    </question>
+
+    <question id="4">
+        <questionDesc>In what year was the first-ever Wimbledon Championship held?</questionDesc>
+        <answer>1877</answer>
+        <clue>It's 1870s</clue>
+        <category>6</category>
+        <type>2</type>
+    </question>
+
+    <question id="5">
+        <questionDesc>Which racer holds the record for the most Grand Prix wins?</questionDesc>
+        <answer>Michael Schumacher / Lewis Hamilton</answer>
+        <clue>M?????? S?????????, L???? H????????</clue>
+        <category>6</category>
+        <type>1</type>
+    </question>
+
+    <question id="6">
+        <questionDesc>Which Jamaican runner is an 11-time world champion and holds the record
+          in the 100 and 200-meter race?
+        </questionDesc>
+        <answer>Usain Bolt</answer>
+        <clue>Hint: U???? B???</clue>
+        <category>6</category>
+        <type>1</type>
+    </question>
+
+    <question id="7">
+        <questionDesc>Which boxer was known as “The Greatest” and “The People’s Champion”?
+        </questionDesc>
+        <answer>Muhammad Ali</answer>
+        <clue>Hint: M???? A???</clue>
+        <category>6</category>
+        <type>1</type>
+    </question>
+
+    <question id="8">
+        <questionDesc>What sport was Jesse Owens involved in?</questionDesc>
+        <answer>Track and field</answer>
+        <clue>T???? and f????</clue>
+        <category>6</category>
+        <type>2</type>
+    </question>
+
+    <question id="9">
+        <questionDesc>Which hockey team did Wayne Gretzky play for in the ‘80s?</questionDesc>
+        <answer>Edmonton Oilers</answer>
+        <clue>E?????? O?????</clue>
+        <category>6</category>
+        <type>2</type>
+    </question>
+
+    <question id="10">
+        <questionDesc>Novak Djokovic won the 2013 Australian Open tournament. Who did he defeat in the
+          final?
+        </questionDesc>
+        <answer>Roger Federer</answer>
+        <clue>R???? F??????</clue>
+        <category>6</category>
+        <type>1</type>
+    </question>
+
+    <question id="11">
+        <questionDesc>Coco Gauff made headlines at Wimbledon last year when she beat Venus
+          Williams. How old was Gauff?
+        </questionDesc>
+        <answer>15</answer>
+        <clue>The answer is 12 to 18.</clue>
+        <category>6</category>
+        <type>2</type>
+    </question>
+
+    <question id="12">
+        <questionDesc>Usain Bolt is still the fastest man in the world, running 100m in 9.58
+          seconds. In which year did he set that record?
+        </questionDesc>
+        <answer>2009</answer>
+        <clue>It's 2009s.</clue>
+        <category>6</category>
+        <type>1</type>
+    </question>
+
+    <question id="13">
+        <questionDesc>How many times has Rafael Nadal won the French Open as of March 2020?
+        </questionDesc>
+        <answer>12</answer>
+        <clue>The answer is 10 to 15.</clue>
+        <category>6</category>
+        <type>1</type>
+    </question>
+
+    <question id="14">
+        <questionDesc>When Michael Jordan played for the Chicago Bulls, how many NBA
+          Championships did he win?
+        </questionDesc>
+        <answer>6</answer>
+        <clue>The answer is 5 to 10.</clue>
+        <category>6</category>
+        <type>1</type>
+    </question>
+
+    <question id="16">
+        <questionDesc>Which Uk Football Team Are Known As The Owls</questionDesc>
+        <answer>Sheffield Wednesday</answer>
+        <clue>S???????d W???????y</clue>
+        <category>6</category>
+        <type>1</type>
+    </question>
+
+    <question id="17">
+        <questionDesc>Which Football Team Has Won The European Cup The Most Times</questionDesc>
+        <answer>Real Madrid</answer>
+        <clue>R??? M?????</clue>
+        <category>6</category>
+        <type>1</type>
+    </question>
+
+    <question id="18">
+        <questionDesc>What Diameter Is The Circle From Which You Throw A Discus</questionDesc>
+        <answer>2.5m</answer>
+        <clue>2.?m</clue>
+        <category>6</category>
+        <type>2</type>
+    </question>
+
+    <question id="19">
+        <questionDesc>How Many Players Are There In A Baseball Team</questionDesc>
+        <answer>9 Players</answer>
+        <clue>No Hint.</clue>
+        <category>6</category>
+        <type>1</type>
+    </question>
+
+    <question id="20">
+        <questionDesc>In Which Game Might You Get A Royal Flush</questionDesc>
+        <answer>Poker</answer>
+        <clue>Hint: P????</clue>
+        <category>6</category>
+        <type>1</type>
+    </question>
+
+    <question id="21">
+        <questionDesc>Name The 3 Female Characters In The Game Cluedo</questionDesc>
+        <answer>Mrs White, Miss Scarlet, Mrs Peacock</answer>
+        <clue>Mrs W????, Miss S??????, Mrs P??????</clue>
+        <category>6</category>
+        <type>1</type>
+    </question>
+
+</class>

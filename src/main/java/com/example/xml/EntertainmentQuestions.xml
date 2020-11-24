@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<class>
+    <question id="1">
+        <questionDesc> What is the name of the song that Queen Elsa sings as she builds her ice
+          castle in the movie Frozen?</questionDesc>
+        <answer>Let it go</answer>
+        <clue>No Hint</clue>
+        <category>2</category>
+        <type>1</type>
+    </question>
+
+    <question id="2">
+        <questionDesc> How many films did Sean Connery play James Bond in?</questionDesc>
+        <answer>7</answer>
+        <clue>The answer is between 5 and 10.</clue>
+        <category>2</category>
+        <type>2</type>
+    </question>
+
+    <question id="3">
+        <questionDesc>In the "Friends" theme song, what are you always stuck in?</questionDesc>
+        <answer>Second Gear</answer>
+        <clue>Hint: S???? G????</clue>
+        <category>2</category>
+        <type>2</type>
+    </question>
+
+    <question id="4">
+        <questionDesc> How many Lord of the Rings films are there?</questionDesc>
+        <answer>3</answer>
+        <clue>The answer is between 1 and 4.</clue>
+        <category>2</category>
+        <type>1</type>
+    </question>
+
+    <question id="5">
+        <questionDesc> Which popular TV show featured house Targaryen and Stark?</questionDesc>
+        <answer>Game of Thrones</answer>
+        <clue>The name is Game of  "????"</clue>
+        <category>2</category>
+        <type>2</type>
+    </question>
+
+    <question id="6">
+        <questionDesc>In The Matrix, does Neo take the blue pill or the red pill?</questionDesc>
+        <answer>Red</answer>
+        <clue>No Hint</clue>
+        <category>2</category>
+        <type>2</type>
+    </question>
+
+    <question id="7">
+        <questionDesc> Which cartoon character lives in a pineapple under the sea?</questionDesc>
+        <answer>Spongebob</answer>
+        <clue>First letter of the name is "S"</clue>
+        <category>2</category>
+        <type>1</type>
+    </question>
+
+    <question id="8">
+        <questionDesc> In what year was the first episode of South Park aired?</questionDesc>
+        <answer>1997</answer>
+        <clue>It's 1990s.</clue>
+        <category>2</category>
+        <type>2</type>
+    </question>
+
+    <question id="9">
+        <questionDesc> Who played Wolverine?</questionDesc>
+        <answer>Hugh Jackman</answer>
+        <clue>First letter of the actor is "H"</clue>
+        <category>2</category>
+        <type>1</type>
+    </question>
+
+    <question id="10">
+        <questionDesc>By which collective name would you identify the group whose firs names begin with J. P. G. and R?</questionDesc>
+        <answer>Beatles</answer>
+        <clue>English rock band formed in Liverpool in 1960</clue>
+        <category>2</category>
+        <type>2</type>
+    </question>
+
+    <question id="11">
+        <questionDesc> How many cards are there in a deck of Uno?</questionDesc>
+        <answer>108</answer>
+        <clue>The answer is between 100 and 110.</clue>
+        <category>2</category>
+        <type>2</type>
+    </question>
+
+    <question id="12">
+        <questionDesc> In which board game do you try to solve a murder?</questionDesc>
+        <answer>Clue</answer>
+        <clue>First letter of the name is "C"</clue>
+        <category>2</category>
+        <type>1</type>
+    </question>
+
+    <question id="13">
+      <questionDesc> In chess, the queen has the combined movement of which two pieces?</questionDesc>
+      <answer>bishop and rook</answer>
+      <clue>Hint: b???? and r????</clue>
+      <category>2</category>
+      <type>1</type>
+    </question>
+
+    <question id="14">
+        <questionDesc> Which of these games includes the phrase “Do not pass go, do not collect
+          $200”?</questionDesc>
+        <answer>Monopoly</answer>
+        <clue>First letter of the game is "M"</clue>
+        <category>2</category>
+        <type>1</type>
+    </question>
+
+    <question id="15">
+        <questionDesc> The video game “Happy Feet” features what animals?</questionDesc>
+        <answer>Penguins</answer>
+        <clue>The animal can swim.</clue>
+        <category>2</category>
+        <type>1</type>
+    </question>
+
+    <question id="16">
+        <questionDesc> What classic video game requires you to eat all the dots throughout a
+          maze?</questionDesc>
+        <answer>Pac-Man</answer>
+        <clue>Hint: P??-M??</clue>
+        <category>2</category>
+        <type>1</type>
+    </question>
+
+    <question id="17">
+        <questionDesc> Which Street Fighter character wears a white outfit and a red headband?</questionDesc>
+        <answer>Ryu</answer>
+        <clue>The number of letter is three.</clue>
+        <category>2</category>
+        <type>1</type>
+    </question>
+
+    <question id="18">
+        <questionDesc> What sport is featured in the video game “FIFA”?</questionDesc>
+        <answer>Football</answer>
+        <clue>First letter of the name is "F"</clue>
+        <category>2</category>
+        <type>1</type>
+    </question>
+
+    <question id="19">
+        <questionDesc> Which actor appeared in films “Face Off” and “Ghost Rider”?</questionDesc>
+        <answer>Nicholas Cage</answer>
+        <clue>Hint: N???? C????</clue>
+        <category>2</category>
+        <type>1</type>
+    </question>
+
+    <question id="20">
+        <questionDesc> Which actress won the Oscar for Best Actress in 2003?</questionDesc>
+        <answer>Nicole Kidman</answer>
+        <clue>Hint: N???? K????</clue>
+        <category>2</category>
+        <type>1</type>
+    </question>
+
+    <question id="21">
+        <questionDesc> The Young Victoria was played by which British actress?</questionDesc>
+        <answer>Emily Blunt</answer>
+        <clue>Hint: E???? B????</clue>
+        <category>2</category>
+        <type>1</type>
+    </question>
+
+</class>
