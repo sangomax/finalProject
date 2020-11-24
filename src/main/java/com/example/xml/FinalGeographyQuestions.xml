@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<class>
+    <question id="1">
+        <questionDesc> Which desert is the largest in the world?</questionDesc>
+        <answer>The Sahara Desert</answer>
+        <clue>That is in Africa.</clue>
+        <category>1</category>
+        <type>3</type>
+    </question>
+
+    <question id="2">
+        <questionDesc>True or False? Sydney is the capital of Australia.</questionDesc>
+        <answer>False</answer>
+        <clue>No clue</clue>
+        <category>1</category>
+        <type>3</type>
+    </question>
+
+    <question id="3">
+        <questionDesc>What is the state capital of New York?</questionDesc>
+        <answer>Albany</answer>
+        <clue>First letter is "A"</clue>
+        <category>1</category>
+        <type>3</type>
+    </question>
+
+    <question id="4">
+        <questionDesc>Greenland is an autonomous territory of which country?</questionDesc>
+        <answer>Denmark</answer>
+        <clue>First letter is "D"</clue>
+        <category>1</category>
+        <type>3</type>
+    </question>
+
+</class>

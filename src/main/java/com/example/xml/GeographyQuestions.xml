@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<class>
+    <question id="1">
+        <questionDesc>What is the name of the thin, but a long country that spans more than
+          half of the western coast of South America?
+        </questionDesc>
+        <answer>Chile</answer>
+        <clue>First letter of the answer is "C".</clue>
+        <category>1</category>
+        <type>1</type>
+    </question>
+
+    <question id="1">
+        <questionDesc>What is the name of the thin, but a long country that spans more than
+          half of the western coast of South America?
+        </questionDesc>
+        <answer>Chile</answer>
+        <clue>First letter of the answer is "C"</clue>
+        <category>1</category>
+        <type>1</type>
+    </question>
+
+    <question id="2">
+        <questionDesc>Which American state is the largest (by area)?</questionDesc>
+        <answer>Alaska</answer>
+        <clue>First letter of the answer is "A"</clue>
+        <category>1</category>
+        <type>1</type>
+    </question>
+
+    <question id="3">
+        <questionDesc>Which two countries share the longest (or largest) international border?
+        </questionDesc>
+        <answer>Canada and the USA</answer>
+        <clue>One of them is where most CICC students live now.</clue>
+        <category>1</category>
+        <type>2</type>
+    </question>
+
+    <question id="4">
+        <questionDesc>What is the smallest country in the world?</questionDesc>
+        <answer>Vatican City</answer>
+        <clue>First letter of the answer is "C"</clue>
+        <category>1</category>
+        <type>1</type>
+    </question>
+
+    <question id="5">
+        <questionDesc>Which continent is the largest?</questionDesc>
+        <answer>Asia</answer>
+        <clue>China belongs to that continent.</clue>
+        <category>1</category>
+        <type>1</type>
+    </question>
+
+    <question id="6">
+        <questionDesc>Which of the Seven Wonders is located in Egypt?</questionDesc>
+        <answer>The Pyramids of Giza</answer>
+        <clue>That is related to Pyramid.</clue>
+        <category>1</category>
+        <type>1</type>
+    </question>
+
+    <question id="7">
+        <questionDesc>What is the capital of New Zealand?</questionDesc>
+        <answer>Wellington</answer>
+        <clue>First letter of the answer is "W".</clue>
+        <category>1</category>
+        <type>1</type>
+    </question>
+
+    <question id="8">
+        <questionDesc>What is the name of the world’s longest river?</questionDesc>
+        <answer>The Nile</answer>
+        <clue>Egypt is in the downstream area.</clue>
+        <category>1</category>
+        <type>1</type>
+    </question>
+
+    <question id="9">
+        <questionDesc>Which city in India would you find the Taj Mahal in?</questionDesc>
+        <answer>Agra</answer>
+        <clue>First letter is "A"</clue>
+        <category>1</category>
+        <type>2</type>
+    </question>
+
+    <question id="10">
+        <questionDesc>Which river flows through the Grand Canyon?</questionDesc>
+        <answer>Colorado</answer>
+        <clue>First letter is "C"</clue>
+        <category>1</category>
+        <type>1</type>
+    </question>
+
+    <question id="11">
+        <questionDesc>What is the capital of Serbia?</questionDesc>
+        <answer>Belgrade</answer>
+        <clue>First letter is "B"</clue>
+        <category>1</category>
+        <type>1</type>
+    </question>
+
+    <question id="12">
+        <questionDesc>In which country would you visit Machu Picchu?</questionDesc>
+        <answer>Peru</answer>
+        <clue>The country is in South America and first letter is "P"</clue>
+        <category>1</category>
+        <type>1</type>
+    </question>
+
+    <question id="13">
+        <questionDesc>The equator passes through how many countries?</questionDesc>
+        <answer>13</answer>
+        <clue>The number of countries is between 10 and 15</clue>
+        <category>1</category>
+        <type>2</type>
+    </question>
+
+    <question id="14">
+        <questionDesc>What is the deepest lake in the world?</questionDesc>
+        <answer>Lake Baikal</answer>
+        <clue>The lake is in Russia.</clue>
+        <category>1</category>
+        <type>1</type>
+    </question>
+
+    <question id="15">
+        <questionDesc>What is the longest river in China?</questionDesc>
+        <answer>Yangzte</answer>
+        <clue>First letter is "Y"</clue>
+        <category>1</category>
+        <type>2</type>
+    </question>
+
+    <question id="16">
+        <questionDesc>How many countries in the world have a non-rectangular flag? Can you name them for
+          bonus points?
+        </questionDesc>
+        <answer>Three - Switzerland, Nepal and Vatican City</answer>
+        <clue>The number of countries is between 1 and 5.</clue>
+        <category>1</category>
+        <type>2</type>
+    </question>
+
+    <question id="17">
+        <questionDesc>Which continent lies in all four hemispheres of the Earth (North, South, East and
+          West)?
+        </questionDesc>
+        <answer>Africa</answer>
+        <clue>No clue</clue>
+        <category>1</category>
+        <type>1</type>
+    </question>
+
+    <question id="18">
+        <questionDesc>What is the highest mountain in Europe?</questionDesc>
+        <answer>Mount Elbrus</answer>
+        <clue>The mountain is in Russia.</clue>
+        <category>1</category>
+        <type>2</type>
+    </question>
+
+    <question id="19">
+        <questionDesc>How many 'official' lakes are there in the Lake District?</questionDesc>
+        <answer>One - Bassenthwaite Lake (the others are meres or waters)</answer>
+        <clue>The answer is between 1 and 5.</clue>
+        <category>1</category>
+        <type>2</type>
+    </question>
+
+    <question id="20">
+        <questionDesc>Which is further from London as the crow flies, New York or St Petersburg?
+        </questionDesc>
+        <answer>New York (3,461 miles to 1,305 miles from St Petersburg)</answer>
+        <clue>No clue</clue>
+        <category>1</category>
+        <type>1</type>
+    </question>
+
+    <question id="21">
+        <questionDesc>How many countries are there in South America?</questionDesc>
+        <answer>12</answer>
+        <clue>The answer is between 10 and 20.</clue>
+        <category>1</category>
+        <type>2</type>
+    </question>
+</class>
