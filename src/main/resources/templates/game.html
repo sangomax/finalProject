@@ -3,73 +3,23 @@
 <head>
     <title>Game</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css">
     <style>
-            .heading{
-                    font: 50px "Roboto", sans-serif;
-                    font-weight: 700;
-                    }
 
-            .subheading1{
-                    font: italic 40px "Roboto", sans-serif;
-                    font-weight: 700;
-                    opacity:1;
-                    }
-
-            .subheading2{
-                    font: 40px "Roboto", sans-serif;
-                    font-weight: 700;
-                    opacity:1;
-
-                    }
-
-            .section{
-                    font: 30px "Roboto", sans-serif;
-                    font-weight: 700;
-                    opacity:1;
-
-                    }
-
-            .question-text{
-                    font: 30px "Roboto", sans-serif;
-                    font-weight: 400;
-                    opacity:1;
-
-                    }
-
-            .body-text{
-                    font: 25px 400 "Roboto", sans-serif;
-                    font-weight: 400;
-                    opacity:1;
-
-                    }
-
-            .caption{
-                    font: 20px "Roboto", sans-serif;
-                    font-weight: 400;
-                    opacity:1;
-
-                    }
-
-            .buttons{
-                    font: 38px "Roboto", sans-serif;
-                    font-weight: 400;
-                    opacity:1;
-
-                    }
 
  .container {
     display:flex;
     flex-direction: row;
     flex-wrap: nowrap;
     background: rgb(14,13,29);
-    height: 1080px;
+    height: 768px;
     background: linear-gradient(12deg, rgba(14,13,29,1) 0%, rgba(44,38,105,1) 100%);
 }
 
 .side-one{top: 0px;
     left: 0px;
     width:35%;
-    height: 1080px; 
+    height: 768px;
     /*background: #000000 0% 0% no-repeat padding-box;
     opacity: 0.2;*/
     background-color: rgba(0, 0, 0, 0.2);
@@ -81,12 +31,12 @@
         color: white;
     }
 .players-heading{
-    padding-top:52px;
+    padding-top:31px;
     text-align:center;
     margin:auto;
     opacity:1;
     color:white;
-    margin-bottom:80px;
+    margin-bottom:33px;
 }    
 
 .side-two{
@@ -105,24 +55,24 @@ body{
 .player{
     /*top: 148px;*/
     left: 0px;
-    height: 137px;
+    height: 105px;
     background: rgba(255, 255, 255, 0.1); 
 }
 .token{
     /*margin-top: 10px;*/
     float:left;
-    margin-left:60px;
-    margin-top:25px;
+    margin-left:30px;
+    margin-top:2px;
 }
  .player-container{
      float:left;
      display:inline;
-     margin-left:30px;
+     margin-left:15px;
      margin-bottom:0;
  }
  .player-name{
      margin-bottom:0px;
-     margin-top:30px;
+     margin-top:25px;
  }
  .player-num{
      margin-bottom:0;
@@ -130,12 +80,12 @@ body{
  }
 
  .pieces-container{
-     margin: 25px 70px 0px 0px;
+     margin: 15px 25px 0px 0px;
      float:right;
-     width:180px;
+     width:170px;
  }
  .pieces-container img{
-     width: 50px;
+    width: 40px;
  }
 
  .roulette {
@@ -146,18 +96,18 @@ body{
 }
 #roulette-categories {
   position: absolute;
-  margin:31px 287px;
+  margin:20px 100px;
   
 }
 #roulette-triangle {
   position: absolute;
-  margin:29px 287px;
+  margin:10px 100px;
   
 }
 #roulette-base {
   position: absolute;
-  top: 30px;
-  right: 325px;
+  top: 20px;
+  right: 95px;
   
 }
 
@@ -168,98 +118,98 @@ body{
     <div class="side-one">
         <p class="subheading2 players-heading">Players</p>
         <div class=player>
-            <img class="token" src="../images/Red Token.png">
+            <img class="token" src="../static/images/Red Token.png">
             <span class="player-container">
-                            <p class="question-text player-name">John Doe</p>
+                            <p class="player-name">John</p>
                             <p class="caption player-num">Player 1</p>
                         </span>
             <div class=pieces-container>
-                <img class="pieces" style="visibility: none" src="../images/Geography Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Entertainment Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/History Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Art & Culture Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sports&Leisure-Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sciences & Nature Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Geography Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Entertainment Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/History Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Art & Culture Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Sports&Leisure-Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Sciences & Nature Piece.png">
             </div>
         </div>
 
         <div class=player style="background:none; visibility:none">
-            <img class="token" src="../images/Green Token.png">
+            <img class="token" src="../static/images/Green Token.png">
             <span class="player-container">
-                        <p class="question-text player-name">Olivia</p>
+                        <p class="player-name">Olivia</p>
                         <p class="caption player-num">Player 2</p>
                     </span>
             <div class=pieces-container>
-                <img class="pieces" style="visibility: none" src="../images/Geography Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Entertainment Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/History Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Art & Culture Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sports&Leisure-Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sciences & Nature Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Geography Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Entertainment Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/History Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Art & Culture Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Sports&Leisure-Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Sciences & Nature Piece.png">
             </div>
         </div>
 
         <div class=player style="background:none; visibility:none">
-            <img class="token" src="../images/Blue Token.png">
+            <img class="token" src="../static/images/Blue Token.png">
             <span class="player-container">
-                    <p class="question-text player-name">Peter</p>
+                    <p class="player-name">Peter</p>
                     <p class="caption player-num">Player 3</p>
                 </span>
             <div class=pieces-container>
-                <img class="pieces" style="visibility: none" src="../images/Geography Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Entertainment Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/History Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Art & Culture Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sports&Leisure-Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sciences & Nature Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Geography Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Entertainment Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/History Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Art & Culture Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Sports&Leisure-Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Sciences & Nature Piece.png">
             </div>
         </div>
 
         <div class=player style="background:none; visibility:none">
-            <img class="token" src="../images/Orange Token.png">
+            <img class="token" src="../static/images/Orange Token.png">
             <span class="player-container">
-                    <p class="question-text player-name">Crystal</p>
+                    <p class="player-name">Crystal</p>
                     <p class="caption player-num">Player 4</p>
                 </span>
             <div class=pieces-container>
-                <img class="pieces" style="visibility: none" src="../images/Geography Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Entertainment Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/History Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Art & Culture Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sports&Leisure-Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sciences & Nature Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Geography Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Entertainment Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/History Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Art & Culture Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Sports&Leisure-Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Sciences & Nature Piece.png">
             </div>
         </div>
 
         <div class=player style="background:none; visibility:none">
-            <img class="token" src="../images/Purple Token.png">
+            <img class="token" src="../static/images/Purple Token.png">
             <span class="player-container">
-                    <p class="question-text player-name">Matt</p>
+                    <p class="player-name">Matt</p>
                     <p class="caption player-num">Player 5</p>
                 </span>
             <div class=pieces-container style="visibility: none">
-                <img class="pieces" style="visibility: none" src="../images/Geography Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Entertainment Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/History Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Art & Culture Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sports&Leisure-Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sciences & Nature Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Geography Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Entertainment Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/History Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Art & Culture Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Sports&Leisure-Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Sciences & Nature Piece.png">
             </div>
         </div>
 
         <div class=player style="background:none; visibility:none" >
-            <img class="token" src="../images/Yellow Token.png">
+            <img class="token" src="../static/images/Yellow Token.png">
             <span class="player-container">
-                    <p class="question-text player-name">Hannah</p>
+                    <p class="player-name">Hannah</p>
                     <p class="caption player-num">Player 6</p>
                 </span>
             <div class=pieces-container>
-                <img class="pieces" style="visibility: none" src="../images/Geography Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Entertainment Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/History Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Art & Culture Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sports&Leisure-Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sciences & Nature Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Geography Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Entertainment Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/History Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Art & Culture Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Sports&Leisure-Piece.png">
+                <img class="pieces" style="visibility: none" src="../static/images/Sciences & Nature Piece.png">
             </div>
         </div>
 
@@ -267,12 +217,12 @@ body{
 
     </div>
     <div class="side-two">
-        <img src="../images/Trivia-logo.png" style="margin:auto; width:12%; transform:rotate(1deg);margin:161px 42% 0px 42%">
+        <img src="../static/images/Trivia-logo.png" style="margin:auto; width:12%; transform:rotate(1deg);margin:84px 42% 0px 42%">
         <div class="roulette">
-            <img id="roulette-base" src="../images/Roulette -Base.png";>
+            <img id="roulette-base" src="../static/images/Roulette -Base.png";>
 
-            <img id="roulette-categories" src="../images/Roulette - Categories.png";>
-            <img id="roulette-triangle" src="../images/Roulette -triangle.png";>
+            <img id="roulette-categories" src="../static/images/Roulette - Categories.png";>
+            <img id="roulette-triangle" src="../static/images/Roulette -triangle.png";>
 
         </div>
     </div>
