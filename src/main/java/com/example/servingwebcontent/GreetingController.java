@@ -3,7 +3,10 @@ package com.example.servingwebcontent;
 import com.example.bean.Player;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 
@@ -46,11 +49,17 @@ public class GreetingController {
         return "listQuestions";
     }
 
-//    @PostMapping("/addPlayers")
-//    public String processForm(Player player) {
-//        System.out.println("post" + player.getNamePlayer());
-//        return "showMessage";
-//    }
+    @PostMapping("/addPlayers")
+    public String processForm(Player player, Model model) {
+        Object ob = model.getAttribute("player");
+        String[] name = player.getNamePlayer().split(",");
+        String[] color = player.getColorPlayer().split(",");
+        for(int i = 0; i < name.length; i++) {
+            this.testeServer.getPlayerList().add(new Player(name[i],color[i],(i+1)));
+        }
+        model.addAttribute("players", this.testeServer.getPlayerList());
+        return "game";
+    }
 
     @PostMapping("/game")
     public String game(Model model) {
@@ -64,5 +73,12 @@ public class GreetingController {
         System.out.println("Let's play!");
         return "game";
     }
+
+//    @RequestMapping(value = "addPlayers", method = RequestMethod.POST)
+//    public String setPlayer(Player player, Model model) {
+//        Object ob = model.getAttribute("player");
+//        this.testeServer.getPlayerList().add((Player) ob);
+//        return "addPlayers";
+//    }
 
 }

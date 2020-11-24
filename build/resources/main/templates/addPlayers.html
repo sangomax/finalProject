@@ -4,52 +4,247 @@
     <title>Add user</title>
     <meta charset="UTF-8">
     <link th:href="@{/css/style.css}" rel="stylesheet"/>
+    <script>
+        function myFunction(v,p) {
+            if(v == 1) {
+                if(p == 2) {
+                    document.getElementById("play2").style.visibility = "hidden";
+                    document.getElementById("play1_b").disabled = false;
+                    document.getElementById("name2").required = false;
+                    document.getElementById("color2").required = false;
+                    document.getElementById("name2").value = "";
+                    document.getElementById("color2").value = "";
+                } else if(p == 3) {
+                    document.getElementById("play3").style.visibility = "hidden";
+                    document.getElementById("play2_m").disabled = false;
+                    document.getElementById("play2_p").disabled = false;
+                    document.getElementById("name3").required = false;
+                    document.getElementById("color3").required = false;
+                    document.getElementById("name3").value = "";
+                    document.getElementById("color3").value = "";
+                } else if(p == 4) {
+                    document.getElementById("play4").style.visibility = "hidden";
+                    document.getElementById("play3_m").disabled = false;
+                    document.getElementById("play3_p").disabled = false;
+                    document.getElementById("name4").required = false;
+                    document.getElementById("color4").required = false;
+                    document.getElementById("name4").value = "";
+                    document.getElementById("color4").value = "";
+                } else if(p == 5) {
+                    document.getElementById("play5").style.visibility = "hidden";
+                    document.getElementById("play4_m").disabled = false;
+                    document.getElementById("play4_p").disabled = false;
+                    document.getElementById("name5").required = false;
+                    document.getElementById("color5").required = false;
+                    document.getElementById("name5").value = "";
+                    document.getElementById("color5").value = "";
+                } else if(p == 6) {
+                    document.getElementById("play6").style.visibility = "hidden";
+                    document.getElementById("play5_m").disabled = false;
+                    document.getElementById("play5_p").disabled = false;
+                    document.getElementById("name6").required = false;
+                    document.getElementById("color6").required = false;
+                    document.getElementById("name6").value = "";
+                    document.getElementById("color6").value = "";
+                }
+            } else {
+                if(p == 1) {
+                    document.getElementById("play2").style.visibility = "visible";
+                    document.getElementById("play1_b").disabled = true;
+                    document.getElementById("name2").required = true;
+                    document.getElementById("color2").required = true;
+                } else if(p == 2) {
+                    document.getElementById("play3").style.visibility = "visible";
+                    document.getElementById("play2_p").disabled = true;
+                    document.getElementById("play2_m").disabled = true;
+                } else if(p == 3) {
+                    document.getElementById("play4").style.visibility = "visible";
+                    document.getElementById("play3_p").disabled = true;
+                    document.getElementById("play3_m").disabled = true;
+                } else if(p == 4) {
+                    document.getElementById("play5").style.visibility = "visible";
+                    document.getElementById("play4_p").disabled = true;
+                    document.getElementById("play4_m").disabled = true;
+                } else if(p == 5) {
+                    document.getElementById("play6").style.visibility = "visible";
+                    document.getElementById("play5_p").disabled = true;
+                    document.getElementById("play5_m").disabled = true;
+                }
+            }
+
+        }
+    </script>
 </head>
 <body class="body-text">
 
-<form action="#" th:action="@{/game}" th:object="${player}" method="post">
-
-        <div class="divTable" id="targetElement">
-            <div class="headRow">
-                <div class="divCell" align="left" style="width:5%; background-color:#ccc;">&nbsp;<= </div>
-                <div class="divCell" align="center" style="width:95%">
-                    <img src="/images/Trivia-logo.png" width="250" height="100">
-                </div>
+<form action="#" th:action="@{addPlayers}" th:object="${player}" method="post">
+    <div class="divTable" id="targetElement">
+        <div class="headRow">
+            <div class="divCell" align="left" style="width:5%; background-color:#ccc;">&nbsp;<=</div>
+            <div class="divCell" align="center" style="width:95%">
+                <img src="/images/Trivia-logo.png" width="250" height="100">
             </div>
-            <div class="divRow">
-                <br/>
-            </div>
-            
-            <div class="divRow">
-                <div class="divCell" align="left" style="width:5%;">&nbsp;&nbsp;&nbsp;</div>
-                <div class="divCell" align="center" style="width:95%">
-                    <div class="divRow" align="center" style="width:95%">
-                        <div class="divCell"><label> PLAYER 1 </label></div>
-                        <div class="divCell"><input type="text" th:field="*{namePlayer}" class="body-text"></div>
-                        <div class="divCell">
-                            <select th:field="*{colorPlayer}" class="body-text">
-                                <option value="" label="Select a Token" selected/>
-                                <option value="Blue" label="Blue"/>
-                                <option value="Purple" label="Purple"/>
-                                <option value="Green" label="Green"/>
-                                <option value="Red" label="Red"/>
-                                <option value="Orange" label="Orange"/>
-                                <option value="Yellow" label="Yellow"/>
-                            </select>
-                        </div>
-
+        </div>
+        <div class="divRow">
+            <br/>
+        </div>
+        <div class="divRow">
+            <div class="divCell" align="left" style="width:5%;">&nbsp;&nbsp;&nbsp;</div>
+            <div class="divCell" align="center" style="width:95%">
+                <div class="divRow" align="center" style="width:95%">
+                    <div class="divCell"><label> PLAYER 1 </label></div>
+                    <div class="divCell"><input id="name1" type="text" th:field="*{namePlayer}" class="body-text" required></div>
+                    <div class="divCell">
+                        <select id="color1" th:field="*{colorPlayer}" class="body-text" required>
+                            <option value="" label="Select a Token" selected/>
+                            <option value="Blue" label="Blue"/>
+                            <option value="Purple" label="Purple"/>
+                            <option value="Green" label="Green"/>
+                            <option value="Red" label="Red"/>
+                            <option value="Orange" label="Orange"/>
+                            <option value="Yellow" label="Yellow"/>
+                        </select>
+                    </div>
+                    <div class="divCell">
+                        <input id="play1_b" type="button" value="+" onclick="myFunction(2,1)" class="buttons_add" />
+                        <input type="button"  value="-" class="buttons_add" style="visibility:hidden;" />
                     </div>
                 </div>
             </div>
-            </form>
-            <div class="divRow_button">
-                <div class="divCell" align="left" style="width:5%;">&nbsp;&nbsp;&nbsp;</div>
-                <div class="divCell" align="center" style="width:95%;"><input type="submit" value="Submit" class="buttons"/><input type="reset" value="Reset" class="buttons"/></div>
-            </div>
-
         </div>
-</form>
+        <div class="divRow" style="visibility:hidden;" id="play2">
+            <div class="divCell" align="left" style="width:5%;" >&nbsp;&nbsp;&nbsp;</div>
+            <div class="divCell" align="center" style="width:95%">
+                <div class="divRow" align="center" style="width:95%">
+                    <div class="divCell"><label> PLAYER 2 </label></div>
+                    <div class="divCell"><input id="name2" type="text" th:field="*{namePlayer}" class="body-text"></div>
+                    <div class="divCell">
+                        <select id="color2" th:field="*{colorPlayer}" class="body-text">
+                            <option value="" label="Select a Token" selected/>
+                            <option value="Blue" label="Blue"/>
+                            <option value="Purple" label="Purple"/>
+                            <option value="Green" label="Green"/>
+                            <option value="Red" label="Red"/>
+                            <option value="Orange" label="Orange"/>
+                            <option value="Yellow" label="Yellow"/>
+                        </select>
+                    </div>
+                    <div class="divCell">
+                        <input id="play2_p" type="button"  value="+" onclick="myFunction(2,2)" class="buttons_add" />
+                        <input id="play2_m" type="button"  value="-" onclick="myFunction(1,2)" class="buttons_add" />
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="divRow" style="visibility:hidden;" id="play3">
+            <div class="divCell" align="left" style="width:5%;" >&nbsp;&nbsp;&nbsp;</div>
+            <div class="divCell" align="center" style="width:95%">
+                <div class="divRow" align="center" style="width:95%">
+                    <div class="divCell"><label> PLAYER 3 </label></div>
+                    <div class="divCell"><input type="text" th:field="*{namePlayer}" class="body-text"></div>
+                    <div class="divCell">
+                        <select th:field="*{colorPlayer}" class="body-text">
+                            <option value="" label="Select a Token" selected/>
+                            <option value="Blue" label="Blue"/>
+                            <option value="Purple" label="Purple"/>
+                            <option value="Green" label="Green"/>
+                            <option value="Red" label="Red"/>
+                            <option value="Orange" label="Orange"/>
+                            <option value="Yellow" label="Yellow"/>
+                        </select>
+                    </div>
+                    <div class="divCell">
+                        <input id="play3_p" type="button"  value="+" onclick="myFunction(2,3)" class="buttons_add" />
+                        <input id="play3_m" type="button"  value="-" onclick="myFunction(1,3)" class="buttons_add" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divRow" style="visibility:hidden;" id="play4">
+            <div class="divCell" align="left" style="width:5%;" >&nbsp;&nbsp;&nbsp;</div>
+            <div class="divCell" align="center" style="width:95%">
+                <div class="divRow" align="center" style="width:95%">
+                    <div class="divCell"><label> PLAYER 4 </label></div>
+                    <div class="divCell"><input type="text" th:field="*{namePlayer}" class="body-text"></div>
+                    <div class="divCell">
+                        <select th:field="*{colorPlayer}" class="body-text">
+                            <option value="" label="Select a Token" selected/>
+                            <option value="Blue" label="Blue"/>
+                            <option value="Purple" label="Purple"/>
+                            <option value="Green" label="Green"/>
+                            <option value="Red" label="Red"/>
+                            <option value="Orange" label="Orange"/>
+                            <option value="Yellow" label="Yellow"/>
+                        </select>
+                    </div>
+                    <div class="divCell">
+                        <input id="play4_p" type="button"  value="+" onclick="myFunction(2,4)" class="buttons_add" />
+                        <input id="play4_m" type="button"  value="-" onclick="myFunction(1,4)" class="buttons_add" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divRow" style="visibility:hidden;" id="play5">
+            <div class="divCell" align="left" style="width:5%;" >&nbsp;&nbsp;&nbsp;</div>
+            <div class="divCell" align="center" style="width:95%">
+                <div class="divRow" align="center" style="width:95%">
+                    <div class="divCell"><label> PLAYER 5 </label></div>
+                    <div class="divCell"><input type="text" th:field="*{namePlayer}" class="body-text"></div>
+                    <div class="divCell">
+                        <select th:field="*{colorPlayer}" class="body-text">
+                            <option value="" label="Select a Token" selected/>
+                            <option value="Blue" label="Blue"/>
+                            <option value="Purple" label="Purple"/>
+                            <option value="Green" label="Green"/>
+                            <option value="Red" label="Red"/>
+                            <option value="Orange" label="Orange"/>
+                            <option value="Yellow" label="Yellow"/>
+                        </select>
+                    </div>
+                    <div class="divCell">
+                        <input id="play5_p" type="button"  value="+" onclick="myFunction(2,5)" class="buttons_add" />
+                        <input id="play5_m" type="button"  value="-" onclick="myFunction(1,5)" class="buttons_add" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divRow" style="visibility:hidden;" id="play6">
+            <div class="divCell" align="left" style="width:5%;" >&nbsp;&nbsp;&nbsp;</div>
+            <div class="divCell" align="center" style="width:95%">
+                <div class="divRow" align="center" style="width:95%">
+                    <div class="divCell"><label> PLAYER 6 </label></div>
+                    <div class="divCell"><input type="text" th:field="*{namePlayer}" class="body-text"></div>
+                    <div class="divCell">
+                        <select th:field="*{colorPlayer}" class="body-text">
+                            <option value="" label="Select a Token" selected/>
+                            <option value="Blue" label="Blue"/>
+                            <option value="Purple" label="Purple"/>
+                            <option value="Green" label="Green"/>
+                            <option value="Red" label="Red"/>
+                            <option value="Orange" label="Orange"/>
+                            <option value="Yellow" label="Yellow"/>
+                        </select>
+                    </div>
+                    <div class="divCell">
+                        <input id="play6_m" type="button"  value="-" onclick="myFunction(1,6)" class="buttons_add" />
+                        <input type="button"  value="-" class="buttons_add" style="visibility:hidden;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divRow_button">
+            <div class="divCell" align="left" style="width:5%;">&nbsp;&nbsp;&nbsp;</div>
+            <div class="divCell" align="center" style="width:95%;">
+                <input type="submit" value="Let's Play" class="buttons"/>
+                <!--<input type="reset" value="Reset" class="buttons"/></div>-->
+        </div>
+
+    </div>
+</form>
 
 </body>
 </html>
