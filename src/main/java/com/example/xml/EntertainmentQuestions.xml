@@ -82,11 +82,11 @@
     </question>
 
     <question id="11">
-        <questionDesc> How many cards are there in a deck of Uno?</questionDesc>
-        <answer>108</answer>
-        <clue>The answer is between 100 and 110.</clue>
+        <questionDesc>Who won his second Oscar in successive years for Forrest Gump?</questionDesc>
+        <answer>Tom Hanks</answer>
+        <clue>T?? H????</clue>
         <category>2</category>
-        <type>2</type>
+        <type>1</type>
     </question>
 
     <question id="12">
@@ -148,9 +148,9 @@
     </question>
 
     <question id="19">
-        <questionDesc> Which actor appeared in films “Face Off” and “Ghost Rider”?</questionDesc>
-        <answer>Nicholas Cage</answer>
-        <clue>Hint: N???? C????</clue>
+        <questionDesc>Which musical based on Romeo & Juliet was a 60s Oscar winner?</questionDesc>
+        <answer>West Side Story</answer>
+        <clue>W??? S??? S????</clue>
         <category>2</category>
         <type>1</type>
     </question>
@@ -164,9 +164,10 @@
     </question>
 
     <question id="21">
-        <questionDesc> The Young Victoria was played by which British actress?</questionDesc>
-        <answer>Emily Blunt</answer>
-        <clue>Hint: E???? B????</clue>
+        <questionDesc> Which iconic TV featured the main characters, Samantha, Carrie, Cynthia
+            and Charlotte?</questionDesc>
+        <answer>Sex and the City</answer>
+        <clue>The title includes the word of "City"</clue>
         <category>2</category>
         <type>1</type>
     </question>
