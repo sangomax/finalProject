@@ -32,4 +32,20 @@
         <type>3</type>
     </question>
 
+    <question id="5">
+        <questionDesc>How many 'official' lakes are there in the Lake District?</questionDesc>
+        <answer>One - Bassenthwaite Lake (the others are meres or waters)</answer>
+        <clue>The answer is between 1 and 5.</clue>
+        <category>1</category>
+        <type>3</type>
+    </question>
+
+    <question id="6">
+        <questionDesc>How many countries are there in South America?</questionDesc>
+        <answer>12</answer>
+        <clue>The answer is between 10 and 20.</clue>
+        <category>1</category>
+        <type>3</type>
+    </question>
+
 </class>

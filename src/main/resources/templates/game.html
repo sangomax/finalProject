@@ -2,19 +2,12 @@
 <html>
 <head>
     <title>Game</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
     <style>
 
 
- .container {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    background: rgb(14,13,29);
-    height: 768px;
-    background: linear-gradient(12deg, rgba(14,13,29,1) 0%, rgba(44,38,105,1) 100%);
-}
+
 
 .side-one{top: 0px;
     left: 0px;
@@ -25,7 +18,7 @@
     background-color: rgba(0, 0, 0, 0.2);
     /*display:inline;*/
     float:left;}
-    
+
     .side-one p{
         opacity:1;
         color: white;
@@ -37,26 +30,27 @@
     opacity:1;
     color:white;
     margin-bottom:33px;
-}    
+}
 
 .side-two{
     /*width:65%;*/
     width:65%;
     float:left;
-    
+
 }
 body{
     width:100%;
     height:100%;
     padding:0;
     margin:0;
+    overflow: hidden;
 }
 
 .player{
     /*top: 148px;*/
     left: 0px;
     height: 105px;
-    background: rgba(255, 255, 255, 0.1); 
+    background: rgba(255, 255, 255, 0.1);
 }
 .token{
     /*margin-top: 10px;*/
@@ -94,139 +88,166 @@ body{
   top: 0;
   left: 0;
 }
-#roulette-categories {
+.roulette-categories {
   position: absolute;
-  margin:20px 100px;
-  
+  margin:15px 175px;
+    right: 85px;
+  /*transform:rotate(345deg); /*Art & Culture question */
+  /*transform:rotate(80deg); Art & Culture question */
+  /*transform:rotate(50deg); Art & Culture Special question */
+  /*transform:rotate(30deg); Sport & Leisure question */
+  /*transform:rotate(345deg); Sport & Leisure Special question */
+  /*transform:rotate(135deg); History Special question */
+  /*transform:rotate(110deg); History Special question */
+  /*transform:rotate(185deg); Entertainment question */
+  /*transform:rotate(170deg); Entertainment Special question */
+  /*transform:rotate(260deg); Geography question */
+  /*transform:rotate(235deg); Geography Special question */
+  /*transform:rotate(310deg); Science & Nature question */
+  /*transform:rotate(290deg); Science & Nature Special question */
+
+
+  transition: rotate 3s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+
+}
+@keyframes rotate {0% {transform: rotate(-10deg);}
+    100%{transform: rotate(400deg);}}
+@-webkit-keyframes rotate {0% {-webkit-transform: rotate(-10deg);}
+  100% {-webkit-transform: rotate(400deg);}}
+
+.imgr{
+    -webkit-animation: 0.4s rotate linear 7;
+    animation: 0.4s rotate linear 7;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+
+    /*position:relative;*/
 }
 #roulette-triangle {
   position: absolute;
   margin:10px 100px;
-  
+    right: 90px;
 }
 #roulette-base {
   position: absolute;
-  top: 20px;
-  right: 95px;
-  
+  top: 18px;
+  right: 185px;
+
 }
 
-        </style>
+
+
+    </style>
+    <script>
+        function updatePlayerTurn(code, turn) {
+            if(turn === false) {
+                document.getElementById(code).style.background = "none";
+            }
+        }
+
+        function showQuestion(){
+
+        }
+
+        function validQuestion(correctAnswer) {
+            var answer = document.getElementById('answer').value;
+            alert(answer);
+            if(correctAnswer === answer) {
+                alert("Correct");
+                document.getElementById("correct").style.visibility = "visible";
+            } else {
+                alert("Incorrect");
+                document.getElementById("incorrect").style.visibility = "visible";
+            }
+
+        }
+</script>
 </head>
 <body>
 <div class="container">
     <div class="side-one">
         <p class="subheading2 players-heading">Players</p>
-        <div class=player>
-            <img class="token" src="../images/Red Token.png">
-            <span class="player-container">
-                            <p class="player-name">John</p>
-                            <p class="caption player-num">Player 1</p>
+        <div th:each="player : ${players}">
+            <div th:id="${player.codePlayer}" class="player">
+                <img class="token" th:if="${player.colorPlayer == 'Blue'}" src="../images/Blue Token.png">
+                <img class="token" th:if="${player.colorPlayer == 'Red'}" src="../images/Red Token.png">
+                <img class="token" th:if="${player.colorPlayer == 'Green'}" src="../images/Green Token.png">
+                <img class="token" th:if="${player.colorPlayer == 'Yellow'}" src="../images/Yellow Token.png">
+                <img class="token" th:if="${player.colorPlayer == 'Purple'}" src="../images/Purple Token.png">
+                <img class="token" th:if="${player.colorPlayer == 'Orange'}" src="../images/Orange Token.png">
+                <span class="player-container">
+                            <p class="player-name"><span th:text="${player.namePlayer}"/></p>
+                            <p class="caption player-num"><span th:text="'Player ' + ${player.codePlayer}"/></p>
                         </span>
-            <div class=pieces-container>
-                <img class="pieces" style="visibility: none" src="../images/Geography Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Entertainment Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/History Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Art & Culture Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sports&Leisure-Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sciences & Nature Piece.png">
+                <div class=pieces-container th:each="category : ${player.scorePlayer.specialCorrectAnswers}">
+                    <img class="pieces" th:if="${category.colorCategory == '#1563BF'}"
+                         src="../images/Geography Piece.png">
+                    <img class="pieces" th:if="${category.colorCategory == '#D320D3'}"
+                         src="../images/Entertainment Piece.png">
+                    <img class="pieces" th:if="${category.colorCategory == '#F0BF2B'}"
+                         src="../images/History Piece.png">
+                    <img class="pieces" th:if="${category.colorCategory == '#6E22F0'}"
+                         src="../images/Art & Culture Piece.png">
+                    <img class="pieces" th:if="${category.colorCategory == '#128B6E'}"
+                         src="../images/Sports&Leisure-Piece.png">
+                    <img class="pieces" th:if="${category.colorCategory == '#EA7620'}"
+                         src="../images/Sciences & Nature Piece.png">
+                </div>
             </div>
+            <script>updatePlayerTurn([[${player.codePlayer}]],  [[${player.isTurn}]]);</script>
         </div>
-
-        <div class=player style="background:none; visibility:none">
-            <img class="token" src="../images/Green Token.png">
-            <span class="player-container">
-                        <p class="player-name">Olivia</p>
-                        <p class="caption player-num">Player 2</p>
-                    </span>
-            <div class=pieces-container>
-                <img class="pieces" style="visibility: none" src="../images/Geography Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Entertainment Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/History Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Art & Culture Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sports&Leisure-Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sciences & Nature Piece.png">
-            </div>
-        </div>
-
-        <div class=player style="background:none; visibility:none">
-            <img class="token" src="../images/Blue Token.png">
-            <span class="player-container">
-                    <p class="player-name">Peter</p>
-                    <p class="caption player-num">Player 3</p>
-                </span>
-            <div class=pieces-container>
-                <img class="pieces" style="visibility: none" src="../images/Geography Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Entertainment Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/History Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Art & Culture Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sports&Leisure-Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sciences & Nature Piece.png">
-            </div>
-        </div>
-
-        <div class=player style="background:none; visibility:none">
-            <img class="token" src="../images/Orange Token.png">
-            <span class="player-container">
-                    <p class="player-name">Crystal</p>
-                    <p class="caption player-num">Player 4</p>
-                </span>
-            <div class=pieces-container>
-                <img class="pieces" style="visibility: none" src="../images/Geography Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Entertainment Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/History Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Art & Culture Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sports&Leisure-Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sciences & Nature Piece.png">
-            </div>
-        </div>
-
-        <div class=player style="background:none; visibility:none">
-            <img class="token" src="../images/Purple Token.png">
-            <span class="player-container">
-                    <p class="player-name">Matt</p>
-                    <p class="caption player-num">Player 5</p>
-                </span>
-            <div class=pieces-container style="visibility: none">
-                <img class="pieces" style="visibility: none" src="../images/Geography Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Entertainment Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/History Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Art & Culture Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sports&Leisure-Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sciences & Nature Piece.png">
-            </div>
-        </div>
-
-        <div class=player style="background:none; visibility:none" >
-            <img class="token" src="../images/Yellow Token.png">
-            <span class="player-container">
-                    <p class="player-name">Hannah</p>
-                    <p class="caption player-num">Player 6</p>
-                </span>
-            <div class=pieces-container>
-                <img class="pieces" style="visibility: none" src="../images/Geography Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Entertainment Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/History Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Art & Culture Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sports&Leisure-Piece.png">
-                <img class="pieces" style="visibility: none" src="../images/Sciences & Nature Piece.png">
-            </div>
-        </div>
-
-
-
     </div>
     <div class="side-two">
 
-        <img src="../static/images/Trivia-logo.png" style="margin:auto; width:12%; transform:rotate(1deg);margin:84px 44% 0px 44%">
+        <img src="/images/Trivia-logo.png"
+             style="margin:auto; width:12%; transform:rotate(1deg);margin:84px 44% 0px 44%">
 
         <div class="roulette">
-            <img id="roulette-base" src="../images/Roulette -Base.png";>
+            <img id="roulette-base" src="/images/Roulette -Base.png" ;>
 
-            <img id="roulette-categories" src="../images/Roulette - Categories.png";>
-            <img id="roulette-triangle" src="../images/Roulette -triangle.png";>
+            <img class="imgr roulette-categories" style="transform:rotate(260deg);"
+                 th:if="${randonQuestion.category.codeCategory == 1 && randonQuestion.type == 1}"
+                 src="/images/Roulette - Categories.png">
+            <img class="imgr roulette-categories" style="transform:rotate(235deg);"
+                 th:if="${randonQuestion.category.codeCategory == 1 && randonQuestion.type == 2}"
+                 src="/images/Roulette - Categories.png">
+            <img class="imgr roulette-categories" style="transform:rotate(185deg);"
+                 th:if="${randonQuestion.category.codeCategory == 2 && randonQuestion.type == 1}"
+                 src="/images/Roulette - Categories.png">
+            <img class="imgr roulette-categories" style="transform:rotate(170deg);"
+                 th:if="${randonQuestion.category.codeCategory == 2 && randonQuestion.type == 2}"
+                 src="/images/Roulette - Categories.png">
+            <img class="imgr roulette-categories" style="transform:rotate(135deg);"
+                 th:if="${randonQuestion.category.codeCategory == 3 && randonQuestion.type == 1}"
+                 src="/images/Roulette - Categories.png">
+            <img class="imgr roulette-categories" style="transform:rotate(110deg);"
+                 th:if="${randonQuestion.category.codeCategory == 3 && randonQuestion.type == 2}"
+                 src="/images/Roulette - Categories.png">
+            <img class="imgr roulette-categories" style="transform:rotate(30deg);"
+                 th:if="${randonQuestion.category.codeCategory == 4 && randonQuestion.type == 1}"
+                 src="/images/Roulette - Categories.png">
+            <img class="imgr roulette-categories" style="transform:rotate(345deg);"
+                 th:if="${randonQuestion.category.codeCategory == 4 && randonQuestion.type == 2}"
+                 src="/images/Roulette - Categories.png">
+            <img class="imgr roulette-categories" style="transform:rotate(80deg);"
+                 th:if="${randonQuestion.category.codeCategory == 5 && randonQuestion.type == 1}"
+                 src="/images/Roulette - Categories.png">
+            <img class="imgr roulette-categories" style="transform:rotate(50deg);"
+                 th:if="${randonQuestion.category.codeCategory == 5 && randonQuestion.type == 2}"
+                 src="/images/Roulette - Categories.png">
+            <img class="imgr roulette-categories" style="transform:rotate(310deg);"
+                 th:if="${randonQuestion.category.codeCategory == 6 && randonQuestion.type == 1}"
+                 src="/images/Roulette - Categories.png">
+            <img class="imgr roulette-categories" style="transform:rotate(290deg);"
+                 th:if="${randonQuestion.category.codeCategory == 6 && randonQuestion.type == 2}"
+                 src="/images/Roulette - Categories.png">
+
+            <img id="roulette-triangle" src="/images/Roulette -triangle.png" ;>
 
         </div>
+        <script>showQuestion();</script>
     </div>
 </div>
 

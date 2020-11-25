@@ -3,7 +3,19 @@
 <head>
     <title>Add user</title>
     <meta charset="UTF-8">
-    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <!--<link th:href="@{/css/style.css}" rel="stylesheet"/>-->
+    <style>
+        body{
+            width:100%;
+            height:100%;
+            padding:0;
+            margin:0;
+            margin-top:50px;
+            margin-bottom:50px;
+            overflow: hidden;
+        }
+    </style>
     <script>
         function myFunction(v,p) {
             if(v == 1) {
@@ -78,7 +90,7 @@
 </head>
 <body class="general-background">
 
-<form action="#" th:action="@{addPlayers}" th:object="${player}" method="post">
+<form action="#" th:action="@{/game}" th:object="${player}" method="post">
     <div class="divTable general-background" id="targetElement">
         <div class="headRow">
             <div class="divCell" align="left" style="width:5%;">&nbsp;<a href="/"> <img src="/images/Arrow.png" width="30" height="30"> </a></div>
@@ -246,10 +258,15 @@
         <div class="divRow_button">
             <div class="divCell" align="left" style="width:5%;">&nbsp;&nbsp;&nbsp;</div>
             <div class="divCell" align="center" style="width:95%;">
-                <input type="submit" value="Let's Play" class="buttons"/>
+                <input type="submit" value="Let's Play" class="buttons button-shape index-button"/>
                 <!--<input type="reset" value="Reset" class="buttons"/></div>-->
             </div>
 
+        </div>
+        <div class="divRow">
+            <br/>
+            <br/>
+            <br/>
         </div>
     </div>
 </form>

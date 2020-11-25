@@ -12,25 +12,39 @@ import java.util.Random;
 @Service
 public class testeServer {
 
-    private List<Question> allQuestions = new ArrayList<>();
+    private List<Question> allCommunSpecialQuestions = new ArrayList<>();
+
+    private List<Question> allFinalQuestions = new ArrayList<>();
 
     private List<Player> playerList = new ArrayList<>();
 
     public void readQuestions() {
         StaXParser read = new StaXParser();
-
-        List<Question> readQuestions = read.readConfig(System.getProperty("user.dir") + "/src/main/java/com/example/xml/questions.xml");
-        for (Question item : readQuestions) {
-            getAllQuestions().add(item);
-        }
+        final String PATH = System.getProperty("user.dir");
+        List<Question> questionsCommunSpecial = new ArrayList<>();
+        questionsCommunSpecial.addAll(read.readConfig(PATH + "/src/main/java/com/example/xml/GeographyQuestions.xml"));
+        questionsCommunSpecial.addAll(read.readConfig(PATH + "/src/main/java/com/example/xml/EntertainmentQuestions.xml"));
+        questionsCommunSpecial.addAll(read.readConfig(PATH + "/src/main/java/com/example/xml/ArtCultureQuestions.xml"));
+        questionsCommunSpecial.addAll(read.readConfig(PATH + "/src/main/java/com/example/xml/HistoryQuestions.xml"));
+        questionsCommunSpecial.addAll(read.readConfig(PATH + "/src/main/java/com/example/xml/ScienceNatureQuestions.xml"));
+        questionsCommunSpecial.addAll(read.readConfig(PATH + "/src/main/java/com/example/xml/SportLeisureQuestions.xml"));
+        setAllCommunSpecialQuestions(questionsCommunSpecial);
     }
 
-    public List<Question> getAllQuestions() {
-        return allQuestions;
+    public List<Question> getAllCommunSpecialQuestions() {
+        return allCommunSpecialQuestions;
     }
 
-    public void setAllQuestions(List<Question> allQuestions) {
-        this.allQuestions = allQuestions;
+    public void setAllCommunSpecialQuestions(List<Question> allCommunSpecialQuestions) {
+        this.allCommunSpecialQuestions = allCommunSpecialQuestions;
+    }
+
+    public List<Question> getAllFinalQuestions() {
+        return allFinalQuestions;
+    }
+
+    public void setAllFinalQuestions(List<Question> allFinalQuestions) {
+        this.allFinalQuestions = allFinalQuestions;
     }
 
     public Integer getRandomNumber(int maxNum) {
