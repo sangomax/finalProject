@@ -33,4 +33,20 @@
         <type>3</type>
     </question>
 
+    <question id="5">
+        <questionDesc>Name The 3 Female Characters In The Game Cluedo</questionDesc>
+        <answer>Mrs White, Miss Scarlet, Mrs Peacock</answer>
+        <clue>Mrs W????, Miss S??????, Mrs P??????</clue>
+        <category>6</category>
+        <type>3</type>
+    </question>
+
+    <question id="6">
+        <questionDesc>What do you call it when a player makes three back to back strikes in bowling?</questionDesc>
+        <answer>Turkey</answer>
+        <clue>T?????</clue>
+        <category>6</category>
+        <type>3</type>
+    </question>
+
 </class>
