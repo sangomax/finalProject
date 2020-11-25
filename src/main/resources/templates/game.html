@@ -134,8 +134,70 @@ body{
   position: absolute;
   top: 18px;
   right: 185px;
-
 }
+
+
+
+.popup {
+  margin: 200px 700px;
+  padding: 20px;
+  background: #14122A 0% 0% no-repeat padding-box;
+  border: 5px solid #E74767;
+  border-radius: 10px;
+  width: 600px;
+  color:white;
+  text-align: center;
+  height:400px;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+.popup .close:hover {
+  color: #E74767;
+}
+.popup .content {
+  max-height: 100%;
+  overflow: auto;
+}
+.content{
+    margin: 20px 63px 27px 63px;
+}
+
+@media screen and (max-width: 400px){
+  .box{
+    width: 30%;
+  }
+  .popup{
+    width: 30%;
+  }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+
 
 
 
@@ -148,7 +210,7 @@ body{
         }
 
         function showQuestion(){
-
+            document.getElementById('callPopUp').click();
         }
 
         function validQuestion(correctAnswer) {
@@ -156,14 +218,18 @@ body{
             alert(answer);
             if(correctAnswer === answer) {
                 alert("Correct");
-                document.getElementById("correct").style.visibility = "visible";
+                /*document.getElementById("correct").style.visibility = "visible";*/
             } else {
                 alert("Incorrect");
-                document.getElementById("incorrect").style.visibility = "visible";
+                /*document.getElementById("incorrect").style.visibility = "visible";*/
             }
+            setTimeout(function(){document.getElementById('callJava').click()},3000);
+       }
 
-        }
-</script>
+
+
+
+    </script>
 </head>
 <body>
 <div class="container">
@@ -225,30 +291,134 @@ body{
             <img class="imgr roulette-categories" style="transform:rotate(110deg);"
                  th:if="${randonQuestion.category.codeCategory == 3 && randonQuestion.type == 2}"
                  src="/images/Roulette - Categories.png">
-            <img class="imgr roulette-categories" style="transform:rotate(30deg);"
+            <img class="imgr roulette-categories" style="transform:rotate(80deg);"
                  th:if="${randonQuestion.category.codeCategory == 4 && randonQuestion.type == 1}"
                  src="/images/Roulette - Categories.png">
-            <img class="imgr roulette-categories" style="transform:rotate(345deg);"
+            <img class="imgr roulette-categories" style="transform:rotate(50deg);"
                  th:if="${randonQuestion.category.codeCategory == 4 && randonQuestion.type == 2}"
                  src="/images/Roulette - Categories.png">
-            <img class="imgr roulette-categories" style="transform:rotate(80deg);"
+            <img class="imgr roulette-categories" style="transform:rotate(310deg);"
                  th:if="${randonQuestion.category.codeCategory == 5 && randonQuestion.type == 1}"
                  src="/images/Roulette - Categories.png">
-            <img class="imgr roulette-categories" style="transform:rotate(50deg);"
+            <img class="imgr roulette-categories" style="transform:rotate(290deg);"
                  th:if="${randonQuestion.category.codeCategory == 5 && randonQuestion.type == 2}"
                  src="/images/Roulette - Categories.png">
-            <img class="imgr roulette-categories" style="transform:rotate(310deg);"
+            <img class="imgr roulette-categories" style="transform:rotate(30deg);"
                  th:if="${randonQuestion.category.codeCategory == 6 && randonQuestion.type == 1}"
                  src="/images/Roulette - Categories.png">
-            <img class="imgr roulette-categories" style="transform:rotate(290deg);"
+            <img class="imgr roulette-categories" style="transform:rotate(345deg);"
                  th:if="${randonQuestion.category.codeCategory == 6 && randonQuestion.type == 2}"
                  src="/images/Roulette - Categories.png">
 
             <img id="roulette-triangle" src="/images/Roulette -triangle.png" ;>
 
+            <a id="callPopUp" style="visibility:hidden;" href="#popup1"/>
         </div>
-        <script>showQuestion();</script>
+        <script defer="defer"> setTimeout(function(){showQuestion();},3200)  </script>
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <form action="#" th:action="@{answer}" th:object="${player}" method="post">
+                    <a class="close" href="#">x</a>
+                    <div class="content" style="overflow: hidden;">
+                        <div class="divTable" id="targetElement">
+                            <div class="headRow" style="width:100%">
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 1 && randonQuestion.type == 1}"
+                                     src="../images/Geography Question.png" width="500" height="100">
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 1 && randonQuestion.type == 2}"
+                                     src="../images/Geography Special Question.png" width="500" height="100">
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 2 && randonQuestion.type == 1}"
+                                     src="../images/Entertainment Question.png" width="500" height="100">
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 2 && randonQuestion.type == 2}"
+                                     src="../images/Entertainment Special Question.png" width="500" height="100">
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 3 && randonQuestion.type == 1}"
+                                     src="../images/History Question.png" width="500" height="100">
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 3 && randonQuestion.type == 2}"
+                                     src="../images/History Special Question.png" width="500" height="100">
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 4 && randonQuestion.type == 1}"
+                                     src="../images/Art & Culture Question.png" width="500" height="100">
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 4 && randonQuestion.type == 2}"
+                                     src="../images/Art & Culture Special Question.png" width="500" height="100">
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 5 && randonQuestion.type == 1}"
+                                     src="../images/Science & Nature Question.png" width="500" height="100">
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 5 && randonQuestion.type == 2}"
+                                     src="../images/Science & Nature Special Question.png" width="500" height="100">
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 6 && randonQuestion.type == 1}"
+                                     src="../images/Sport & Leisure Question.png" width="500" height="100">
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 6 && randonQuestion.type == 2}"
+                                     src="../images/Sport & Leisure Special Question.png" width="500" height="100">
+                                <img class="pieces" th:if="${randonQuestion.type == 3}"
+                                     src="../images/Final question.png"
+                                     width="500" height="100">
+                            </div>
+
+                            <div class="divCell" align="center" style="width:100%; ">
+                                <div class="flip-container" id="flip-toggle" align="center">
+                                    <div class="flipper">
+                                        <table class="front" th:bgcolor="${randonQuestion.category.colorCategory}" style="heigh:50px;">
+                                            <tr>
+                                                <td>
+                                                    <span th:text="${randonQuestion.question}"
+                                                          class="body-text"
+                                                          style="text-align: center;"/>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- front content -->
+                                        <table class="back" th:bgcolor="${randonQuestion.category.colorCategory}">
+                                            <tr>
+                                                <td class="body-text"
+                                                    style="font-weight: bold; text-decoration: underline;">
+                                                    Answer
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="body-text"><span
+                                                        th:text="${randonQuestion.answer}"/></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="headRow" align="center">
+                                <div class="divCell" style="width:100%; margin-top:20px;">
+                                    <label class="subheading2 players-heading" style="margin-right:10px"> Answer: </label>
+                                    <input id="answer" type="text" th:field="${player.answer}" class="input-text"  style="margin-right:10px">
+                                    <button type="button"
+                                            th:onclick="document.querySelector('#flip-toggle').classList.toggle('hover'); validQuestion([[${randonQuestion.answer}]]); "
+                                            class="buttons"> Send
+                                    </button>
+                                    <button type="submit" id="callJava" style="visibility:hidden;"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <!--<p class="subheading1">Spin the roulette and answer the question related to the topic</p>
+                <p class="subheading2" styles="margin-top:56px">Answering questions</p>
+                <p class="body-text">If answering correctly, you keep continue spinning the roulette.  If you don’t answer correctly, you miss your turn.</p>
+                <p class="subheading2">Special questions</p>
+                <p class="body-text">If you the question correctly, you will get a wedge for your circular token. If you have the wedge offered by that question, then you will answer as a normal question.</p>
+                <p class="subheading2">Final question</p>
+                <p class="body-text">Once you got all the wedges,  you must answer the final question correctly to win the game. If you fail you will try again when it would be your turn.</p>-->
+            </div>
+        </div>
     </div>
+</div>
+
 </div>
 
 

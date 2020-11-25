@@ -19,16 +19,18 @@ public class GreetingController {
     Question question;
     Player playerTurn;
 
-    public GreetingController() {
-        this.testeServer.readQuestions();
-    }
-
-
     @GetMapping("/greeting")
     public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
         model.addAttribute("name", name);
         System.out.println(name);
         return "greeting";
+    }
+
+    @GetMapping("/score")
+    public String score(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+        System.out.println(name);
+        return "score";
     }
 
     @GetMapping("/addPlayers")
@@ -76,6 +78,26 @@ public class GreetingController {
 
         this.testeServer.getPlayerList().get(0).setIsTurn("true");
 
+        int questionNumber = this.testeServer.getRandomNumber(this.testeServer.getAllCommunSpecialQuestions().size());
+        this.question = this.testeServer.getAllCommunSpecialQuestions().get(questionNumber);
+        this.playerTurn = this.testeServer.getPlayerList().get(0);
+        model.addAttribute("randonQuestion", this.question);
+        model.addAttribute("players", this.testeServer.getPlayerList());
+        return "game";
+    }
+
+    @RequestMapping(value = "answer")
+    public String answerQuestion(Player player, Model model, Question randonQuestion, String answer) {
+
+        if(answer.equalsIgnoreCase(this.question.getAnswer())) {
+            model.addAttribute("validate", true);
+//            this.testeServer.updatePlayer(this.playerTurn, this.question);
+        } else {
+
+//            this.playerTurn = this.testeServer.changePlayer(this.playerTurn);
+        }
+
+        player.setAnswer("");
         int questionNumber = this.testeServer.getRandomNumber(this.testeServer.getAllCommunSpecialQuestions().size());
         this.question = this.testeServer.getAllCommunSpecialQuestions().get(questionNumber);
         this.playerTurn = this.testeServer.getPlayerList().get(0);
