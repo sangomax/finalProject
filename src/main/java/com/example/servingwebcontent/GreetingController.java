@@ -1,6 +1,7 @@
 package com.example.servingwebcontent;
 
 import com.example.bean.Player;
+import com.example.bean.Score;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -72,6 +73,12 @@ public class GreetingController {
 
         System.out.println("Let's play!");
         return "game";
+    }
+
+    @GetMapping("/score")
+    public String sendForm(Score score) {
+        System.out.println("get" + score.getNumCorrectAnswers());
+        return "score";
     }
 
 //    @RequestMapping(value = "addPlayers", method = RequestMethod.POST)
