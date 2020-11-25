@@ -1,6 +1,7 @@
 package com.example.servingwebcontent;
 
 import com.example.bean.Player;
+import com.example.bean.Question;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +15,9 @@ import java.util.ArrayList;
 public class GreetingController {
 
     testeServer testeServer = new testeServer();
+
+    Question question;
+    Player playerTurn;
 
     public GreetingController() {
         this.testeServer.readQuestions();
@@ -43,9 +47,9 @@ public class GreetingController {
     @GetMapping("/listQuestions")
     public String showAll(Model model) {
 
-        model.addAttribute("questions", this.testeServer.getAllQuestions());
-        int questionNumber = this.testeServer.getRandomNumber(this.testeServer.getAllQuestions().size());
-        model.addAttribute("randonQuestion", this.testeServer.getAllQuestions().get(questionNumber));
+        model.addAttribute("questions", this.testeServer.getAllCommunSpecialQuestions());
+        int questionNumber = this.testeServer.getRandomNumber(this.testeServer.getAllCommunSpecialQuestions().size());
+        model.addAttribute("randonQuestion", this.testeServer.getAllCommunSpecialQuestions().get(questionNumber));
         return "listQuestions";
     }
 
@@ -58,19 +62,25 @@ public class GreetingController {
             this.testeServer.getPlayerList().add(new Player(name[i],color[i],(i+1)));
         }
         model.addAttribute("players", this.testeServer.getPlayerList());
-        return "game";
+        return "/game";
     }
 
     @PostMapping("/game")
-    public String game(Model model) {
-        model.addAttribute("players", testeServer.getPlayerList());
-        for(Player player: this.testeServer.getPlayerList())
-        {
-            System.out.println(player.getNamePlayer());
-            System.out.println(player.getColorPlayer());
+    public String game(Player player, Model model) {
+        Object ob = model.getAttribute("player");
+        String[] name = player.getNamePlayer().split(",");
+        String[] color = player.getColorPlayer().split(",");
+        for(int i = 0; i < name.length; i++) {
+            this.testeServer.getPlayerList().add(new Player(name[i],color[i],(i+1)));
         }
 
-        System.out.println("Let's play!");
+        this.testeServer.getPlayerList().get(0).setIsTurn("true");
+
+        int questionNumber = this.testeServer.getRandomNumber(this.testeServer.getAllCommunSpecialQuestions().size());
+        this.question = this.testeServer.getAllCommunSpecialQuestions().get(questionNumber);
+        this.playerTurn = this.testeServer.getPlayerList().get(0);
+        model.addAttribute("randonQuestion", this.question);
+        model.addAttribute("players", this.testeServer.getPlayerList());
         return "game";
     }
 

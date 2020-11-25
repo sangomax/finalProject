@@ -10,12 +10,17 @@ public class Player {
 
     private Integer codePlayer;
 
+    private String isTurn;
+
+    private String answer;
+
 
     public Player(String namePlayer, String colorPlayer, Integer codePlayer) {
         this.namePlayer = namePlayer;
         this.colorPlayer = colorPlayer;
         this.codePlayer = codePlayer;
         this.scorePlayer = new Score();
+        this.isTurn = "false";
     }
 
     public String getNamePlayer() {
@@ -48,5 +53,21 @@ public class Player {
 
     public void setCodePlayer(Integer codePlayer) {
         this.codePlayer = codePlayer;
+    }
+
+    public String getIsTurn() {
+        return isTurn;
+    }
+
+    public void setIsTurn(String isTurn) {
+        this.isTurn = isTurn;
+    }
+
+    public String getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
     }
 }
