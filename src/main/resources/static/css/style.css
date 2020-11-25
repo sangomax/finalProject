@@ -190,8 +190,6 @@ background: linear-gradient(12deg, rgba(14,13,29,1) 0%, rgba(44,38,105,1) 100%);
 /*Buttons*/
 
 .button-shape{
-    margin-bottom:28px;
-    margin-left:526px;
     width:316px;
     height:56px;
     background: #14122A 0% 0% no-repeat padding-box;
@@ -215,6 +213,15 @@ background: linear-gradient(12deg, rgba(14,13,29,1) 0%, rgba(44,38,105,1) 100%);
 }
 .game-button:hover{
     color:#4791E7;
+}
+
+.container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background: rgb(14,13,29);
+    height: 768px;
+    background: linear-gradient(12deg, rgba(14,13,29,1) 0%, rgba(44,38,105,1) 100%);
 }
 
 
