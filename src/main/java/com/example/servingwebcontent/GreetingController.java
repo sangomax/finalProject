@@ -2,6 +2,7 @@ package com.example.servingwebcontent;
 
 import com.example.bean.Player;
 import com.example.bean.Question;
+import com.example.bean.Score;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,13 +25,6 @@ public class GreetingController {
         model.addAttribute("name", name);
         System.out.println(name);
         return "greeting";
-    }
-
-    @GetMapping("/score")
-    public String score(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", name);
-        System.out.println(name);
-        return "score";
     }
 
     @GetMapping("/addPlayers")
@@ -86,6 +80,7 @@ public class GreetingController {
         return "game";
     }
 
+
     @RequestMapping(value = "answer")
     public String answerQuestion(Player player, Model model, Question randonQuestion, String answer) {
 
@@ -104,6 +99,12 @@ public class GreetingController {
         model.addAttribute("randonQuestion", this.question);
         model.addAttribute("players", this.testeServer.getPlayerList());
         return "game";
+    }
+
+    @GetMapping("/score")
+    public String sendForm(Score score) {
+        System.out.println("get" + score.getNumCorrectAnswers());
+        return "score";
     }
 
 //    @RequestMapping(value = "addPlayers", method = RequestMethod.POST)
