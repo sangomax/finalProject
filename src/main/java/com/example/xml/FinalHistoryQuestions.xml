@@ -34,4 +34,21 @@
         <category>3</category>
         <type>3</type>
     </question>
+
+    <question id="5">
+        <questionDesc>Established in 1872, what became the world’s first national park?</questionDesc>
+        <answer>Yellowstone National Park</answer>
+        <clue>Y?????????? National Park</clue>
+        <category>3</category>
+        <type>3</type>
+    </question>
+
+    <question id="6">
+        <questionDesc>In 1946 the ringgit was established as the official monetary unit of which Southeast Asian country?</questionDesc>
+        <answer>Malaysia</answer>
+        <clue>No Hint</clue>
+        <category>3</category>
+        <type>3</type>
+    </question>
+
 </class>
