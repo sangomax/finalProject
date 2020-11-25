@@ -18,6 +18,10 @@ public class testeServer {
 
     private List<Player> playerList = new ArrayList<>();
 
+    public testeServer() {
+        this.readQuestions();
+    }
+
     public void readQuestions() {
         StaXParser read = new StaXParser();
         final String PATH = System.getProperty("user.dir");
