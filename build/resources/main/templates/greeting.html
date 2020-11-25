@@ -13,138 +13,259 @@
 </body>
 </html>-->
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org" class="general-background">
+<html>
 <head>
-    <title>Score</title>
+    <title>Game</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <style>
 
-     body{
-    width:1366px;
-    height:766px;
+
+
+
+.side-one{top: 0px;
+    left: 0px;
+    width:35%;
+    height: 768px;
+    /*background: #000000 0% 0% no-repeat padding-box;
+    opacity: 0.2;*/
+    background-color: rgba(0, 0, 0, 0.2);
+    /*display:inline;*/
+    float:left;}
+
+    .side-one p{
+        opacity:1;
+        color: white;
+    }
+.players-heading{
+    padding-top:31px;
+    text-align:center;
+    margin:auto;
+    opacity:1;
+    color:white;
+    margin-bottom:33px;
+}
+
+.side-two{
+    /*width:65%;*/
+    width:65%;
+    float:left;
+
+}
+body{
+    width:100%;
+    height:100%;
     padding:0;
     margin:0;
 }
 
-.score-cont{
-margin: 37px 135px 28px 135px;
-width: 1094px;
-height: 703px;
-background: #14122A 0% 0% no-repeat padding-box;
-border: 5px solid #4791E7;
-border-radius: 10px;
-opacity: 1;
-}
-
-.player-score{
-    margin-left:41px;
-    margin-right:24px;
-}
-.results{
-    margin-top:18px;
-    margin-bottom:18px;
-}
-table {
-    border-collapse: collapse;
-    /*height:413px;*/
-}
-tr { border: none; }
-td{
-    height:80px;
-    text-align:center;
-    }
-.td-line {
-  border-left: solid 3px #4791E7;
-}
-.winner-bg{
+.player{
+    /*top: 148px;*/
+    left: 0px;
+    height: 105px;
     background: rgba(255, 255, 255, 0.1);
 }
-.winner-bg td{
-    height:60px;
+.token{
+    /*margin-top: 10px;*/
+    float:left;
+    margin-left:30px;
+    margin-top:2px;
+}
+ .player-container{
+     float:left;
+     display:inline;
+     margin-left:15px;
+     margin-bottom:0;
+ }
+ .player-name{
+     margin-bottom:0px;
+     margin-top:25px;
+ }
+ .player-num{
+     margin-bottom:0;
+     margin-top:9px;
+ }
+
+ .pieces-container{
+     margin: 15px 25px 0px 0px;
+     float:right;
+     width:170px;
+ }
+ .pieces-container img{
+    width: 40px;
+ }
+
+ .roulette {
+  position: relative;
+  margin-top:30px;
+  top: 0;
+  left: 0;
+}
+#roulette-categories {
+  position: absolute;
+  margin:15px 175px;
+  transform:rotate(345deg); /*Art & Culture question */
+  /*transform:rotate(80deg); Art & Culture question */
+  /*transform:rotate(50deg); Art & Culture Special question */
+  /*transform:rotate(30deg); Sport & Leisure question */
+  /*transform:rotate(345deg); Sport & Leisure Special question */
+  /*transform:rotate(135deg); History Special question */
+  /*transform:rotate(110deg); History Special question */
+  /*transform:rotate(185deg); Entertainment question */
+  /*transform:rotate(170deg); Entertainment Special question */
+  /*transform:rotate(260deg); Geography question */
+  /*transform:rotate(235deg); Geography Special question */
+  /*transform:rotate(310deg); Science & Nature question */
+  /*transform:rotate(290deg); Science & Nature Special question */
+
+
+  transition: rotate 3s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+
+}
+@keyframes rotate {0% {transform: rotate(-10deg);}
+    100%{transform: rotate(400deg);}}
+@-webkit-keyframes rotate {0% {-webkit-transform: rotate(-10deg);}
+  100% {-webkit-transform: rotate(400deg);}}
+.imgr{
+    -webkit-animation: 0.4s rotate linear 7;
+    animation: 0.4s rotate linear 7;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    /*position:relative;*/
+}
+#roulette-triangle {
+  position: absolute;
+  margin:10px 100px;
+
+}
+#roulette-base {
+  position: absolute;
+  top: 20px;
+  right: 95px;
+
 }
 
-
         </style>
-
 </head>
 <body>
-<div class="container ">
-    <div class="score-cont">
-        <div>
-            <p class="heading" style="margin:50px 45% 53px 45%; color:white">Score</p>
+<div class="container">
+    <div class="side-one">
+        <p class="subheading2 players-heading">Players</p>
+        <div class=player>
+            <img class="token" src="/images/Red Token.png">
+            <span class="player-container">
+                            <p class="player-name">John</p>
+                            <p class="caption player-num">Player 1</p>
+                        </span>
+            <div class=pieces-container>
+                <img class="pieces" style="visibility: none" src="/images/Geography Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Entertainment Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/History Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Art & Culture Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Sports&Leisure-Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Sciences & Nature Piece.png">
+            </div>
         </div>
-        <table class="egt" style="color:white">
-            <tr class="winner-bg" style="text-align: center; height:60px; background:none;">
-                <td style="width:138px"></td>
-                <td class="body-text results td-line" style="font-weight:700;margin-left:35px; margin-right:35px;">Answered Questions</td>
-                <td class="body-text results td-line" style="font-weight:700;margin-left:35px; margin-right:35px;">Correct Answers</td>
-                <td class="body-text results td-line" style="font-weight:700;margin-left:35px; margin-right:35px;">Incorrect Answers</td>
-                <td class="body-text results td-line" style="font-weight:700; margin-left:35px; margin-right:35px;">Correct Special Questions</td>
-                <td class="body-text results td-line" style="font-weight:700; margin-left:35px; margin-right:35px;">Incorrect Special Questions</td>
-            </tr>
 
-            <tr class="winner-bg" >
-                <td class="body-text player-score results" ><span style="font-weight:700;height:100%; ;margin-left:35px; margin-right:24px;">Player 1</span></td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-            </tr>
-            <tr class="winner-bg" style="background:none;">
-                <td class="body-text player-score results" ><span style="font-weight:700;height:100%; ;margin-left:35px; margin-right:24px;">Player 2</span></td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-            </tr>
-            <tr class="winner-bg" style="background:none;">
-                <td class="body-text player-score results" ><span style="font-weight:700;height:100%; ;margin-left:35px; margin-right:24px;">Player 3</span></td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-            </tr>
-            <tr class="winner-bg" style="background:none;">
-                <td class="body-text player-score results" ><span style="font-weight:700;height:100%; ;margin-left:35px; margin-right:24px;">Player 4</span></td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-            </tr>
-            <tr class="winner-bg" style="background:none;">
-                <td class="body-text player-score results" ><span style="font-weight:700;height:100%; ;margin-left:35px; margin-right:24px;">Player 5</span></td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-            </tr>
-            <tr class="winner-bg" style="background:none;">
-                <td class="body-text player-score results" ><span style="font-weight:700;height:100%; ;margin-left:35px; margin-right:24px;">Player 6</span></td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-            </tr>
+        <div class=player style="background:none; visibility:none">
+            <img class="token" src="/images/Green Token.png">
+            <span class="player-container">
+                        <p class="player-name">Olivia</p>
+                        <p class="caption player-num">Player 2</p>
+                    </span>
+            <div class=pieces-container>
+                <img class="pieces" style="visibility: none" src="/images/Geography Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Entertainment Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/History Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Art & Culture Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Sports&Leisure-Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Sciences & Nature Piece.png">
+            </div>
+        </div>
 
-        </table>
-        <div class="body-text" style="margin-top:51px;">
-            <div  style="margin-left:215px;float:left; display:inline">
-                <button onclick="window.location.href='/game'" class="game-button button-shape button">Play Again</button>
+        <div class=player style="background:none; visibility:none">
+            <img class="token" src="/images/Blue Token.png">
+            <span class="player-container">
+                    <p class="player-name">Peter</p>
+                    <p class="caption player-num">Player 3</p>
+                </span>
+            <div class=pieces-container>
+                <img class="pieces" style="visibility: none" src="/images/Geography Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Entertainment Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/History Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Art & Culture Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Sports&Leisure-Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Sciences & Nature Piece.png">
             </div>
-            <div style="float:left; display:inline; margin-left:31px">
-                <button onclick="window.location.href='/'" class="game-button button-shape button">End Game</button>
+        </div>
+
+        <div class=player style="background:none; visibility:none">
+            <img class="token" src="/images/Orange Token.png">
+            <span class="player-container">
+                    <p class="player-name">Crystal</p>
+                    <p class="caption player-num">Player 4</p>
+                </span>
+            <div class=pieces-container>
+                <img class="pieces" style="visibility: none" src="/images/Geography Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Entertainment Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/History Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Art & Culture Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Sports&Leisure-Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Sciences & Nature Piece.png">
             </div>
+        </div>
+
+        <div class=player style="background:none; visibility:none">
+            <img class="token" src="/images/Purple Token.png">
+            <span class="player-container">
+                    <p class="player-name">Matt</p>
+                    <p class="caption player-num">Player 5</p>
+                </span>
+            <div class=pieces-container style="visibility: none">
+                <img class="pieces" style="visibility: none" src="/images/Geography Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Entertainment Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/History Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Art & Culture Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Sports&Leisure-Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Sciences & Nature Piece.png">
+            </div>
+        </div>
+
+        <div class=player style="background:none; visibility:none" >
+            <img class="token" src="/images/Yellow Token.png">
+            <span class="player-container">
+                    <p class="player-name">Hannah</p>
+                    <p class="caption player-num">Player 6</p>
+                </span>
+            <div class=pieces-container>
+                <img class="pieces" style="visibility: none" src="/images/Geography Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Entertainment Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/History Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Art & Culture Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Sports&Leisure-Piece.png">
+                <img class="pieces" style="visibility: none" src="/images/Sciences & Nature Piece.png">
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="side-two">
+
+        <img src="/images/Trivia-logo.png" style="margin:auto; width:12%; transform:rotate(1deg);margin:84px 44% 0px 44%">
+
+        <div class="roulette">
+            <img id="roulette-base" src="/images/Roulette -Base.png";>
+
+            <img id="roulette-categories" class="imgr" src="/images/Roulette - Categories.png";>
+            <img id="roulette-triangle" src="/images/Roulette -triangle.png";>
 
         </div>
     </div>
 </div>
-</body>
 
+
+</body>
 </html>

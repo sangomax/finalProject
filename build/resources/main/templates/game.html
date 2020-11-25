@@ -90,7 +90,36 @@ body{
 #roulette-categories {
   position: absolute;
   margin:20px 100px;
+  transform:rotate(345deg); /*Art & Culture question */
+  /*transform:rotate(80deg); Art & Culture question */
+  /*transform:rotate(50deg); Art & Culture Special question */
+  /*transform:rotate(30deg); Sport & Leisure question */
+  /*transform:rotate(345deg); Sport & Leisure Special question */
+  /*transform:rotate(135deg); History Special question */
+  /*transform:rotate(110deg); History Special question */
+  /*transform:rotate(185deg); Entertainment question */
+  /*transform:rotate(170deg); Entertainment Special question */
+  /*transform:rotate(260deg); Geography question */
+  /*transform:rotate(235deg); Geography Special question */
+  /*transform:rotate(310deg); Science & Nature question */
+  /*transform:rotate(290deg); Science & Nature Special question */
+
+
+  transition: rotate 3s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
   
+}
+@keyframes rotate {0% {transform: rotate(-10deg);}
+    100%{transform: rotate(400deg);}}
+@-webkit-keyframes rotate {0% {-webkit-transform: rotate(-10deg);}
+  100% {-webkit-transform: rotate(400deg);}}
+.imgr{
+    -webkit-animation: 0.4s rotate linear 7;
+    animation: 0.4s rotate linear 7;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    /*position:relative;*/
 }
 #roulette-triangle {
   position: absolute;
@@ -216,7 +245,7 @@ body{
         <div class="roulette">
             <img id="roulette-base" src="../static/images/Roulette -Base.png";>
 
-            <img id="roulette-categories" src="../static/images/Roulette - Categories.png";>
+            <img id="roulette-categories" class="imgr" src="../static/images/Roulette - Categories.png";>
             <img id="roulette-triangle" src="../static/images/Roulette -triangle.png";>
 
         </div>
