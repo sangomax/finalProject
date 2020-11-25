@@ -32,4 +32,20 @@
         <type>3</type>
     </question>
 
+    <question id="5">
+        <questionDesc> Which animal symbolizes good luck in Europe?</questionDesc>
+        <answer>Ladybug</answer>
+        <clue>L??????</clue>
+        <category>5</category>
+        <type>3</type>
+    </question>
+
+    <question id="6">
+        <questionDesc>What is the nearest planet to the sun?</questionDesc>
+        <answer>Mercury</answer>
+        <clue>M??????</clue>
+        <category>5</category>
+        <type>3</type>
+    </question>
+
 </class>

@@ -32,4 +32,20 @@
         <type>3</type>
     </question>
 
+    <question id="5">
+        <questionDesc>What is Pablo Picasso's style of artwork called?</questionDesc>
+        <answer>Cubism</answer>
+        <clue>Hint: C???sm</clue>
+        <category>4</category>
+        <type>3</type>
+    </question>
+
+    <question id="6">
+        <questionDesc> What design style uses lots of sea/ocean themed items?</questionDesc>
+        <answer>Nautical</answer>
+        <clue>Hint: N??t???l</clue>
+        <category>4</category>
+        <type>3</type>
+    </question>
+
 </class>

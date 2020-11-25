@@ -153,9 +153,9 @@
     </question>
 
     <question id="19">
-        <questionDesc>How Many Players Are There In A Baseball Team</questionDesc>
+        <questionDesc>How Many Players Are There In A Baseball Team </questionDesc>
         <answer>9 Players</answer>
-        <clue>No Hint.</clue>
+        <clue>? Players</clue>
         <category>6</category>
         <type>1</type>
     </question>
@@ -169,9 +169,9 @@
     </question>
 
     <question id="21">
-        <questionDesc>Name The 3 Female Characters In The Game Cluedo</questionDesc>
-        <answer>Mrs White, Miss Scarlet, Mrs Peacock</answer>
-        <clue>Mrs W????, Miss S??????, Mrs P??????</clue>
+        <questionDesc>How many regulation strokes are there in swimming?</questionDesc>
+        <answer>4</answer>
+        <clue>The answer is 1 to 5.</clue>
         <category>6</category>
         <type>1</type>
     </question>
