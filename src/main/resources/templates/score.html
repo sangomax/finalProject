@@ -61,6 +61,14 @@ td{
     margin: 70px;
 
 }
+.td-space{
+    font-weight:700;
+    padding-left:10px;
+    padding-right:10px;
+    margin-left:35px;
+    margin-right:35px;"
+}
+
         </style>
     <script>
         function updatePlayerWon(code, won) {
@@ -80,11 +88,11 @@ td{
         <table class="egt" style="color:white" align="center">
             <tr class="winner-bg" style="text-align: center; height:60px; background:none;">
                 <td style="width:138px"></td>
-                <td class="body-text results td-line" style="font-weight:700;margin-left:35px; margin-right:35px;">Answered Questions</td>
-                <td class="body-text results td-line" style="font-weight:700;margin-left:35px; margin-right:35px;">Correct Answers</td>
-                <td class="body-text results td-line" style="font-weight:700;margin-left:35px; margin-right:35px;">Incorrect Answers</td>
-                <td class="body-text results td-line" style="font-weight:700; margin-left:35px; margin-right:35px;">Correct Special Questions</td>
-                <td class="body-text results td-line" style="font-weight:700; margin-left:35px; margin-right:35px;">Incorrect Special Questions</td>
+                <td class="body-text results td-line td-space" >Answered Questions</td>
+                <td class="body-text results td-line td-space" >Correct Answers</td>
+                <td class="body-text results td-line td-space" >Incorrect Answers</td>
+                <td class="body-text results td-line td-space" >Correct Special Questions</td>
+                <td class="body-text results td-line td-space" >Incorrect Special Questions</td>
             </tr>
             <div th:each="player : ${players}">
                 <tr th:id="tab+${player.codePlayer}" class="winner-bg" >
