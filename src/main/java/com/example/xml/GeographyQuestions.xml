@@ -5,16 +5,6 @@
           half of the western coast of South America?
         </questionDesc>
         <answer>Chile</answer>
-        <clue>First letter of the answer is "C".</clue>
-        <category>1</category>
-        <type>1</type>
-    </question>
-
-    <question id="1">
-        <questionDesc>What is the name of the thin, but a long country that spans more than
-          half of the western coast of South America?
-        </questionDesc>
-        <answer>Chile</answer>
         <clue>First letter of the answer is "C"</clue>
         <category>1</category>
         <type>1</type>
@@ -29,10 +19,9 @@
     </question>
 
     <question id="3">
-        <questionDesc>Which two countries share the longest (or largest) international border?
-        </questionDesc>
-        <answer>Canada and the USA</answer>
-        <clue>One of them is where most CICC students live now.</clue>
+        <questionDesc> Which two countries share the longest (or largest) international border?</questionDesc>
+        <answer>Canada and America</answer>
+        <clue>C????? and A??????</clue>
         <category>1</category>
         <type>2</type>
     </question>
@@ -110,7 +99,7 @@
     </question>
 
     <question id="13">
-        <questionDesc>The equator passes through how many countries?</questionDesc>
+        <questionDesc>The equator passes through how many countries?(by an alphanumeric character)</questionDesc>
         <answer>13</answer>
         <clue>The number of countries is between 10 and 15</clue>
         <category>1</category>
@@ -134,10 +123,8 @@
     </question>
 
     <question id="16">
-        <questionDesc>How many countries in the world have a non-rectangular flag? Can you name them for
-          bonus points?
-        </questionDesc>
-        <answer>Three - Switzerland, Nepal and Vatican City</answer>
+        <questionDesc>How many countries in the world have a non-rectangular flag? (by an alphanumeric character)</questionDesc>
+        <answer>3</answer>
         <clue>The number of countries is between 1 and 5.</clue>
         <category>1</category>
         <type>2</type>
@@ -170,16 +157,15 @@
     </question>
 
     <question id="20">
-        <questionDesc>Which is further from London as the crow flies, New York or St Petersburg?
-        </questionDesc>
-        <answer>New York (3,461 miles to 1,305 miles from St Petersburg)</answer>
+        <questionDesc>Which is further from London as the crow flies, New York or St Petersburg?</questionDesc>
+        <answer>New York</answer>
         <clue>No clue</clue>
         <category>1</category>
         <type>1</type>
     </question>
 
     <question id="21">
-        <questionDesc>How many countries does the United States share a land border with?</questionDesc>
+        <questionDesc>How many countries does the United States share a land border with?(by an alphanumeric character)</questionDesc>
         <answer>2</answer>
         <clue>No Hint</clue>
         <category>1</category>
