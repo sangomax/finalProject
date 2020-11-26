@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Game</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -211,19 +211,32 @@ body{
             document.getElementById('callPopUp').click();
         }
 
+        function setSpecial(color, code){
+            if(color === '#1563BF') {
+                document.getElementById('Geography' + code).style.visibility = "visible";
+            } else if(color === '#D320D3') {
+                document.getElementById('Entertainment' + code).style.visibility = "visible";
+            } else if(color === '#F0BF2B') {
+                document.getElementById('History' + code).style.visibility = "visible";
+            } else if(color === '#6E22F0') {
+                document.getElementById('ArtCulture' + code).style.visibility = "visible";
+            } else if(color === '#128B6E') {
+                document.getElementById('SportsLeisure' + code).style.visibility = "visible";
+            } else if(color === '#EA7620') {
+                document.getElementById('SciencesNature' + code).style.visibility = "visible";
+            }
+        }
+
         function validQuestion(correctAnswer) {
             var answer = document.getElementById('answer').value;
-            alert(answer);
+
             if(correctAnswer === answer) {
-                alert("Correct");
                 /*document.getElementById("correct").style.visibility = "visible";*/
             } else {
-                alert("Incorrect");
                 /*document.getElementById("incorrect").style.visibility = "visible";*/
             }
             setTimeout(function(){document.getElementById('callJava').click()},3000);
        }
-
 
 
 
@@ -233,7 +246,6 @@ body{
 <div class="container">
     <div class="side-one">
         <p class="subheading2 players-heading">Players</p>
-
         <div th:each="player : ${players}">
             <div th:id="${player.codePlayer}" class="player">
                 <img class="token" th:if="${player.colorPlayer == 'Blue'}" src="../images/Blue Token.png">
@@ -246,25 +258,20 @@ body{
                             <p class="player-name"><span th:text="${player.namePlayer}"/></p>
                             <p class="caption player-num"><span th:text="'Player ' + ${player.codePlayer}"/></p>
                         </span>
-                <div class=pieces-container th:each="category : ${player.scorePlayer.specialCorrectAnswers}">
-                    <img class="pieces" th:if="${category.colorCategory == '#1563BF'}"
-                         src="../images/Geography Piece.png">
-                    <img class="pieces" th:if="${category.colorCategory == '#D320D3'}"
-                         src="../images/Entertainment Piece.png">
-                    <img class="pieces" th:if="${category.colorCategory == '#F0BF2B'}"
-                         src="../images/History Piece.png">
-                    <img class="pieces" th:if="${category.colorCategory == '#6E22F0'}"
-                         src="../images/Art & Culture Piece.png">
-                    <img class="pieces" th:if="${category.colorCategory == '#128B6E'}"
-                         src="../images/Sports&Leisure-Piece.png">
-                    <img class="pieces" th:if="${category.colorCategory == '#EA7620'}"
-                         src="../images/Sciences & Nature Piece.png">
+                <div class=pieces-container >
+                    <img class="pieces" th:id="Geography + ${player.codePlayer}" src="../images/Geography Piece.png" style="visibility:hidden;">
+                    <img class="pieces" th:id="Entertainment + ${player.codePlayer}" src="../images/Entertainment Piece.png" style="visibility:hidden;">
+                    <img class="pieces" th:id="History + ${player.codePlayer}" src="../images/History Piece.png" style="visibility:hidden;">
+                    <img class="pieces" th:id="ArtCulture + ${player.codePlayer}" src="../images/Art & Culture Piece.png" style="visibility:hidden;">
+                    <img class="pieces" th:id="SportsLeisure + ${player.codePlayer}" src="../images/Sports&Leisure-Piece.png" style="visibility:hidden;">
+                    <img class="pieces" th:id="SciencesNature + ${player.codePlayer}" src="../images/Sciences & Nature Piece.png" style="visibility:hidden;">
                 </div>
-
+                <div th:each="category : ${player.scorePlayer.specialCorrectAnswers}">
+                    <script th:inline="javascript">setSpecial([[${category.colorCategory}]], [[${player.codePlayer}]]);</script>
+                </div>
             </div>
             <script>updatePlayerTurn([[${player.codePlayer}]],  [[${player.isTurn}]]);</script>
         </div>
-
     </div>
     <div class="side-two">
 
@@ -310,9 +317,11 @@ body{
             <img class="imgr roulette-categories" style="transform:rotate(345deg);"
                  th:if="${randonQuestion.category.codeCategory == 6 && randonQuestion.type == 2}"
                  src="/images/Roulette - Categories.png">
+            <img class="imgr roulette-categories"
+                 th:if="${randonQuestion.type == 3}"
+                 src="/images/Roulette - Categories.png">
 
             <img id="roulette-triangle" src="/images/Roulette -triangle.png" ;>
-
 
             <a id="callPopUp" style="visibility:hidden;" href="#popup1"/>
         </div>
@@ -320,10 +329,11 @@ body{
         <div id="popup1" class="overlay">
             <div class="popup">
                 <form action="#" th:action="@{answer}" th:object="${player}" method="post">
-                    <a class="close" href="#">x</a>
+                    <a class="close" href="#"></a>
                     <div class="content" style="overflow: hidden;">
                         <div class="divTable" id="targetElement">
-                            <div class="headRow" style="width:100%">
+                            <div class="headRow" style="width:100%;">
+
                                 <img class="pieces"
                                      th:if="${randonQuestion.category.codeCategory == 1 && randonQuestion.type == 1}"
                                      src="../images/Geography Question.png" width="500" height="100">
@@ -370,7 +380,7 @@ body{
                                     <div class="flipper">
                                         <table class="front" th:bgcolor="${randonQuestion.category.colorCategory}" style="heigh:50px;">
                                             <tr>
-                                                <td>
+                                                <td align="center">
                                                     <span th:text="${randonQuestion.question}"
                                                           class="body-text"
                                                           style="text-align: center;"/>
@@ -380,13 +390,7 @@ body{
                                         <!-- front content -->
                                         <table class="back" th:bgcolor="${randonQuestion.category.colorCategory}">
                                             <tr>
-                                                <td class="body-text"
-                                                    style="font-weight: bold; text-decoration: underline;">
-                                                    Answer
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="body-text"><span
+                                                <td class="body-text" align="center"><span
                                                         th:text="${randonQuestion.answer}"/></td>
                                             </tr>
                                         </table>
@@ -408,21 +412,12 @@ body{
                         </div>
                     </div>
                 </form>
-
-                <!--<p class="subheading1">Spin the roulette and answer the question related to the topic</p>
-                <p class="subheading2" styles="margin-top:56px">Answering questions</p>
-                <p class="body-text">If answering correctly, you keep continue spinning the roulette.  If you don’t answer correctly, you miss your turn.</p>
-                <p class="subheading2">Special questions</p>
-                <p class="body-text">If you the question correctly, you will get a wedge for your circular token. If you have the wedge offered by that question, then you will answer as a normal question.</p>
-                <p class="subheading2">Final question</p>
-                <p class="body-text">Once you got all the wedges,  you must answer the final question correctly to win the game. If you fail you will try again when it would be your turn.</p>-->
             </div>
         </div>
     </div>
 </div>
 
 </div>
-
 
 </body>
 </html>
