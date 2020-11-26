@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <class>
     <question id="1">
-        <questionDesc> Who discovered penicillin?</questionDesc>
+        <questionDesc>Who discovered penicillin?</questionDesc>
         <answer>Alexander Fleming</answer>
         <clue>A???????? F??????</clue>
         <category>5</category>
@@ -9,7 +9,7 @@
     </question>
 
     <question id="2">
-        <questionDesc> Who was the first woman to win a Nobel Prize (in 1903)?</questionDesc>
+        <questionDesc>Who was the first woman to win a Nobel Prize (in 1903)?</questionDesc>
         <answer>Marie Curie</answer>
         <clue>M???? C????</clue>
         <category>5</category>
@@ -17,7 +17,7 @@
     </question>
 
     <question id="3">
-        <questionDesc> What part of the atom has no electric charge?</questionDesc>
+        <questionDesc>What part of the atom has no electric charge?</questionDesc>
         <answer>Neutron</answer>
         <clue>N?????n</clue>
         <category>5</category>
@@ -25,7 +25,7 @@
     </question>
 
     <question id="4">
-        <questionDesc> What is the symbol for potassium?</questionDesc>
+        <questionDesc>What is the symbol for potassium?</questionDesc>
         <answer>K</answer>
         <clue>It's one letter.</clue>
         <category>5</category>
@@ -33,7 +33,7 @@
     </question>
 
     <question id="5">
-        <questionDesc> Which planet is the hottest in the solar system?</questionDesc>
+        <questionDesc>Which planet is the hottest in the solar system?</questionDesc>
         <answer>Venus</answer>
         <clue>V????</clue>
         <category>5</category>
@@ -41,7 +41,7 @@
     </question>
 
     <question id="6">
-        <questionDesc> Which natural disaster is measured with a Richter scale?</questionDesc>
+        <questionDesc>Which natural disaster is measured with a Richter scale?</questionDesc>
         <answer>Earthquakes</answer>
         <clue>The first letter is "E"</clue>
         <category>5</category>
@@ -49,7 +49,7 @@
     </question>
 
     <question id="7">
-        <questionDesc> What animals are pearls found in?</questionDesc>
+        <questionDesc>What animals are pearls found in?</questionDesc>
         <answer>Oysters</answer>
         <clue>The first letter is "O"</clue>
         <category>5</category>
@@ -57,7 +57,7 @@
     </question>
 
     <question id="8">
-        <questionDesc> How many molecules of oxygen does ozone have?</questionDesc>
+        <questionDesc>How many molecules of oxygen does ozone have?(by an alphanumeric character)</questionDesc>
         <answer>3</answer>
         <clue>It's between 2 and 5.</clue>
         <category>5</category>
@@ -65,7 +65,7 @@
     </question>
 
     <question id="9">
-        <questionDesc> How many hearts does an octopus have?</questionDesc>
+        <questionDesc>How many hearts does an octopus have?(by an alphanumeric character)</questionDesc>
         <answer>3</answer>
         <clue>It's between 2 and 5.</clue>
         <category>5</category>
@@ -73,7 +73,7 @@
     </question>
 
     <question id="10">
-        <questionDesc> What’s the scientific name of a wolf?</questionDesc>
+        <questionDesc>What’s the scientific name of a wolf?</questionDesc>
         <answer>Canis lupus</answer>
         <clue>C???? l????</clue>
         <category>5</category>
@@ -81,7 +81,7 @@
     </question>
 
     <question id="11">
-        <questionDesc> What is your body’s largest organ?</questionDesc>
+        <questionDesc>What is your body’s largest organ?</questionDesc>
         <answer>The skin</answer>
         <clue>The s???</clue>
         <category>5</category>
@@ -89,7 +89,9 @@
     </question>
 
     <question id="12">
-        <questionDesc> How long is the gestation period of an African elephant?</questionDesc>
+        <questionDesc>How long is the gestation period of an African elephant?(with an alphanumeric character and
+            "months")
+        </questionDesc>
         <answer>22 months</answer>
         <clue>It's between 12 and 25 months</clue>
         <category>5</category>
@@ -97,7 +99,7 @@
     </question>
 
     <question id="13">
-        <questionDesc> What’s the scientific name of a wolf? </questionDesc>
+        <questionDesc>What’s the scientific name of a wolf?</questionDesc>
         <answer>Canis lupus</answer>
         <clue>C???? l????</clue>
         <category>5</category>
@@ -105,7 +107,7 @@
     </question>
 
     <question id="14">
-        <questionDesc> What is a female donkey called?</questionDesc>
+        <questionDesc>What is a female donkey called?</questionDesc>
         <answer>Jenny</answer>
         <clue>J????</clue>
         <category>5</category>
@@ -113,7 +115,7 @@
     </question>
 
     <question id="15">
-        <questionDesc> Which mammal has no vocal cords?</questionDesc>
+        <questionDesc>Which mammal has no vocal cords?</questionDesc>
         <answer>Giraffe</answer>
         <clue>G??????</clue>
         <category>5</category>
@@ -121,7 +123,7 @@
     </question>
 
     <question id="16">
-        <questionDesc> What’s the fastest land animal in the world?</questionDesc>
+        <questionDesc>What’s the fastest land animal in the world?</questionDesc>
         <answer>The cheetah</answer>
         <clue>The c?????h</clue>
         <category>5</category>
@@ -129,7 +131,7 @@
     </question>
 
     <question id="17">
-        <questionDesc> How many eyes does a bee have?</questionDesc>
+        <questionDesc>How many eyes does a bee have?(by an alphanumeric character)</questionDesc>
         <answer>5</answer>
         <clue>It's between 3 and 6.</clue>
         <category>5</category>
@@ -145,7 +147,7 @@
     </question>
 
     <question id="19">
-        <questionDesc> What name is used to refer to a group of frogs?</questionDesc>
+        <questionDesc>What name is used to refer to a group of frogs?</questionDesc>
         <answer>An army</answer>
         <clue>An a???</clue>
         <category>5</category>
@@ -153,15 +155,15 @@
     </question>
 
     <question id="20">
-        <questionDesc> Do sponges have hearts?</questionDesc>
+        <questionDesc>Do sponges have hearts?(Yes or No)</questionDesc>
         <answer>No</answer>
-        <clue>Yes or No</clue>
+        <clue>No Hint</clue>
         <category>5</category>
         <type>1</type>
     </question>
 
     <question id="21">
-        <questionDesc> Lemurs are native to only one country on earth. Name it.</questionDesc>
+        <questionDesc>Lemurs are native to only one country on earth. Name it.</questionDesc>
         <answer>Madagascar</answer>
         <clue>M????????r</clue>
         <category>5</category>
