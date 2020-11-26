@@ -58,6 +58,7 @@ public class GreetingController {
         for(int i = 0; i < this.testeServer.getPlayerList().size(); i++) {
             this.testeServer.getPlayerList().get(i).setScorePlayer(new Score());
             this.testeServer.getPlayerList().get(i).setIsWinner("false");
+            this.testeServer.getPlayerList().get(i).setIsTurn("false");
         }
         this.testeServer.getPlayerList().get(0).setIsTurn("true");
         this.question = this.testeServer.getRandomQuestion();
