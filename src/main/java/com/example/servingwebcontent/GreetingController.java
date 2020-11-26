@@ -2,12 +2,12 @@ package com.example.servingwebcontent;
 
 import com.example.bean.Player;
 import com.example.bean.Question;
+import com.example.bean.Score;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 
@@ -19,18 +19,9 @@ public class GreetingController {
     Question question;
     Player playerTurn;
 
-    @GetMapping("/greeting")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", name);
-        System.out.println(name);
-        return "greeting";
-    }
-
-    @GetMapping("/score")
-    public String score(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", name);
-        System.out.println(name);
-        return "score";
+    @RequestMapping("/index")
+    public String index() {
+        return "index";
     }
 
     @GetMapping("/addPlayers")
@@ -67,6 +58,20 @@ public class GreetingController {
         return "/game";
     }
 
+    @PostMapping("/again")
+    public String again(Player player, Model model) {
+        for(int i = 0; i < this.testeServer.getPlayerList().size(); i++) {
+            this.testeServer.getPlayerList().get(i).setScorePlayer(new Score());
+            this.testeServer.getPlayerList().get(i).setIsWinner("false");
+        }
+        this.testeServer.getPlayerList().get(0).setIsTurn("true");
+        this.question = this.testeServer.getRandomQuestion();
+        this.playerTurn = this.testeServer.getPlayerList().get(0);
+        model.addAttribute("randonQuestion", this.question);
+        model.addAttribute("players", this.testeServer.getPlayerList());
+        return "game";
+    }
+
     @PostMapping("/game")
     public String game(Player player, Model model) {
         Object ob = model.getAttribute("player");
@@ -75,42 +80,40 @@ public class GreetingController {
         for(int i = 0; i < name.length; i++) {
             this.testeServer.getPlayerList().add(new Player(name[i],color[i],(i+1)));
         }
-
         this.testeServer.getPlayerList().get(0).setIsTurn("true");
 
-        int questionNumber = this.testeServer.getRandomNumber(this.testeServer.getAllCommunSpecialQuestions().size());
-        this.question = this.testeServer.getAllCommunSpecialQuestions().get(questionNumber);
+        this.question = this.testeServer.getRandomQuestion();
         this.playerTurn = this.testeServer.getPlayerList().get(0);
         model.addAttribute("randonQuestion", this.question);
         model.addAttribute("players", this.testeServer.getPlayerList());
         return "game";
     }
+
 
     @RequestMapping(value = "answer")
     public String answerQuestion(Player player, Model model, Question randonQuestion, String answer) {
-
+        String pageDirect;
         if(answer.equalsIgnoreCase(this.question.getAnswer())) {
-            model.addAttribute("validate", true);
-//            this.testeServer.updatePlayer(this.playerTurn, this.question);
+            pageDirect = this.testeServer.updatePlayer(this.playerTurn, this.question, true);
         } else {
-
-//            this.playerTurn = this.testeServer.changePlayer(this.playerTurn);
+            pageDirect = this.testeServer.updatePlayer(this.playerTurn, this.question, false);
+            this.playerTurn = this.testeServer.currentPlayer();
         }
 
         player.setAnswer("");
-        int questionNumber = this.testeServer.getRandomNumber(this.testeServer.getAllCommunSpecialQuestions().size());
-        this.question = this.testeServer.getAllCommunSpecialQuestions().get(questionNumber);
-        this.playerTurn = this.testeServer.getPlayerList().get(0);
+
+        this.question = this.testeServer.getRandomQuestion();
         model.addAttribute("randonQuestion", this.question);
         model.addAttribute("players", this.testeServer.getPlayerList());
-        return "game";
+
+        return pageDirect;
     }
 
-//    @RequestMapping(value = "addPlayers", method = RequestMethod.POST)
-//    public String setPlayer(Player player, Model model) {
-//        Object ob = model.getAttribute("player");
-//        this.testeServer.getPlayerList().add((Player) ob);
-//        return "addPlayers";
-//    }
+    @GetMapping("/score")
+    public String sendForm(Player player, Model model) {
+        model.addAttribute("players", this.testeServer.getPlayerList());
+
+        return "score";
+    }
 
 }

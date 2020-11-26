@@ -106,7 +106,7 @@
             <div class="divCell" align="center" style="width:95%">
                 <div class="divRow" align="center" style="width:95%">
                     <div class="divCell subheading2 players-heading"><label> PLAYER 1 </label></div>
-                    <div class="divCell"><input id="name1" type="text" th:field="*{namePlayer}" class="input-text"
+                    <div class="divCell"><input id="name1" type="text" th:field="*{namePlayer}" class="input-text" maxlength="15"
                                                 required></div>
                     <div class="divCell">
                         <select id="color1" th:field="*{colorPlayer}" class="select" required>
@@ -131,7 +131,7 @@
             <div class="divCell" align="center" style="width:95%">
                 <div class="divRow" align="center" style="width:95%">
                     <div class="divCell subheading2 players-heading"><label> PLAYER 2 </label></div>
-                    <div class="divCell"><input id="name2" type="text" th:field="*{namePlayer}" class="input-text"></div>
+                    <div class="divCell"><input id="name2" type="text" th:field="*{namePlayer}" class="input-text" maxlength="15"></div>
                     <div class="divCell">
                         <select id="color2" th:field="*{colorPlayer}" class="select">
                             <option value="" label="Select a Token" selected/>
@@ -156,7 +156,7 @@
             <div class="divCell" align="center" style="width:95%">
                 <div class="divRow" align="center" style="width:95%">
                     <div class="divCell subheading2 players-heading"><label> PLAYER 3 </label></div>
-                    <div class="divCell"><input type="text" th:field="*{namePlayer}" class="input-text"></div>
+                    <div class="divCell"><input type="text" th:field="*{namePlayer}" class="input-text" maxlength="15"></div>
                     <div class="divCell">
                         <select th:field="*{colorPlayer}" class="select">
                             <option value="" label="Select a Token" selected/>
@@ -181,7 +181,7 @@
             <div class="divCell" align="center" style="width:95%">
                 <div class="divRow" align="center" style="width:95%">
                     <div class="divCell subheading2 players-heading"><label> PLAYER 4 </label></div>
-                    <div class="divCell"><input type="text" th:field="*{namePlayer}" class="input-text"></div>
+                    <div class="divCell"><input type="text" th:field="*{namePlayer}" class="input-text" maxlength="15"></div>
                     <div class="divCell">
                         <select th:field="*{colorPlayer}" class="select">
                             <option value="" label="Select a Token" selected/>
@@ -206,7 +206,7 @@
             <div class="divCell" align="center" style="width:95%">
                 <div class="divRow" align="center" style="width:95%">
                     <div class="divCell subheading2 players-heading"><label> PLAYER 5 </label></div>
-                    <div class="divCell"><input type="text" th:field="*{namePlayer}" class="input-text"></div>
+                    <div class="divCell"><input type="text" th:field="*{namePlayer}" class="input-text" maxlength="15"></div>
                     <div class="divCell">
                         <select th:field="*{colorPlayer}" class="select">
                             <option value="" label="Select a Token" selected/>
@@ -231,7 +231,7 @@
             <div class="divCell" align="center" style="width:95%">
                 <div class="divRow" align="center" style="width:95%">
                     <div class="divCell subheading2 players-heading"><label> PLAYER 6 </label></div>
-                    <div class="divCell"><input type="text" th:field="*{namePlayer}" class="input-text"></div>
+                    <div class="divCell"><input type="text" th:field="*{namePlayer}" class="input-text" maxlength="15"></div>
                     <div class="divCell">
                         <select th:field="*{colorPlayer}" class="select">
                             <option value="" label="Select a Token" selected/>
