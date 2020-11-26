@@ -25,7 +25,8 @@
     </question>
 
     <question id="4">
-        <questionDesc> When did construction on the Empire State building started?</questionDesc>
+        <questionDesc>When did construction on the Empire State building started?(by an alphanumeric character)
+        </questionDesc>
         <answer>1929</answer>
         <clue>It's 1920s.</clue>
         <category>4</category>
