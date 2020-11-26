@@ -9,7 +9,7 @@
     </question>
 
     <question id="2">
-        <questionDesc>How many Pyramids of Giza were made?</questionDesc>
+        <questionDesc>How many Pyramids of Giza were made?(by an alphanumeric character)</questionDesc>
         <answer>3</answer>
         <clue>The answer is between 2 and 5.</clue>
         <category>3</category>
@@ -33,7 +33,7 @@
     </question>
 
     <question id="5">
-        <questionDesc>How long did the Middle Ages last?</questionDesc>
+        <questionDesc> How long did the Middle Ages last?(by an alphanumeric character)</questionDesc>
         <answer>About 1000 years</answer>
         <clue>About ???? years</clue>
         <category>3</category>
@@ -49,7 +49,7 @@
     </question>
 
     <question id="7">
-        <questionDesc>In which year World War I begin?</questionDesc>
+        <questionDesc>In which year World War I begin?(by an alphanumeric character)</questionDesc>
         <answer>1914</answer>
         <clue>It's 1910s.</clue>
         <category>3</category>
@@ -115,7 +115,7 @@
     </question>
 
     <question id="15">
-        <questionDesc>How many stars does the American Flag have?</questionDesc>
+        <questionDesc>How many stars does the American Flag have?(by an alphanumeric character)</questionDesc>
         <answer>50</answer>
         <clue>No Hint</clue>
         <category>3</category>
@@ -133,7 +133,7 @@
     </question>
 
     <question id="17">
-        <questionDesc>How many Stripes does the United States of America’ flag have?</questionDesc>
+        <questionDesc>How many Stripes does the United States of America’ flag have?(by an alphanumeric character)</questionDesc>
         <answer>13</answer>
         <clue>No Hint</clue>
         <category>3</category>
@@ -143,7 +143,7 @@
     <question id="18">
         <questionDesc>Which Century did the French Revolution take place?</questionDesc>
         <answer>18th century</answer>
-        <clue>No Hint</clue>
+        <clue>15th to 19th century</clue>
         <category>3</category>
         <type>1</type>
     </question>
