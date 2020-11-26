@@ -1,5 +1,6 @@
 package com.example.servingwebcontent;
 
+import com.example.bean.Category;
 import com.example.bean.Player;
 import com.example.bean.Question;
 import com.example.bean.Score;
@@ -7,6 +8,7 @@ import com.example.handlers.StaXParser;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 
@@ -59,7 +61,7 @@ public class testeServer {
 
     public Question getRandomQuestion() {
         int numRandom = 0;
-        if(currentPlayer().getScorePlayer().getSpecialCorrectAnswers().size() == 6) {
+        if(answerEachCategory()) {
             numRandom = getRandomNumber(getAllFinalQuestions().size());
             if(getQuestionsAlreadyAnswer().contains(getAllFinalQuestions().get(numRandom))) {
                 return getRandomQuestion();
@@ -71,11 +73,21 @@ public class testeServer {
             numRandom = getRandomNumber(getAllCommunSpecialQuestions().size());
             if(getQuestionsAlreadyAnswer().contains(getAllCommunSpecialQuestions().get(numRandom))) {
                 return getRandomQuestion();
-            } else if(getAllCommunSpecialQuestions().get(numRandom).getType() == 2 && currentPlayer().getScorePlayer().getSpecialCorrectAnswers().contains(getAllCommunSpecialQuestions().get(numRandom))) {
+            } else if(getAllCommunSpecialQuestions().get(numRandom).getType() == 2 && currentPlayer().getScorePlayer().getSpecialCorrectAnswers().contains(getAllCommunSpecialQuestions().get(numRandom).getCategory())) {
                 return getRandomQuestion();
             }
+
             return getAllCommunSpecialQuestions().get(numRandom);
         }
+    }
+
+    public boolean answerEachCategory() {
+        int count = 0;
+        HashSet<Integer> categoryList = new HashSet<>();
+        for(Category category: currentPlayer().getScorePlayer().getSpecialCorrectAnswers()) {
+            categoryList.add(category.getCodeCategory());
+        }
+        return categoryList.size() == 6 ? true : false;
     }
 
     public String updatePlayer(Player playerTurn,Question question, boolean isCorrect) {
@@ -164,4 +176,6 @@ public class testeServer {
     public void setQuestionsAlreadyAnswer(List<Question> questionsAlreadyAnswer) {
         this.questionsAlreadyAnswer = questionsAlreadyAnswer;
     }
+
+
 }
