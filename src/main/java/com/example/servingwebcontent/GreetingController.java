@@ -20,24 +20,11 @@ public class GreetingController {
     Question question;
     Player playerTurn;
 
-    @GetMapping("/greeting")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", name);
-        System.out.println(name);
-        return "greeting";
-    }
-
     @GetMapping("/addPlayers")
     public String sendForm(Player player) {
 //        System.out.println("get" + player.getNamePlayer());
         this.testeServer.setPlayerList(new ArrayList<>());
         return "addPlayers";
-    }
-
-    @RequestMapping("/playFeild")
-    public String playFeild() {
-        System.out.println("Let's play!");
-        return "playFeild";
     }
 
     @GetMapping("/listQuestions")
@@ -79,7 +66,6 @@ public class GreetingController {
         model.addAttribute("players", this.testeServer.getPlayerList());
         return "game";
     }
-
 
     @RequestMapping(value = "answer")
     public String answerQuestion(Player player, Model model, Question randonQuestion, String answer) {
