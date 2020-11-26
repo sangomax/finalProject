@@ -10,7 +10,7 @@
     </question>
 
     <question id="2">
-        <questionDesc> How many films did Sean Connery play James Bond in?</questionDesc>
+        <questionDesc> How many films did Sean Connery play James Bond in? (by an alphanumeric character)</questionDesc>
         <answer>7</answer>
         <clue>The answer is between 5 and 10.</clue>
         <category>2</category>
@@ -26,7 +26,7 @@
     </question>
 
     <question id="4">
-        <questionDesc> How many Lord of the Rings films are there?</questionDesc>
+        <questionDesc> How many Lord of the Rings films are there? (by an alphanumeric character)</questionDesc>
         <answer>3</answer>
         <clue>The answer is between 1 and 4.</clue>
         <category>2</category>
@@ -36,7 +36,7 @@
     <question id="5">
         <questionDesc> Which popular TV show featured house Targaryen and Stark?</questionDesc>
         <answer>Game of Thrones</answer>
-        <clue>The name is Game of  "????"</clue>
+        <clue>Hint: Game of  "T?????s"</clue>
         <category>2</category>
         <type>2</type>
     </question>
@@ -58,7 +58,7 @@
     </question>
 
     <question id="8">
-        <questionDesc> In what year was the first episode of South Park aired?</questionDesc>
+        <questionDesc> In what year was the first episode of South Park aired?(by an alphanumeric character)</questionDesc>
         <answer>1997</answer>
         <clue>It's 1990s.</clue>
         <category>2</category>
@@ -124,9 +124,9 @@
 
     <question id="16">
         <questionDesc> What classic video game requires you to eat all the dots throughout a
-          maze?</questionDesc>
-        <answer>Pac-Man</answer>
-        <clue>Hint: P??-M??</clue>
+            maze?</questionDesc>
+        <answer>Pac Man</answer>
+        <clue>Hint: P?? M??</clue>
         <category>2</category>
         <type>1</type>
     </question>
