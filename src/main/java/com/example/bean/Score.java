@@ -11,12 +11,18 @@ public class Score {
 
     private Integer numIncorrectAnswers;
 
+    private Integer numSpecialCorrectAnswers;
+
+    private Integer numSpecialIncorrectAnswers;
+
     private List<Category> specialCorrectAnswers;
 
     public Score() {
         this.numberQuestions = new Integer(0);
         this.numCorrectAnswers = new Integer(0);
         this.numIncorrectAnswers = new Integer(0);
+        this.numSpecialCorrectAnswers = new Integer(0);
+        this.numSpecialIncorrectAnswers = new Integer(0);
         this.specialCorrectAnswers = new ArrayList<>();
     }
 
@@ -50,5 +56,21 @@ public class Score {
 
     public void setSpecialCorrectAnswers(List<Category> specialCorrectAnswers) {
         this.specialCorrectAnswers = specialCorrectAnswers;
+    }
+
+    public Integer getNumSpecialCorrectAnswers() {
+        return numSpecialCorrectAnswers;
+    }
+
+    public void setNumSpecialCorrectAnswers(Integer numSpecialCorrectAnswers) {
+        this.numSpecialCorrectAnswers = numSpecialCorrectAnswers;
+    }
+
+    public Integer getNumSpecialIncorrectAnswers() {
+        return numSpecialIncorrectAnswers;
+    }
+
+    public void setNumSpecialIncorrectAnswers(Integer numSpecialIncorrectAnswers) {
+        this.numSpecialIncorrectAnswers = numSpecialIncorrectAnswers;
     }
 }

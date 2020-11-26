@@ -14,6 +14,7 @@ public class Player {
 
     private String answer;
 
+    private String isWinner;
 
     public Player(String namePlayer, String colorPlayer, Integer codePlayer) {
         this.namePlayer = namePlayer;
@@ -21,6 +22,7 @@ public class Player {
         this.codePlayer = codePlayer;
         this.scorePlayer = new Score();
         this.isTurn = "false";
+        this.isWinner = "false";
     }
 
     public String getNamePlayer() {
@@ -69,5 +71,13 @@ public class Player {
 
     public void setAnswer(String answer) {
         this.answer = answer;
+    }
+
+    public String getIsWinner() {
+        return isWinner;
+    }
+
+    public void setIsWinner(String isWinner) {
+        this.isWinner = isWinner;
     }
 }
