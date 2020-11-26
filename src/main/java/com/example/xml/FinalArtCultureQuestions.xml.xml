@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <class>
     <question id="1">
-        <questionDesc> In which country was Buddha born?</questionDesc>
+        <questionDesc>In which country was Buddha born?</questionDesc>
         <answer>Nepal</answer>
         <clue>First letter of the name is "N".</clue>
         <category>4</category>
@@ -25,7 +25,7 @@
     </question>
 
     <question id="4">
-        <questionDesc> When did construction on the Empire State building started?</questionDesc>
+        <questionDesc>When did construction on the Empire State building started?(by an alphanumeric character)</questionDesc>
         <answer>1929</answer>
         <clue>It's 1920s.</clue>
         <category>4</category>
@@ -41,7 +41,7 @@
     </question>
 
     <question id="6">
-        <questionDesc> What design style uses lots of sea/ocean themed items?</questionDesc>
+        <questionDesc>What design style uses lots of sea/ocean themed items?</questionDesc>
         <answer>Nautical</answer>
         <clue>Hint: N??t???l</clue>
         <category>4</category>

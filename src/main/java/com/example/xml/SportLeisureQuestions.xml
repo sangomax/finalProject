@@ -1,9 +1,7 @@
 <?xml version="1.0"?>
 <class>
     <question id="1">
-        <questionDesc>How many soccer players should each team have on the field at the start
-          of each match?
-        </questionDesc>
+        <questionDesc>How many soccer players should each team have on the field at the start of each match?(by an alphanumeric character)</questionDesc>
         <answer>11</answer>
         <clue>No Hint.</clue>
         <category>6</category>
@@ -11,10 +9,8 @@
     </question>
 
     <question id="2">
-        <questionDesc>When Michael Jordan played for the Chicago Bulls, how many NBA
-          Championships did he win?
-        </questionDesc>
-        <answer>Six</answer>
+        <questionDesc>When Michael Jordan played for the Chicago Bulls, how many NBA Championships did he win?(by an alphanumeric character)</questionDesc>
+        <answer>6</answer>
         <clue>The answer is between Three and Seven.</clue>
         <category>6</category>
         <type>2</type>
@@ -29,7 +25,7 @@
     </question>
 
     <question id="4">
-        <questionDesc>In what year was the first-ever Wimbledon Championship held?</questionDesc>
+        <questionDesc>In what year was the first-ever Wimbledon Championship held?(by an alphanumeric character)</questionDesc>
         <answer>1877</answer>
         <clue>It's 1870s</clue>
         <category>6</category>
@@ -45,9 +41,7 @@
     </question>
 
     <question id="6">
-        <questionDesc>Which Jamaican runner is an 11-time world champion and holds the record
-          in the 100 and 200-meter race?
-        </questionDesc>
+        <questionDesc>Which Jamaican runner is an 11-time world champion and holds the record in the 100 and 200-meter race?</questionDesc>
         <answer>Usain Bolt</answer>
         <clue>Hint: U???? B???</clue>
         <category>6</category>
@@ -55,8 +49,7 @@
     </question>
 
     <question id="7">
-        <questionDesc>Which boxer was known as “The Greatest” and “The People’s Champion”?
-        </questionDesc>
+        <questionDesc>Which boxer was known as “The Greatest” and “The People’s Champion”?</questionDesc>
         <answer>Muhammad Ali</answer>
         <clue>Hint: M???? A???</clue>
         <category>6</category>
@@ -80,9 +73,7 @@
     </question>
 
     <question id="10">
-        <questionDesc>Novak Djokovic won the 2013 Australian Open tournament. Who did he defeat in the
-          final?
-        </questionDesc>
+        <questionDesc>Novak Djokovic won the 2013 Australian Open tournament. Who did he defeat in the final?</questionDesc>
         <answer>Roger Federer</answer>
         <clue>R???? F??????</clue>
         <category>6</category>
@@ -90,9 +81,7 @@
     </question>
 
     <question id="11">
-        <questionDesc>Coco Gauff made headlines at Wimbledon last year when she beat Venus
-          Williams. How old was Gauff?
-        </questionDesc>
+        <questionDesc>Coco Gauff made headlines at Wimbledon last year when she beat Venus Williams. How old was Gauff?(by an alphanumeric character)</questionDesc>
         <answer>15</answer>
         <clue>The answer is 12 to 18.</clue>
         <category>6</category>
@@ -100,9 +89,7 @@
     </question>
 
     <question id="12">
-        <questionDesc>Usain Bolt is still the fastest man in the world, running 100m in 9.58
-          seconds. In which year did he set that record?
-        </questionDesc>
+        <questionDesc>Usain Bolt is still the fastest man in the world, running 100m in 9.58 seconds. In which year did he set that record?(by an alphanumeric character)</questionDesc>
         <answer>2009</answer>
         <clue>It's 2009s.</clue>
         <category>6</category>
@@ -110,8 +97,7 @@
     </question>
 
     <question id="13">
-        <questionDesc>How many times has Rafael Nadal won the French Open as of March 2020?
-        </questionDesc>
+        <questionDesc>How many times has Rafael Nadal won the French Open as of March 2020?(by an alphanumeric character)</questionDesc>
         <answer>12</answer>
         <clue>The answer is 10 to 15.</clue>
         <category>6</category>
@@ -119,9 +105,7 @@
     </question>
 
     <question id="14">
-        <questionDesc>When Michael Jordan played for the Chicago Bulls, how many NBA
-          Championships did he win?
-        </questionDesc>
+        <questionDesc>When Michael Jordan played for the Chicago Bulls, how many NBA Championships did he win?(by an alphanumeric character)</questionDesc>
         <answer>6</answer>
         <clue>The answer is 5 to 10.</clue>
         <category>6</category>
@@ -153,9 +137,9 @@
     </question>
 
     <question id="19">
-        <questionDesc>How Many Players Are There In A Baseball Team </questionDesc>
-        <answer>9 Players</answer>
-        <clue>? Players</clue>
+        <questionDesc>How Many Players Are There In A Baseball Team (by an alphanumeric character)</questionDesc>
+        <answer>9</answer>
+        <clue>It's between 5 and 11</clue>
         <category>6</category>
         <type>1</type>
     </question>
@@ -169,7 +153,7 @@
     </question>
 
     <question id="21">
-        <questionDesc>How many regulation strokes are there in swimming?</questionDesc>
+        <questionDesc>How many regulation strokes are there in swimming?(by an alphanumeric character)</questionDesc>
         <answer>4</answer>
         <clue>The answer is 1 to 5.</clue>
         <category>6</category>

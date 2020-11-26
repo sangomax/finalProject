@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <class>
     <question id="1">
-        <questionDesc> Which desert is the largest in the world?</questionDesc>
+        <questionDesc>Which desert is the largest in the world?</questionDesc>
         <answer>The Sahara Desert</answer>
         <clue>That is in Africa.</clue>
         <category>1</category>
@@ -33,15 +33,15 @@
     </question>
 
     <question id="5">
-        <questionDesc>How many 'official' lakes are there in the Lake District?</questionDesc>
-        <answer>One - Bassenthwaite Lake (the others are meres or waters)</answer>
+        <questionDesc>How many 'official' lakes are there in the Lake District?(by an alphanumeric character)</questionDesc>
+        <answer>1</answer>
         <clue>The answer is between 1 and 5.</clue>
         <category>1</category>
         <type>3</type>
     </question>
 
     <question id="6">
-        <questionDesc>How many countries are there in South America?</questionDesc>
+        <questionDesc>How many countries are there in South America?(by an alphanumeric character)</questionDesc>
         <answer>12</answer>
         <clue>The answer is between 10 and 20.</clue>
         <category>1</category>
