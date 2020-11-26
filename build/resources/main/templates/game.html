@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Game</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -135,10 +135,70 @@ body{
   position: absolute;
   top: 18px;
   right: 185px;
+
 }
 
 
 
+.popup {
+  margin: 200px 700px;
+  padding: 20px;
+  background: #14122A 0% 0% no-repeat padding-box;
+  border: 5px solid #E74767;
+  border-radius: 10px;
+  width: 600px;
+  color:white;
+  text-align: center;
+  height:400px;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+.popup .close:hover {
+  color: #E74767;
+}
+.popup .content {
+  max-height: 100%;
+  overflow: auto;
+}
+.content{
+    margin: 20px 63px 27px 63px;
+}
+
+@media screen and (max-width: 400px){
+  .box{
+    width: 30%;
+  }
+  .popup{
+    width: 30%;
+  }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+
+}
     </style>
     <script>
         function updatePlayerTurn(code, turn) {
@@ -148,28 +208,44 @@ body{
         }
 
         function showQuestion(){
+            document.getElementById('callPopUp').click();
+        }
 
+        function setSpecial(color, code){
+            if(color === '#1563BF') {
+                document.getElementById('Geography' + code).style.visibility = "visible";
+            } else if(color === '#D320D3') {
+                document.getElementById('Entertainment' + code).style.visibility = "visible";
+            } else if(color === '#F0BF2B') {
+                document.getElementById('History' + code).style.visibility = "visible";
+            } else if(color === '#6E22F0') {
+                document.getElementById('ArtCulture' + code).style.visibility = "visible";
+            } else if(color === '#128B6E') {
+                document.getElementById('SportsLeisure' + code).style.visibility = "visible";
+            } else if(color === '#EA7620') {
+                document.getElementById('SciencesNature' + code).style.visibility = "visible";
+            }
         }
 
         function validQuestion(correctAnswer) {
             var answer = document.getElementById('answer').value;
-            alert(answer);
-            if(correctAnswer === answer) {
-                alert("Correct");
-                document.getElementById("correct").style.visibility = "visible";
-            } else {
-                alert("Incorrect");
-                document.getElementById("incorrect").style.visibility = "visible";
-            }
 
-        }
-</script>
+            if(correctAnswer === answer) {
+                /*document.getElementById("correct").style.visibility = "visible";*/
+            } else {
+                /*document.getElementById("incorrect").style.visibility = "visible";*/
+            }
+            setTimeout(function(){document.getElementById('callJava').click()},3000);
+       }
+
+
+
+    </script>
 </head>
 <body>
 <div class="container">
     <div class="side-one">
         <p class="subheading2 players-heading">Players</p>
-
         <div th:each="player : ${players}">
             <div th:id="${player.codePlayer}" class="player">
                 <img class="token" th:if="${player.colorPlayer == 'Blue'}" src="../images/Blue Token.png">
@@ -182,25 +258,20 @@ body{
                             <p class="player-name"><span th:text="${player.namePlayer}"/></p>
                             <p class="caption player-num"><span th:text="'Player ' + ${player.codePlayer}"/></p>
                         </span>
-                <div class=pieces-container th:each="category : ${player.scorePlayer.specialCorrectAnswers}">
-                    <img class="pieces" th:if="${category.colorCategory == '#1563BF'}"
-                         src="../images/Geography Piece.png">
-                    <img class="pieces" th:if="${category.colorCategory == '#D320D3'}"
-                         src="../images/Entertainment Piece.png">
-                    <img class="pieces" th:if="${category.colorCategory == '#F0BF2B'}"
-                         src="../images/History Piece.png">
-                    <img class="pieces" th:if="${category.colorCategory == '#6E22F0'}"
-                         src="../images/Art & Culture Piece.png">
-                    <img class="pieces" th:if="${category.colorCategory == '#128B6E'}"
-                         src="../images/Sports&Leisure-Piece.png">
-                    <img class="pieces" th:if="${category.colorCategory == '#EA7620'}"
-                         src="../images/Sciences & Nature Piece.png">
+                <div class=pieces-container >
+                    <img class="pieces" th:id="Geography + ${player.codePlayer}" src="../images/Geography Piece.png" style="visibility:hidden;">
+                    <img class="pieces" th:id="Entertainment + ${player.codePlayer}" src="../images/Entertainment Piece.png" style="visibility:hidden;">
+                    <img class="pieces" th:id="History + ${player.codePlayer}" src="../images/History Piece.png" style="visibility:hidden;">
+                    <img class="pieces" th:id="ArtCulture + ${player.codePlayer}" src="../images/Art & Culture Piece.png" style="visibility:hidden;">
+                    <img class="pieces" th:id="SportsLeisure + ${player.codePlayer}" src="../images/Sports&Leisure-Piece.png" style="visibility:hidden;">
+                    <img class="pieces" th:id="SciencesNature + ${player.codePlayer}" src="../images/Sciences & Nature Piece.png" style="visibility:hidden;">
                 </div>
-
+                <div th:each="category : ${player.scorePlayer.specialCorrectAnswers}">
+                    <script th:inline="javascript">setSpecial([[${category.colorCategory}]], [[${player.codePlayer}]]);</script>
+                </div>
             </div>
             <script>updatePlayerTurn([[${player.codePlayer}]],  [[${player.isTurn}]]);</script>
         </div>
-
     </div>
     <div class="side-two">
 
@@ -228,31 +299,125 @@ body{
             <img class="imgr roulette-categories" style="transform:rotate(110deg);"
                  th:if="${randonQuestion.category.codeCategory == 3 && randonQuestion.type == 2}"
                  src="/images/Roulette - Categories.png">
-            <img class="imgr roulette-categories" style="transform:rotate(30deg);"
+            <img class="imgr roulette-categories" style="transform:rotate(80deg);"
                  th:if="${randonQuestion.category.codeCategory == 4 && randonQuestion.type == 1}"
                  src="/images/Roulette - Categories.png">
-            <img class="imgr roulette-categories" style="transform:rotate(345deg);"
+            <img class="imgr roulette-categories" style="transform:rotate(50deg);"
                  th:if="${randonQuestion.category.codeCategory == 4 && randonQuestion.type == 2}"
                  src="/images/Roulette - Categories.png">
-            <img class="imgr roulette-categories" style="transform:rotate(80deg);"
+            <img class="imgr roulette-categories" style="transform:rotate(310deg);"
                  th:if="${randonQuestion.category.codeCategory == 5 && randonQuestion.type == 1}"
                  src="/images/Roulette - Categories.png">
-            <img class="imgr roulette-categories" style="transform:rotate(50deg);"
+            <img class="imgr roulette-categories" style="transform:rotate(290deg);"
                  th:if="${randonQuestion.category.codeCategory == 5 && randonQuestion.type == 2}"
                  src="/images/Roulette - Categories.png">
-            <img class="imgr roulette-categories" style="transform:rotate(310deg);"
+            <img class="imgr roulette-categories" style="transform:rotate(30deg);"
                  th:if="${randonQuestion.category.codeCategory == 6 && randonQuestion.type == 1}"
                  src="/images/Roulette - Categories.png">
-            <img class="imgr roulette-categories" style="transform:rotate(290deg);"
+            <img class="imgr roulette-categories" style="transform:rotate(345deg);"
                  th:if="${randonQuestion.category.codeCategory == 6 && randonQuestion.type == 2}"
+                 src="/images/Roulette - Categories.png">
+            <img class="imgr roulette-categories"
+                 th:if="${randonQuestion.type == 3}"
                  src="/images/Roulette - Categories.png">
 
             <img id="roulette-triangle" src="/images/Roulette -triangle.png" ;>
+
+            <a id="callPopUp" style="visibility:hidden;" href="#popup1"/>
         </div>
-        <script>showQuestion();</script>
+        <script defer="defer"> setTimeout(function(){showQuestion();},3200)  </script>
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <form action="#" th:action="@{answer}" th:object="${player}" method="post">
+                    <a class="close" href="#"></a>
+                    <div class="content" style="overflow: hidden;">
+                        <div class="divTable" id="targetElement">
+                            <div class="headRow" style="width:100%;">
+
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 1 && randonQuestion.type == 1}"
+                                     src="../images/Geography Question.png" width="500" >
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 1 && randonQuestion.type == 2}"
+                                     src="../images/Geography Special Question.png" width="500">
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 2 && randonQuestion.type == 1}"
+                                     src="../images/Entertainment Question.png" width="500" >
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 2 && randonQuestion.type == 2}"
+                                     src="../images/Entertainment Special Question.png" width="500" >
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 3 && randonQuestion.type == 1}"
+                                     src="../images/History Question.png" width="500" >
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 3 && randonQuestion.type == 2}"
+                                     src="../images/History Special Question.png" width="500" >
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 4 && randonQuestion.type == 1}"
+                                     src="../images/Art & Culture Question.png" width="500" >
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 4 && randonQuestion.type == 2}"
+                                     src="../images/Art & Culture Special Question.png" width="500" >
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 5 && randonQuestion.type == 1}"
+                                     src="../images/Science & Nature Question.png" width="500" >
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 5 && randonQuestion.type == 2}"
+                                     src="../images/Science & Nature Special Question.png" width="500" >
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 6 && randonQuestion.type == 1}"
+                                     src="../images/Sport & Leisure Question.png" width="500">
+                                <img class="pieces"
+                                     th:if="${randonQuestion.category.codeCategory == 6 && randonQuestion.type == 2}"
+                                     src="../images/Sport & Leisure Special Question.png" width="500" >
+                                <img class="pieces" th:if="${randonQuestion.type == 3}"
+                                     src="../images/Final question.png"
+                                     width="500" >
+                            </div>
+
+                            <div class="divCell" align="center" style="width:100%; ">
+                                <div class="flip-container" id="flip-toggle" align="center">
+                                    <div class="flipper">
+                                        <table class="front" th:bgcolor="${randonQuestion.category.colorCategory}" style="height:50px;">
+                                            <tr>
+                                                <td align="center">
+                                                    <span th:text="${randonQuestion.question}"
+                                                          class="body-text"
+                                                          style="text-align: center;padding-bottom:20px;"/>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- front content -->
+                                        <table class="back" th:bgcolor="${randonQuestion.category.colorCategory}">
+                                            <tr>
+                                                <td class="body-text" align="center"><span
+                                                        th:text="${randonQuestion.answer}"/></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="headRow" align="center">
+                                <div class="divCell" style="width:100%; margin-top:20px;">
+                                    <label class="subheading2 players-heading" style="margin-right:10px"> Answer: </label>
+                                    <input id="answer" type="text" th:field="${player.answer}" class="input-text"  style="margin-right:10px">
+                                    <button type="button"
+                                            th:onclick="document.querySelector('#flip-toggle').classList.toggle('hover'); validQuestion([[${randonQuestion.answer}]]); "
+                                            class="buttons button-shape game-button" style="margin-top:10px"> Send
+                                    </button>
+                                    <button type="submit" id="callJava" style="visibility:hidden;"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 
+</div>
 
 </body>
 </html>

@@ -11,13 +11,15 @@
     height:766px;
     padding:0;
     margin:0;
+    overflow: hidden;
+    background: linear-gradient(1deg, #1C1852 0%, #6B6FCE 100%) 0% 0% no-repeat;
 }
 
 .score-cont{
-margin: 37px 135px 28px 135px;
-width: 1094px;
+padding: 25px;
+width: 1110px;
 height: 703px;
-background: #14122A 0% 0% no-repeat padding-box;
+background: #14122A;
 border: 5px solid #4791E7;
 border-radius: 10px;
 opacity: 1;
@@ -49,85 +51,69 @@ td{
 .winner-bg td{
     height:60px;
 }
+.container_local {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /*background: rgb(14,13,29);*/
+    width:100%;
+    height: 100%;
+    margin: 50px 150px;
+
+}
 
 
         </style>
+    <script>
+        function updatePlayerWon(code, won) {
+            if(won === false) {
+                document.getElementById('tab' + code).style.background = "none";
+            }
+        }
+    </script>
 
 </head>
 <body>
-<div class="container ">
+<div class="container_local" align="center">
     <div class="score-cont">
-        <div>
-            <p class="heading" style="margin:50px 45% 53px 45%; color:white">Score</p>
+        <div align="center">
+            <p class="heading" style="margin:30px; color:white">Score</p>
         </div>
-        <table class="egt" style="color:white">
+        <table class="egt" style="color:white; height:413px" align="center">
             <tr class="winner-bg" style="text-align: center; height:60px; background:none;">
                 <td style="width:138px"></td>
-                <td class="body-text results td-line" style="font-weight:700;margin-left:35px; margin-right:35px;">Answered Questions</td>
-                <td class="body-text results td-line" style="font-weight:700;margin-left:35px; margin-right:35px;">Correct Answers</td>
-                <td class="body-text results td-line" style="font-weight:700;margin-left:35px; margin-right:35px;">Incorrect Answers</td>
-                <td class="body-text results td-line" style="font-weight:700; margin-left:35px; margin-right:35px;">Correct Special Questions</td>
-                <td class="body-text results td-line" style="font-weight:700; margin-left:35px; margin-right:35px;">Incorrect Special Questions</td>
+                <td class="body-text results td-line" style="font-weight:700;padding-left:20px; padding-right:20px; margin-left:35px; margin-right:35px;">Answered Questions</td>
+                <td class="body-text results td-line" style="font-weight:700;padding-left:20px; padding-right:20px; margin-left:35px; margin-right:35px;">Correct Answers</td>
+                <td class="body-text results td-line" style="font-weight:700;padding-left:20px; padding-right:20px; margin-left:35px; margin-right:35px;">Incorrect Answers</td>
+                <td class="body-text results td-line" style="font-weight:700;padding-left:20px; padding-right:20px; margin-left:35px; margin-right:35px;">Correct Special Questions</td>
+                <td class="body-text results td-line" style="font-weight:700;padding-left:20px; padding-right:20px; margin-left:35px; margin-right:35px;">Incorrect Special Questions</td>
             </tr>
-
-            <tr class="winner-bg" >
-                <td class="body-text player-score results" ><span style="font-weight:700;height:100%; ;margin-left:35px; margin-right:24px;">Player 1</span></td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-            </tr>
-            <tr class="winner-bg" style="background:none;">
-                <td class="body-text player-score results" ><span style="font-weight:700;height:100%; ;margin-left:35px; margin-right:24px;">Player 2</span></td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-            </tr>
-            <tr class="winner-bg" style="background:none;">
-                <td class="body-text player-score results" ><span style="font-weight:700;height:100%; ;margin-left:35px; margin-right:24px;">Player 3</span></td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-            </tr>
-            <tr class="winner-bg" style="background:none;">
-                <td class="body-text player-score results" ><span style="font-weight:700;height:100%; ;margin-left:35px; margin-right:24px;">Player 4</span></td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-            </tr>
-            <tr class="winner-bg" style="background:none;">
-                <td class="body-text player-score results" ><span style="font-weight:700;height:100%; ;margin-left:35px; margin-right:24px;">Player 5</span></td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-            </tr>
-            <tr class="winner-bg" style="background:none;">
-                <td class="body-text player-score results" ><span style="font-weight:700;height:100%; ;margin-left:35px; margin-right:24px;">Player 6</span></td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-                <td class="body-text results td-line" >30</td>
-            </tr>
+            <div th:each="player : ${players}">
+                <tr th:id="tab+${player.codePlayer}" class="winner-bg" >
+                    <div th:id="${player.codePlayer}" class="player">
+                        <td class="body-text player-score results" ><span style="font-weight:700;height:100%; ;margin-left:25px; margin-right:24px;" th:text="'Player ' + ${player.codePlayer}"/></td>
+                        <td class="body-text results td-line" ><span th:text="${player.scorePlayer.numberQuestions}"/></td>
+                        <td class="body-text results td-line" ><span th:text="${player.scorePlayer.numCorrectAnswers}"/></td>
+                        <td class="body-text results td-line" ><span th:text="${player.scorePlayer.numIncorrectAnswers}"/></td>
+                        <td class="body-text results td-line" ><span th:text="${player.scorePlayer.numSpecialCorrectAnswers}"/></td>
+                        <td class="body-text results td-line" ><span th:text="${player.scorePlayer.numSpecialIncorrectAnswers}"/></td>
+                    </div>
+                </tr>
+                <script>updatePlayerWon([[${player.codePlayer}]],  [[${player.isWinner}]]);</script>
+            </div>
 
         </table>
-        <div class="body-text" style="margin-top:51px;">
-            <div  style="margin-left:215px;float:left; display:inline">
-                <button onclick="window.location.href='/game'" class="game-button button-shape button">Play Again</button>
-            </div>
-            <div style="float:left; display:inline; margin-left:31px">
-                <button onclick="window.location.href='/'" class="game-button button-shape button">End Game</button>
-            </div>
-
+        <div class="body-text" style="margin-top:61px;" align="center">
+            <form action="#" th:action="@{/again}" method="post">
+                <div  style="margin-left:215px;float:left; display:inline">
+                    <button class="game-button button-shape button">Play Again</button>
+                </div>
+            </form>
+            <form action="#" th:action="@{/index}" method="get">
+                <div style="float:left; display:inline; margin-left:31px">
+                    <button class="game-button button-shape button">End Game</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
