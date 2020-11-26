@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <class>
     <question id="1">
-        <questionDesc>Which European country was occupied by Britain from 1814 until 1964?
-        </questionDesc>
+        <questionDesc>Which European country was occupied by Britain from 1814 until 1964?</questionDesc>
         <answer>Malta</answer>
         <clue>M????</clue>
         <category>3</category>
@@ -10,9 +9,7 @@
     </question>
 
     <question id="2">
-        <questionDesc>What German dance, which sees partners spinning together in close contact, was
-          condemned as depraved when it was first seen in Regency society?
-        </questionDesc>
+        <questionDesc>What German dance, which sees partners spinning together in close contact, was condemned as depraved when it was first seen in Regency society?</questionDesc>
         <answer>The Waltz</answer>
         <clue>The W????</clue>
         <category>3</category>

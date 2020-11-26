@@ -89,9 +89,7 @@
     </question>
 
     <question id="12">
-        <questionDesc>How long is the gestation period of an African elephant?(with an alphanumeric character and
-            "months")
-        </questionDesc>
+        <questionDesc>How long is the gestation period of an African elephant?(with an alphanumeric character and "months")</questionDesc>
         <answer>22 months</answer>
         <clue>It's between 12 and 25 months</clue>
         <category>5</category>

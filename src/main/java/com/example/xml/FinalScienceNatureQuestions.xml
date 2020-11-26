@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <class>
     <question id="1">
-        <questionDesc> What food comprises 99 percent of a giant panda’s diet? </questionDesc>
+        <questionDesc>What food comprises 99 percent of a giant panda’s diet?</questionDesc>
         <answer>Bamboo</answer>
         <clue>B????o</clue>
         <category>5</category>
@@ -9,7 +9,7 @@
     </question>
 
     <question id="2">
-        <questionDesc> Which planet has the most gravity?</questionDesc>
+        <questionDesc>Which planet has the most gravity?</questionDesc>
         <answer>Jupiter</answer>
         <clue>The first letter is "J"</clue>
         <category>5</category>
@@ -25,7 +25,7 @@
     </question>
 
     <question id="4">
-        <questionDesc> What is meteorology the study of?</questionDesc>
+        <questionDesc>What is meteorology the study of?</questionDesc>
         <answer>The weather</answer>
         <clue>The w??????</clue>
         <category>5</category>
@@ -33,7 +33,7 @@
     </question>
 
     <question id="5">
-        <questionDesc> Which animal symbolizes good luck in Europe?</questionDesc>
+        <questionDesc>Which animal symbolizes good luck in Europe?</questionDesc>
         <answer>Ladybug</answer>
         <clue>L??????</clue>
         <category>5</category>

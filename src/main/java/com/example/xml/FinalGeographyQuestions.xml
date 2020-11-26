@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <class>
     <question id="1">
-        <questionDesc> Which desert is the largest in the world?</questionDesc>
+        <questionDesc>Which desert is the largest in the world?</questionDesc>
         <answer>The Sahara Desert</answer>
         <clue>That is in Africa.</clue>
         <category>1</category>

@@ -1,9 +1,7 @@
 <?xml version="1.0"?>
 <class>
     <question id="1">
-        <questionDesc>What is the name of the thin, but a long country that spans more than
-          half of the western coast of South America?
-        </questionDesc>
+        <questionDesc>What is the name of the thin, but a long country that spans more than half of the western coast of South America?</questionDesc>
         <answer>Chile</answer>
         <clue>First letter of the answer is "C"</clue>
         <category>1</category>
@@ -19,7 +17,7 @@
     </question>
 
     <question id="3">
-        <questionDesc> Which two countries share the longest (or largest) international border?</questionDesc>
+        <questionDesc>Which two countries share the longest (or largest) international border?</questionDesc>
         <answer>Canada and America</answer>
         <clue>C????? and A??????</clue>
         <category>1</category>
@@ -131,9 +129,7 @@
     </question>
 
     <question id="17">
-        <questionDesc>Which continent lies in all four hemispheres of the Earth (North, South, East and
-          West)?
-        </questionDesc>
+        <questionDesc>Which continent lies in all four hemispheres of the Earth (North, South, East and West)?</questionDesc>
         <answer>Africa</answer>
         <clue>No clue</clue>
         <category>1</category>

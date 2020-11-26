@@ -33,7 +33,7 @@
     </question>
 
     <question id="5">
-        <questionDesc> How long did the Middle Ages last?(by an alphanumeric character)</questionDesc>
+        <questionDesc>How long did the Middle Ages last?(by an alphanumeric character)</questionDesc>
         <answer>About 1000 years</answer>
         <clue>About ???? years</clue>
         <category>3</category>
@@ -97,9 +97,7 @@
     </question>
 
     <question id="13">
-        <questionDesc>Who wrote the 12th-century account Historia regum Britanniae (The History of the
-          Kings of Britain), which is often credited with making the legend of King Arthur popular?
-        </questionDesc>
+        <questionDesc>Who wrote the 12th-century account Historia regum Britanniae (The History of the Kings of Britain), which is often credited with making the legend of King Arthur popular?</questionDesc>
         <answer>Geoffrey of Monmouth</answer>
         <clue>G??????? of M???????</clue>
         <category>3</category>
@@ -123,9 +121,7 @@
     </question>
 
     <question id="16">
-        <questionDesc>Which medieval queen was married to both Louis VII of France and Henry II of
-          England?
-        </questionDesc>
+        <questionDesc>Which medieval queen was married to both Louis VII of France and Henry II of England?</questionDesc>
         <answer>Eleanor of Aquitaine</answer>
         <clue>EL????? of A????????</clue>
         <category>3</category>
@@ -149,8 +145,7 @@
     </question>
 
     <question id="19">
-        <questionDesc>Who was the captain of the vessel Titanic at the time of its sinking?
-        </questionDesc>
+        <questionDesc>Who was the captain of the vessel Titanic at the time of its sinking?</questionDesc>
         <answer>Edward Smith</answer>
         <clue>E????? S????</clue>
         <category>3</category>
@@ -166,9 +161,7 @@
     </question>
 
     <question id="21">
-        <questionDesc>Julius Caesar was assassinated on 15 March 44 BC, a date now often known by what
-          term?
-        </questionDesc>
+        <questionDesc>Julius Caesar was assassinated on 15 March 44 BC, a date now often known by what term?</questionDesc>
         <answer>The Ides of March</answer>
         <clue>The ???? of ?????</clue>
         <category>3</category>
