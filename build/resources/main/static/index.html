@@ -9,7 +9,7 @@
 
 
  .container-index {
-    width:1366px;
+    width:100%;
     display:inline-block;
     background: rgb(14,13,29);
     height: 100%;
@@ -18,10 +18,11 @@
 
 
 body{
-    width: 1366px;
-    height:768px;
+    width: 100%;
+    height:1000px;
     padding:0;
     margin:0;
+    overflow: hidden;
 }
 img{
 width: 303px;
@@ -29,7 +30,6 @@ height: 112px;
 }
 .index-button{
     margin-bottom:28px;
-    margin-left:526px;
     width:316px;
     height:56px;
     background: #14122A 0% 0% no-repeat padding-box;
@@ -123,17 +123,19 @@ height: 112px;
         </style>
 </head>
 <body>
-<div class="container-index" >
-    <div >
+<div class="container-index">
+    <div align="center">
         <img src="/images/Trivia-logo.png" style="margin:auto; transform:rotate(1deg);margin:161px 531px 0px 531px;">
     </div>
-    <div class="body-text">
-        <div  style="margin-top:127px">
+    <div class="body-text" align="center">
+        <div style="margin-top:127px;">
+
             <button onclick="window.location.href='/addPlayers'" class="index-button button-shape button">New Game</button>
         </div>
 
         <div >
-            <a class="index-button button-shape button" href="#popup1" style="margin-bottom:28px;margin-left:526px;"><hr style="visibility:hidden;height:0.1px;margin: 12px 0px 1px 0px; width:20%;"></span><span style="font:25px 'Roboto';margin-top:100px;margin-left:85px ">Instructions</span></a>
+            <a class="index-button button-shape button" href="#popup1" style="margin-bottom:28px; width:310px;height:50px"><hr style="visibility:hidden;height:0.1px;margin: 10px 0px 1px 0px;"></span>Instructions</a>
+
         </div>
         <div id="popup1" class="overlay">
             <div class="popup">
