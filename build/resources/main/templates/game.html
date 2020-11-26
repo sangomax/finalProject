@@ -220,9 +220,9 @@ body{
                 document.getElementById('History' + code).style.visibility = "visible";
             } else if(color === '#6E22F0') {
                 document.getElementById('ArtCulture' + code).style.visibility = "visible";
-            } else if(color === '#128B6E') {
-                document.getElementById('SportsLeisure' + code).style.visibility = "visible";
             } else if(color === '#EA7620') {
+                document.getElementById('SportsLeisure' + code).style.visibility = "visible";
+            } else if(color === '#128B6E') {
                 document.getElementById('SciencesNature' + code).style.visibility = "visible";
             }
         }
@@ -336,49 +336,49 @@ body{
 
                                 <img class="pieces"
                                      th:if="${randonQuestion.category.codeCategory == 1 && randonQuestion.type == 1}"
-                                     src="../images/Geography Question.png" width="500" >
+                                     src="../images/Geography Question.png" width="600" >
                                 <img class="pieces"
                                      th:if="${randonQuestion.category.codeCategory == 1 && randonQuestion.type == 2}"
-                                     src="../images/Geography Special Question.png" width="500">
+                                     src="../images/Geography Special Question.png" width="600">
                                 <img class="pieces"
                                      th:if="${randonQuestion.category.codeCategory == 2 && randonQuestion.type == 1}"
-                                     src="../images/Entertainment Question.png" width="500" >
+                                     src="../images/Entertainment Question.png" width="600" >
                                 <img class="pieces"
                                      th:if="${randonQuestion.category.codeCategory == 2 && randonQuestion.type == 2}"
-                                     src="../images/Entertainment Special Question.png" width="500" >
+                                     src="../images/Entertainment Special Question.png" width="600" >
                                 <img class="pieces"
                                      th:if="${randonQuestion.category.codeCategory == 3 && randonQuestion.type == 1}"
-                                     src="../images/History Question.png" width="500" >
+                                     src="../images/History Question.png" width="600" >
                                 <img class="pieces"
                                      th:if="${randonQuestion.category.codeCategory == 3 && randonQuestion.type == 2}"
-                                     src="../images/History Special Question.png" width="500" >
+                                     src="../images/History Special Question.png" width="600" >
                                 <img class="pieces"
                                      th:if="${randonQuestion.category.codeCategory == 4 && randonQuestion.type == 1}"
-                                     src="../images/Art & Culture Question.png" width="500" >
+                                     src="../images/Art & Culture Question.png" width="600" >
                                 <img class="pieces"
                                      th:if="${randonQuestion.category.codeCategory == 4 && randonQuestion.type == 2}"
-                                     src="../images/Art & Culture Special Question.png" width="500" >
+                                     src="../images/Art & Culture Special Question.png" width="600" >
                                 <img class="pieces"
                                      th:if="${randonQuestion.category.codeCategory == 5 && randonQuestion.type == 1}"
-                                     src="../images/Science & Nature Question.png" width="500" >
+                                     src="../images/Science & Nature Question.png" width="600" >
                                 <img class="pieces"
                                      th:if="${randonQuestion.category.codeCategory == 5 && randonQuestion.type == 2}"
-                                     src="../images/Science & Nature Special Question.png" width="500" >
+                                     src="../images/Science & Nature Special Question.png" width="600" >
                                 <img class="pieces"
                                      th:if="${randonQuestion.category.codeCategory == 6 && randonQuestion.type == 1}"
-                                     src="../images/Sport & Leisure Question.png" width="500">
+                                     src="../images/Sport & Leisure Question.png" width="600">
                                 <img class="pieces"
                                      th:if="${randonQuestion.category.codeCategory == 6 && randonQuestion.type == 2}"
-                                     src="../images/Sport & Leisure Special Question.png" width="500" >
+                                     src="../images/Sport & Leisure Special Question.png" width="600" >
                                 <img class="pieces" th:if="${randonQuestion.type == 3}"
                                      src="../images/Final question.png"
-                                     width="500" >
+                                     width="600" >
                             </div>
 
                             <div class="divCell" align="center" style="width:100%; ">
                                 <div class="flip-container" id="flip-toggle" align="center">
                                     <div class="flipper">
-                                        <table class="front" th:bgcolor="${randonQuestion.category.colorCategory}" style="height:50px;">
+                                        <table class="front" th:bgcolor="${randonQuestion.category.colorCategory}" style="height:180px; ">
                                             <tr>
                                                 <td align="center">
                                                     <span th:text="${randonQuestion.question}"
